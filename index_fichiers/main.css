@@ -1,0 +1,2663 @@
+/* http://meyerweb.com/eric/tools/css/reset/v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 5, ../sass/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../sass/base/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../sass/base/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../sass/base/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../sass/base/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../sass/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, ../sass/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* http://codepen.io/terkel/pen/dvejH
+   Button reset
+*/
+/* line 52, ../sass/base/_reset.scss */
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+/* line 61, ../sass/base/_reset.scss */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-appearance: button;
+  /* for input */
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+
+/* line 75, ../sass/base/_reset.scss */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Make `a` like a button */
+/* line 82, ../sass/base/_reset.scss */
+[role="button"] {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+}
+
+/* line 1, ../sass/base/_base.scss */
+*, *::before, *::after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 5, ../sass/base/_base.scss */
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 12, ../sass/base/_base.scss */
+svg {
+  display: inline-block;
+}
+
+/* line 16, ../sass/base/_base.scss */
+path {
+  fill: #212121;
+}
+
+/* line 1, ../sass/base/_typography.scss */
+body {
+  color: #212121;
+  font: normal 400 16px "Source Sans Pro", sans-serif;
+  line-height: 1;
+}
+
+/* line 7, ../sass/base/_typography.scss */
+strong, b {
+  font-weight: 600;
+}
+
+/* line 11, ../sass/base/_typography.scss */
+em, i {
+  font-style: italic;
+}
+
+/* line 15, ../sass/base/_typography.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 1, ../sass/layout/_body.scss */
+.body {
+  background-color: #eeeeee;
+  position: relative;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.body--cristal {
+  background-attachment: fixed;
+  background-image: url(../addendum/empire.jpg);
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+@media (min-width: 992px) {
+  /* line 30, ../sass/helpers/_mixins.scss */
+  .body--cristal {
+    background-attachment: fixed;
+  }
+}
+
+/* line 1, ../sass/components/_buttons.scss */
+.button {
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ef5350;
+  color: #fafafa;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 8px;
+}
+/* line 12, ../sass/components/_buttons.scss */
+.button:hover {
+  background-color: #f05e5c;
+}
+/* line 17, ../sass/components/_buttons.scss */
+.button:not(.button--grey) .button__icon__path {
+  fill: #fafafa;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.button--grey {
+  background-color: #c9c9c9;
+  color: #212121;
+}
+/* line 24, ../sass/components/_buttons.scss */
+.button--grey:hover {
+  background-color: #cfcfcf;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.button--splash {
+  -moz-transition: background-color 0.3s, font-size 0.2s, height 0.2s, line-height 0.2s, margin-top 0.2s, width 0.2s;
+  -o-transition: background-color 0.3s, font-size 0.2s, height 0.2s, line-height 0.2s, margin-top 0.2s, width 0.2s;
+  -webkit-transition: background-color 0.3s, font-size 0.2s, height 0.2s, line-height 0.2s, margin-top 0.2s, width 0.2s;
+  transition: background-color 0.3s, font-size 0.2s, height 0.2s, line-height 0.2s, margin-top 0.2s, width 0.2s;
+  font-size: 14px;
+  height: 39.6px;
+  letter-spacing: 1px;
+  line-height: 39.6px;
+  margin-top: 0;
+  text-transform: uppercase;
+  width: 250px;
+}
+@media (min-width: 768px) {
+  /* line 30, ../sass/helpers/_mixins.scss */
+  .button--splash {
+    font-size: 15px;
+    height: 43.2px;
+    line-height: 43.2px;
+    width: 350px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 30, ../sass/helpers/_mixins.scss */
+  .button--splash {
+    height: 50.4px;
+    line-height: 50.4px;
+    margin-top: 30px;
+    width: 450px;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.button__icon {
+  bottom: 1px;
+  height: 1em;
+  position: relative;
+  vertical-align: middle;
+  width: 1em;
+}
+
+/* line 1, ../sass/components/_nav.scss */
+.nav {
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  /* line 1, ../sass/components/_nav.scss */
+  .nav {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+  .nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 992px) {
+  /* line 1, ../sass/components/_nav.scss */
+  .nav {
+    display: block;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__container {
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  background-color: #323232;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.nav__container--cristal {
+  background-color: transparent;
+  position: relative;
+}
+/* line 28, ../sass/components/_nav.scss */
+.nav__container--cristal .nav__menu__link:hover {
+  color: inherit;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__logo {
+  -moz-transform: scale(0.75, 0.75);
+  -ms-transform: scale(0.75, 0.75);
+  -webkit-transform: scale(0.75, 0.75);
+  transform: scale(0.75, 0.75);
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: block;
+  line-height: 60px;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .nav__logo {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .nav__logo {
+    float: left;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__logo__image {
+  vertical-align: middle;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__logo__name {
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__logo__dot {
+  font-weight: 100;
+  margin-left: -4px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__menu {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .nav__menu {
+    line-height: 36px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .nav__menu {
+    float: right;
+    line-height: 75px;
+    margin-bottom: 0;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__menu__item {
+  margin: 0 8px;
+}
+/* line 79, ../sass/components/_nav.scss */
+.nav__menu__item:last-child {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 79, ../sass/components/_nav.scss */
+  .nav__menu__item:last-child {
+    display: inline-block;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__menu__link {
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 88, ../sass/components/_nav.scss */
+.nav__menu__link:hover {
+  color: #ef5350;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.nav__spacer {
+  -moz-transition: min-height 0.2s;
+  -o-transition: min-height 0.2s;
+  -webkit-transition: min-height 0.2s;
+  transition: min-height 0.2s;
+  min-height: 107px;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .nav__spacer {
+    min-height: 127px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .nav__spacer {
+    min-height: 75px;
+  }
+}
+
+/* line 1, ../sass/components/_header.scss */
+.header {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.header__background {
+  -moz-transform: translate(-50%, -26%);
+  -ms-transform: translate(-50%, -26%);
+  -webkit-transform: translate(-50%, -26%);
+  transform: translate(-50%, -26%);
+  height: auto;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.header__tag {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+/* line 26, ../sass/components/_header.scss */
+.header__tag--unofficial:before {
+  content: "#";
+  margin-right: 10px;
+}
+
+/* line 34, ../sass/components/_header.scss */
+.breadcrumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  padding: 11px;
+  position: absolute;
+  top: 0;
+  color: #9e9e9e;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.breadcrumb__link {
+  color: #f5f5f5;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.breadcrumb__spacer {
+  cursor: default;
+  margin: 0 5px;
+}
+
+/* line 1, ../sass/components/_pagination.scss */
+.pagination {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 20px;
+}
+/* line 6, ../sass/components/_pagination.scss */
+.pagination > li {
+  display: inline;
+}
+/* line 8, ../sass/components/_pagination.scss */
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #FFF;
+  border: 1px solid #e0e0e0;
+  color: #474747;
+  float: left;
+  line-height: 32px;
+  margin-left: -1px;
+  padding: 0 12px;
+  position: relative;
+  text-decoration: none;
+}
+/* line 21, ../sass/components/_pagination.scss */
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin-left: 0;
+}
+/* line 28, ../sass/components/_pagination.scss */
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 37, ../sass/components/_pagination.scss */
+.pagination > li > a:hover, .pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  background-color: #eeeeee;
+  border-color: #d7d7d7;
+  color: #212121;
+  z-index: 2;
+}
+/* line 48, ../sass/components/_pagination.scss */
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  background-color: #ef5350;
+  border-color: #ed3c39;
+  color: #fafafa;
+  cursor: default;
+  z-index: 3;
+}
+/* line 60, ../sass/components/_pagination.scss */
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  background-color: #FFF;
+  border-color: #e0e0e0;
+  color: #9e9e9e;
+  cursor: default;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.pagination__container {
+  width: 76.5625%;
+  float: right;
+  margin-right: 0;
+  text-align: center;
+}
+
+@-moz-keyframes firstAppear {
+  0% {
+    -moz-transform: translate(52%, -100%);
+    transform: translate(52%, -100%);
+    opacity: 0;
+  }
+  12.5% {
+    -moz-transform: translate(52%, -10%);
+    transform: translate(52%, -10%);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: translate(52%, 0);
+    transform: translate(52%, 0);
+    opacity: 1;
+  }
+  75% {
+    -moz-transform: translate(52%, 0);
+    transform: translate(52%, 0);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes firstAppear {
+  0% {
+    -webkit-transform: translate(52%, -100%);
+    transform: translate(52%, -100%);
+    opacity: 0;
+  }
+  12.5% {
+    -webkit-transform: translate(52%, -10%);
+    transform: translate(52%, -10%);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate(52%, 0);
+    transform: translate(52%, 0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translate(52%, 0);
+    transform: translate(52%, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes firstAppear {
+  0% {
+    -moz-transform: translate(52%, -100%);
+    -ms-transform: translate(52%, -100%);
+    -webkit-transform: translate(52%, -100%);
+    transform: translate(52%, -100%);
+    opacity: 0;
+  }
+  12.5% {
+    -moz-transform: translate(52%, -10%);
+    -ms-transform: translate(52%, -10%);
+    -webkit-transform: translate(52%, -10%);
+    transform: translate(52%, -10%);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: translate(52%, 0);
+    -ms-transform: translate(52%, 0);
+    -webkit-transform: translate(52%, 0);
+    transform: translate(52%, 0);
+    opacity: 1;
+  }
+  75% {
+    -moz-transform: translate(52%, 0);
+    -ms-transform: translate(52%, 0);
+    -webkit-transform: translate(52%, 0);
+    transform: translate(52%, 0);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes lastAppear {
+  0% {
+    -moz-transform: translate(-52%, -100%);
+    transform: translate(-52%, -100%);
+    opacity: 0;
+  }
+  12.5% {
+    -moz-transform: translate(-52%, -10%);
+    transform: translate(-52%, -10%);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: translate(-52%, 0);
+    transform: translate(-52%, 0);
+    opacity: 1;
+  }
+  75% {
+    -moz-transform: translate(-52%, 0);
+    transform: translate(-52%, 0);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes lastAppear {
+  0% {
+    -webkit-transform: translate(-52%, -100%);
+    transform: translate(-52%, -100%);
+    opacity: 0;
+  }
+  12.5% {
+    -webkit-transform: translate(-52%, -10%);
+    transform: translate(-52%, -10%);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate(-52%, 0);
+    transform: translate(-52%, 0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translate(-52%, 0);
+    transform: translate(-52%, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes lastAppear {
+  0% {
+    -moz-transform: translate(-52%, -100%);
+    -ms-transform: translate(-52%, -100%);
+    -webkit-transform: translate(-52%, -100%);
+    transform: translate(-52%, -100%);
+    opacity: 0;
+  }
+  12.5% {
+    -moz-transform: translate(-52%, -10%);
+    -ms-transform: translate(-52%, -10%);
+    -webkit-transform: translate(-52%, -10%);
+    transform: translate(-52%, -10%);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: translate(-52%, 0);
+    -ms-transform: translate(-52%, 0);
+    -webkit-transform: translate(-52%, 0);
+    transform: translate(-52%, 0);
+    opacity: 1;
+  }
+  75% {
+    -moz-transform: translate(-52%, 0);
+    -ms-transform: translate(-52%, 0);
+    -webkit-transform: translate(-52%, 0);
+    transform: translate(-52%, 0);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes separatorAppear {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  75% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 20px;
+  }
+}
+@-webkit-keyframes separatorAppear {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  75% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 20px;
+  }
+}
+@keyframes separatorAppear {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  75% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 20px;
+  }
+}
+@-moz-keyframes animateLeft {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -25px 0;
+  }
+}
+@-webkit-keyframes animateLeft {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -25px 0;
+  }
+}
+@keyframes animateLeft {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -25px 0;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__header {
+  overflow: hidden;
+  padding-top: 43px;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__bloc {
+  background-color: #eeeeee;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f5f5f5;
+  font-size: 16px;
+  height: 80px;
+  position: relative;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.carnage__game:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game__mode {
+  font-size: 20px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game__mode__icon {
+  -webkit-filter: invert(0.9);
+  filter: invert(0.9);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  left: 10px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game__map {
+  color: #9e9e9e;
+  text-transform: uppercase;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game__duration {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #9e9e9e;
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  top: 50%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game__duration__item {
+  display: inline-block;
+  text-align: center;
+  width: 45px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__game__container {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 85px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__score {
+  color: #f5f5f5;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 600;
+  height: 125px;
+  line-height: 125px;
+  vertical-align: middle;
+  width: 250px;
+}
+/* line 142, ../sass/pages/_carnage.scss */
+.carnage__score:first-of-type {
+  text-align: right;
+}
+/* line 145, ../sass/pages/_carnage.scss */
+.carnage__score:last-of-type {
+  text-align: left;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__score__team {
+  display: inline-block;
+  height: 125px;
+  vertical-align: middle;
+  width: 125px;
+}
+@media (min-width: 992px) {
+  /* line 158, ../sass/pages/_carnage.scss */
+  .carnage__score__team.launchAnimation:first-of-type:not(.done) {
+    -moz-animation: firstAppear 2s ease;
+    -webkit-animation: firstAppear 2s ease;
+    animation: firstAppear 2s ease;
+  }
+  /* line 163, ../sass/pages/_carnage.scss */
+  .carnage__score__team.launchAnimation:last-of-type:not(.done) {
+    -moz-animation: lastAppear 2s ease;
+    -webkit-animation: lastAppear 2s ease;
+    animation: lastAppear 2s ease;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__score__container {
+  margin: 55px 0;
+  text-align: center;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__score__separator {
+  display: inline-block;
+  height: 125px;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+}
+@media (min-width: 992px) {
+  /* line 182, ../sass/pages/_carnage.scss */
+  .carnage__score__separator.launchAnimation:not(.done) {
+    -moz-animation: separatorAppear 2s ease;
+    -webkit-animation: separatorAppear 2s ease;
+    animation: separatorAppear 2s ease;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__score__separator__box {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #fafafa;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__report {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.carnage__report:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 205, ../sass/pages/_carnage.scss */
+.carnage__table:last-of-type {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+}
+/* line 209, ../sass/pages/_carnage.scss */
+.carnage__table--red .carnage__table__head {
+  background-color: #c21818;
+  border-left-color: #c21818;
+}
+/* line 213, ../sass/pages/_carnage.scss */
+.carnage__table--red .carnage__table__big {
+  border-left-color: #c21818;
+}
+/* line 218, ../sass/pages/_carnage.scss */
+.carnage__table--blue .carnage__table__head {
+  background-color: #1882d5;
+  border-left-color: #1882d5;
+}
+/* line 222, ../sass/pages/_carnage.scss */
+.carnage__table--blue .carnage__table__big {
+  border-left-color: #1882d5;
+}
+/* line 227, ../sass/pages/_carnage.scss */
+.carnage__table--ie .carnage__table__row--left {
+  -moz-animation: none;
+  -webkit-animation: none;
+  animation: none;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__head {
+  border-left: 4px solid #212121;
+  color: #fafafa;
+  font-weight: 600;
+  height: 3em;
+  line-height: 3em;
+}
+/* line 240, ../sass/pages/_carnage.scss */
+.carnage__table__head__title:first-of-type {
+  font-size: 18px;
+  padding-left: 11px;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* line 246, ../sass/pages/_carnage.scss */
+.carnage__table__head__title:last-of-type {
+  padding-right: 15px;
+  text-align: right;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__row {
+  height: 4em;
+  line-height: 4em;
+}
+/* line 256, ../sass/pages/_carnage.scss */
+.carnage__table__row:nth-of-type(odd) {
+  background-color: #cfcfcf;
+}
+/* line 259, ../sass/pages/_carnage.scss */
+.carnage__table__row:nth-of-type(even) {
+  background-color: #e0e0e0;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.carnage__table__row--left {
+  -moz-animation: animateLeft 2.5s linear infinite;
+  -webkit-animation: animateLeft 2.5s linear infinite;
+  animation: animateLeft 2.5s linear infinite;
+  background-image: -moz-repeating-linear-gradient(-51.6deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 10px, transparent 10px, transparent 20px);
+  background-image: -webkit-repeating-linear-gradient(-51.6deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 10px, transparent 10px, transparent 20px);
+  background-image: repeating-linear-gradient(-51.6deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 10px, transparent 10px, transparent 20px);
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__small {
+  width: 11%;
+  text-align: center;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__small__value {
+  -moz-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  display: block;
+  font-weight: 600;
+  height: 0.5em;
+  left: 50%;
+  position: relative;
+  top: 50%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__small__name {
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+  font-size: 0.85em;
+  height: 0;
+  left: 50%;
+  position: relative;
+  top: 50%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__big {
+  overflow: hidden;
+  *zoom: 1;
+  border-left: 4px solid #212121;
+  font-weight: 600;
+  width: 45%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__big__emblem {
+  background-color: #212121;
+  float: left;
+  height: 4em;
+  width: 4em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__table__big__name {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: 600;
+  margin-left: 8px;
+  position: relative;
+  top: 50%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player {
+  padding-top: 50px;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__href {
+  position: absolute;
+  top: -74px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__header {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.carnage__player__header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__header__spartan {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  position: relative;
+  top: 3px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__header__name {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+  bottom: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__header__name__bloc {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f5f5f5;
+  font-size: 25px;
+  height: 70px;
+  left: 50%;
+  line-height: 70px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__containerHolder {
+  background-color: #eeeeee;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__container {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.carnage__player__container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__container__name {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__medals {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 57.62712%;
+  float: left;
+  margin-right: 1.69492%;
+  padding-bottom: 15px;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.carnage__player__medals:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__medal {
+  width: 18.36735%;
+  float: left;
+  margin-right: 2.04082%;
+  margin-bottom: 1.69492%;
+  text-align: center;
+}
+/* line 382, ../sass/pages/_carnage.scss */
+.carnage__player__medal:nth-of-type(5n) {
+  width: 18.36735%;
+  float: right;
+  margin-right: 0;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__medal__icon {
+  -moz-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  -webkit-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+  display: inline-block;
+  margin-bottom: -8px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__medal__name {
+  font-weight: 600;
+}
+/* line 397, ../sass/pages/_carnage.scss */
+.carnage__player__medal__count:before {
+  content: "x";
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapons {
+  width: 40.67797%;
+  float: right;
+  margin-right: 0;
+  padding-bottom: 15px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.carnage__player__weapon:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon__icon {
+  width: 28.57143%;
+  float: left;
+  margin-right: 2.04082%;
+  margin-right: 5.08475%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon__info {
+  width: 28.57143%;
+  float: left;
+  margin-right: 2.04082%;
+  height: 100%;
+  margin-right: 0;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon__info__name {
+  font-weight: 600;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon__stats {
+  width: 18.36735%;
+  float: left;
+  margin-right: 2.04082%;
+  height: 100%;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+}
+/* line 436, ../sass/pages/_carnage.scss */
+.carnage__player__weapon__stats:last-of-type {
+  width: 18.36735%;
+  float: right;
+  margin-right: 0;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon__stats__name {
+  font-weight: 600;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.carnage__player__weapon__holder {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+}
+
+/* line 1, ../sass/pages/_forum.scss */
+.forumBar {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.forumBar:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.forumBar__actions {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 76.5625%;
+  float: right;
+  margin-right: 0;
+  border-bottom: 1px solid #d6d6d6;
+  line-height: 53px;
+  left: 100%;
+  padding-right: 100%;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.forumBar__actions__link {
+  margin: 0 5px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.forumBar__filter {
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  display: block;
+  float: left;
+  padding: 0 8px;
+}
+/* line 21, ../sass/pages/_forum.scss */
+.forumBar__filter:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.forumBar__filter--active {
+  background-color: #ef5350;
+  color: #fafafa;
+}
+/* line 27, ../sass/pages/_forum.scss */
+.forumBar__filter--active:hover {
+  background-color: #ef5350;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.forumBar__filters {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 76.5625%;
+  float: right;
+  margin-right: 0;
+  border-bottom: 1px solid #d6d6d6;
+  left: 100%;
+  line-height: 35px;
+  margin-left: 5px;
+  overflow: hidden;
+  padding-right: 100%;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.forumBar__filters__name {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+/* line 48, ../sass/pages/_forum.scss */
+.forumBar__filters__name:first-of-type {
+  margin-left: 5px !important;
+}
+/* line 51, ../sass/pages/_forum.scss */
+.forumBar__filters__name:last-of-type {
+  margin-left: 25px;
+}
+
+/* line 58, ../sass/pages/_forum.scss */
+.topics {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.topics:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  width: 21.875%;
+  float: left;
+  margin-right: 1.5625%;
+  background-color: #fafafa;
+  position: relative;
+  top: -82px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__name {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px 10px;
+  text-align: center;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__list {
+  padding: 0 35px 7px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__item {
+  overflow: hidden;
+  *zoom: 1;
+  line-height: 1.1em;
+}
+/* line 82, ../sass/pages/_forum.scss */
+.topics__filters__item:hover .topics__filters__item__delete {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.topics__filters__item--lastOfficial {
+  margin-bottom: 0.45em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__item__link {
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  display: block;
+}
+/* line 94, ../sass/pages/_forum.scss */
+.topics__filters__item__link:hover {
+  color: #f44336;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__item__delete {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  cursor: pointer;
+  float: right;
+  height: 1.25em;
+  width: 1.25em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__item__delete__icon {
+  height: 1.25em;
+  width: 1.25em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__filters__item__delete__icon__path {
+  fill: #ef5350;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  overflow: hidden;
+  *zoom: 1;
+  -moz-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  width: 76.5625%;
+  float: right;
+  margin-right: 0;
+  background: #fafafa;
+  height: 65px;
+  margin: 7px 0;
+  position: relative;
+}
+/* line 127, ../sass/pages/_forum.scss */
+.topics__topic:first-of-type {
+  margin-top: 25px;
+}
+/* line 130, ../sass/pages/_forum.scss */
+.topics__topic:hover {
+  -moz-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  -webkit-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, -3px 0 0 #f44336 inset;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, -3px 0 0 #f44336 inset;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, -3px 0 0 #f44336 inset;
+}
+/* line 137, ../sass/pages/_forum.scss */
+.topics__topic:hover .topics__topic__actions {
+  -moz-transition-delay: 1.7s;
+  -o-transition-delay: 1.7s;
+  -webkit-transition-delay: 1.7s;
+  transition-delay: 1.7s;
+  max-width: 170px;
+  width: 170px;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.topics__topic--new {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, 3px 0 0 #f44336 inset;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, 3px 0 0 #f44336 inset;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, 3px 0 0 #f44336 inset;
+}
+/* line 150, ../sass/pages/_forum.scss */
+.topics__topic--new:hover {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, 3px 0 0 #f44336 inset, -3px 0 0 #f44336 inset;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, 3px 0 0 #f44336 inset, -3px 0 0 #f44336 inset;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6, 3px 0 0 #f44336 inset, -3px 0 0 #f44336 inset;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 50px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes__counter {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes__icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes__like {
+  cursor: pointer;
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 100%;
+}
+/* line 192, ../sass/pages/_forum.scss */
+.topics__topic__likes__like:hover .topics__topic__likes__like__path {
+  fill: #388e3c;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes__like__path {
+  -moz-transition: fill 0.1s;
+  -o-transition: fill 0.1s;
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes__dislike {
+  bottom: 4px;
+  cursor: pointer;
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 209, ../sass/pages/_forum.scss */
+.topics__topic__likes__dislike:hover .topics__topic__likes__dislike__path {
+  fill: #d32f2f;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__likes__dislike__path {
+  -moz-transition: fill 0.1s;
+  -o-transition: fill 0.1s;
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__author {
+  float: left;
+  height: 100%;
+  width: 53px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__author__avatar {
+  height: 53px;
+  width: 53px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__author__link {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  height: 100%;
+  margin-left: 8px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info__author {
+  color: #f44336;
+  font-weight: 600;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info__name {
+  display: inline-block;
+  font-size: 18px;
+  height: 20px;
+  max-width: 480px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info__name__icon {
+  display: inline-block;
+  height: 1.15em;
+  vertical-align: top;
+  width: 1.15em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info__post {
+  color: #616161;
+  font-size: 14px;
+  margin-top: 2px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info__tags {
+  display: inline-block;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__info__tag {
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  color: #8e8e8e;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+/* line 278, ../sass/pages/_forum.scss */
+.topics__topic__info__tag:hover {
+  color: #f44336;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -moz-transition: margin-right 0.2s ease;
+  -o-transition: margin-right 0.2s ease;
+  -webkit-transition: margin-right 0.2s ease;
+  transition: margin-right 0.2s ease;
+  float: right;
+  height: 100%;
+  margin-right: 10px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__last {
+  color: #616161;
+  font-size: 14px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__author {
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  color: inherit;
+  font-weight: 600;
+}
+/* line 302, ../sass/pages/_forum.scss */
+.topics__topic__meta__author:hover {
+  color: #f44336;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__counter {
+  font-size: 13px;
+  margin-top: 2px;
+  text-align: right;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__counter__icon {
+  color: #424242;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__counter__icon__icon {
+  bottom: 1px;
+  height: 1.2em;
+  position: relative;
+  vertical-align: middle;
+  width: 1.2em;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__counter__icon__icon--smaller {
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__meta__counter__value {
+  display: inline-block;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__actions {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -moz-transition: max-width 0.3s;
+  -o-transition: max-width 0.3s;
+  -webkit-transition: max-width 0.3s;
+  transition: max-width 0.3s;
+  background-color: #f44336;
+  color: #fafafa;
+  float: right;
+  font-size: 15px;
+  height: 100%;
+  max-width: 0px;
+  text-align: center;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topics__topic__action {
+  margin: 1px 8px 0;
+  white-space: nowrap;
+}
+
+/* line 354, ../sass/pages/_forum.scss */
+.topic {
+  border-bottom: 2px solid #eeeeee;
+  height: 65px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__info {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  height: 100%;
+  padding-left: 15px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__info__name {
+  font-size: 22px;
+  font-weight: 600;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__info__tags {
+  display: inline-block;
+  font-size: 14px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__info__tag {
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  color: #8e8e8e;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+/* line 381, ../sass/pages/_forum.scss */
+.topic__info__tag:hover {
+  color: #f44336;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__meta {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  height: 100%;
+  padding-right: 10px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__meta__counter {
+  font-size: 13px;
+  margin-top: 2px;
+  text-align: right;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__meta__counter__icon {
+  color: #424242;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__meta__counter__icon__icon {
+  bottom: 1px;
+  height: 1.2em;
+  position: relative;
+  vertical-align: middle;
+  width: 1.2em;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.topic__meta__counter__icon__icon--smaller {
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.topic__meta__counter__value {
+  display: inline-block;
+}
+
+/* line 424, ../sass/pages/_forum.scss */
+.post {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  overflow: hidden;
+  *zoom: 1;
+  width: 76.5625%;
+  float: right;
+  margin-right: 0;
+  background: #fafafa;
+  margin: 7px 0;
+  position: relative;
+}
+/* line 432, ../sass/pages/_forum.scss */
+.post:first-of-type {
+  margin-top: 25px;
+}
+/* line 435, ../sass/pages/_forum.scss */
+.post:nth-of-type(2) {
+  margin-top: 2em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__header {
+  border-bottom: 1px solid #eeeeee;
+  height: 65px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__footer {
+  border-top: 1px solid #eeeeee;
+  height: 65px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 50px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes__counter {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes__icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes__like {
+  cursor: pointer;
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 100%;
+}
+/* line 480, ../sass/pages/_forum.scss */
+.post__likes__like:hover .topics__topic__likes__like__path {
+  fill: #388e3c;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes__like__path {
+  -moz-transition: fill 0.1s;
+  -o-transition: fill 0.1s;
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes__dislike {
+  bottom: 4px;
+  cursor: pointer;
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 497, ../sass/pages/_forum.scss */
+.post__likes__dislike:hover .topics__topic__likes__dislike__path {
+  fill: #d32f2f;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__likes__dislike__path {
+  -moz-transition: fill 0.1s;
+  -o-transition: fill 0.1s;
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__author {
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 53px;
+}
+/* line 518, ../sass/pages/_forum.scss */
+.post__author--banned .post__author__avatar {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__author__avatar {
+  height: 53px;
+  width: 53px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__author__info {
+  margin-left: 10px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__author__info__name {
+  font-weight: 600;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__author__info__op {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ef5350;
+  color: #fafafa;
+  cursor: default;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 0.5em;
+  padding: 3px 5px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__author__info__quote {
+  color: #616161;
+  font-size: 15px;
+  white-space: nowrap;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__meta {
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  height: 100%;
+  margin-right: 10px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__meta__date {
+  font-size: 15px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__meta__link {
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  font-size: 14px;
+  margin-left: 0.2em;
+}
+/* line 570, ../sass/pages/_forum.scss */
+.post__meta__link:hover {
+  color: #f44336;
+}
+/* line 573, ../sass/pages/_forum.scss */
+.post__meta__link:hover .post__meta__link__icon__path {
+  fill: #f44336;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__meta__link__icon {
+  bottom: 1px;
+  height: 1.1em;
+  position: relative;
+  vertical-align: middle;
+  width: 1.1em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__meta__link__icon__path {
+  -moz-transition: fill 0.1s;
+  -o-transition: fill 0.1s;
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__content {
+  line-height: 1.1em;
+  padding: 8px;
+}
+/* line 595, ../sass/pages/_forum.scss */
+.post__content *:first-child {
+  margin-top: 0;
+}
+/* line 598, ../sass/pages/_forum.scss */
+.post__content *:last-child {
+  margin-bottom: 0;
+}
+/* line 601, ../sass/pages/_forum.scss */
+.post__content * {
+  max-width: 100%;
+}
+/* line 604, ../sass/pages/_forum.scss */
+.post__content h1, .post__content h2, .post__content h3, .post__content h4, .post__content h5, .post__content p, .post__content ul, .post__content div {
+  margin: 5px 0;
+}
+/* line 607, ../sass/pages/_forum.scss */
+.post__content a {
+  color: #f44336;
+}
+/* line 610, ../sass/pages/_forum.scss */
+.post__content h1 {
+  border-bottom: 1px solid #eeeeee;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+/* line 618, ../sass/pages/_forum.scss */
+.post__content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+}
+/* line 623, ../sass/pages/_forum.scss */
+.post__content h3 {
+  border-bottom: 1px solid #eeeeee;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+/* line 631, ../sass/pages/_forum.scss */
+.post__content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+}
+/* line 636, ../sass/pages/_forum.scss */
+.post__content h5 {
+  font-weight: 600;
+}
+/* line 639, ../sass/pages/_forum.scss */
+.post__content ul {
+  list-style-type: square;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__mod {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  *zoom: 1;
+  background-color: #ef5350;
+  margin: auto !important;
+  width: 95%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__mod__icon {
+  display: table-cell;
+  margin: 0 !important;
+  padding: 8px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__mod__icon__icon {
+  width: 1.35em;
+  height: 1.35em;
+  position: relative;
+  top: 2px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__mod__icon__path {
+  fill: #fafafa;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.post__mod__note {
+  color: #fafafa;
+  display: table-cell;
+  margin: 0 !important;
+  padding: 8px;
+  padding-left: 4px;
+  vertical-align: middle;
+}
+
+/* line 680, ../sass/pages/_forum.scss */
+.poll {
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.poll__question {
+  font-size: 1.1em;
+  margin-top: 0.5em;
+  text-align: center;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.poll__container {
+  margin: 0.75em auto 0;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.poll__answer {
+  text-align: center;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.poll__bar {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffcdd2;
+  height: 6px;
+  margin: 0.5em auto;
+  position: relative;
+  width: 40%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.poll__bar__value {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: width 1s ease;
+  -o-transition: width 1s ease;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  background-color: #ef5350;
+  height: 100%;
+  width: 0;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.poll__meta {
+  color: #616161;
+  font-size: 15px;
+  margin: 0px 5px 5px;
+  text-align: right;
+}
+
+/* line 1, ../sass/pages/_landingPage.scss */
+.splash {
+  -moz-transition: padding 0.2s;
+  -o-transition: padding 0.2s;
+  -webkit-transition: padding 0.2s;
+  transition: padding 0.2s;
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  padding: 1.5em 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 1, ../sass/pages/_landingPage.scss */
+  .splash {
+    padding: 4em 0;
+  }
+}
+@media (min-width: 992px) {
+  /* line 16, ../sass/pages/_landingPage.scss */
+  .splash:not(.alt) {
+    padding: 7em 0 8em;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.splash__title {
+  -moz-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .splash__title {
+    font-size: 26px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .splash__title {
+    font-size: 32px;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.splash__subTitle {
+  -moz-transition: font-size 0.2s, margin 0.2s;
+  -o-transition: font-size 0.2s, margin 0.2s;
+  -webkit-transition: font-size 0.2s, margin 0.2s;
+  transition: font-size 0.2s, margin 0.2s;
+  font-size: 18px;
+  font-weight: 100;
+  margin: 0.5em 0;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .splash__subTitle {
+    font-size: 20px;
+    margin: 0.25em 0px 0.5em;
+  }
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .splash__subTitle {
+    font-size: 24px;
+    margin: 10px 0 0;
+  }
+}
+
+/* line 48, ../sass/pages/_landingPage.scss */
+.landingFeature {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.landingFeature:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.landingFeature__name {
+  -moz-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .landingFeature__name {
+    font-size: 30px;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.landingFeature__name__sup {
+  font-size: 55%;
+  position: relative;
+  top: 2px;
+  vertical-align: top;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.landingFeature__subName {
+  -moz-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .landingFeature__subName {
+    font-size: 18px;
+  }
+}
+
+/* line 83, ../sass/pages/_landingPage.scss */
+.landingFeatures {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.landingFeatures:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.landingFeatures__column {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .landingFeatures__column {
+    width: 31.03448%;
+    float: left;
+    margin-right: 3.44828%;
+  }
+  /* line 91, ../sass/pages/_landingPage.scss */
+  .landingFeatures__column:last-child {
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.landingFeatures__column__name {
+  -moz-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .landingFeatures__column__name {
+    font-size: 30px;
+  }
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.landingFeatures__column__subName {
+  -moz-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/helpers/_mixins.scss */
+  .landingFeatures__column__subName {
+    font-size: 18px;
+  }
+}
+
+/* line 1, ../sass/pages/_user.scss */
+.user {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.user:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__main {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 2em;
+  margin-left: 10px;
+  padding-top: 0.25em;
+  text-transform: uppercase;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__title__user {
+  text-transform: none;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__awards {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  background: #fafafa;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__awards__container {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-transition: padding-bottom 0.2s;
+  -o-transition: padding-bottom 0.2s;
+  -webkit-transition: padding-bottom 0.2s;
+  transition: padding-bottom 0.2s;
+  margin-top: 8px;
+}
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.user__awards__container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 34, ../sass/pages/_user.scss */
+.user__awards__container:hover {
+  padding-bottom: 15px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__awards__award {
+  width: 6.77966%;
+  float: left;
+  margin-right: 1.69492%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  margin-right: 0%;
+  margin-left: 2.11864%;
+  margin-bottom: 1.69492%;
+}
+/* line 46, ../sass/pages/_user.scss */
+.user__awards__award:hover + .user__awards__award__description {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 30, ../sass/helpers/_mixins.scss */
+.user__awards__award--unlocked {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__awards__award__description {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  bottom: 5px;
+  cursor: default;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__awards__award__description__title {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  margin-right: 0.3em;
+  text-transform: uppercase;
+}
+/* line 70, ../sass/pages/_user.scss */
+.user__awards__award__description__title:after {
+  bottom: 1px;
+  content: "|";
+  font-family: "Source Sans Pro", sans-serif;
+  margin-left: 0.3em;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__profile {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  background: #fafafa;
+  margin-bottom: 1.12994%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__profile__bloc {
+  padding: 0 10px 10px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__profile__avatar {
+  width: 80px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+  background: #fafafa;
+  overflow: hidden;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__spartan {
+  height: 336px;
+  position: relative;
+  right: 18px;
+  top: 3px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__emblem {
+  left: 120px;
+  position: absolute;
+  top: 40px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__stats {
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 130px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__stats__box {
+  margin: 5px 0;
+  text-align: center;
+}
+/* line 134, ../sass/pages/_user.scss */
+.user__player__stats__box:last-of-type {
+  margin-bottom: 80px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__stats__title {
+  color: #ef5350;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 1px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__stats__description {
+  font-size: 14px;
+  position: relative;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__stats__description__value {
+  font-size: 16px;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__player__more {
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  left: 50%;
+  position: absolute;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__description {
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.05), 0 3px 0 #d6d6d6;
+  background: #fafafa;
+  margin-bottom: 1.69492%;
+}
+/* line 21, ../sass/helpers/_mixins.scss */
+.user__description__text {
+  padding: 0 10px 10px;
+}
