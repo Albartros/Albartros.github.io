@@ -1,0 +1,76 @@
+html{
+  height: 100%;
+}
+
+body {
+    background-attachment: fixed;
+    background-color: transparent;
+    background-image: url('background_720.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #f5f5f5;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: default;
+}
+
+@media only screen and (min-width: 1281px) {
+    body {
+        background-image: url("background_1080.jpg");
+    }
+}
+
+@media only screen and (min-width: 2560px) { 
+    body {
+        background-image: url("background_1440.jpg");
+    }
+}
+
+@media only screen and (min-width: 4096px) { 
+    body {
+        background-image: url("background_4K.jpg");
+    }
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    max-width: 800px;
+    padding: 10px 25px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: "Poiret One", cursive;
+    font-size: 4em;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p {
+    letter-spacing: 0.2px;
+    margin: 0;
+    word-spacing: 1px;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: inherit;
+}
