@@ -50,6 +50,7 @@ h1 {
 }
 
 p {
+    font-size: 0.9em;
     left: 50%;
     letter-spacing: 0.2px;
     margin: 0;
@@ -93,6 +94,7 @@ a {
                 transform: translate(0, 0);
     }
     p {
+        font-size: 1em;
         left: 0;
         position: relative;
         text-align: left;
