@@ -48,11 +48,15 @@
         <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script>
             var animated = $(".animated").hide();
+            var i = 0;
             $( window ).load(function() {
-                animated.get(0).show().addClass("flipInX");
-                animated.get(1).show().addClass("bounceInLeft");
-                animated.get(2).show().addClass("bounceInRight");
-            })
+                animated.each(function(e) {
+                    if (i == 0) { e.addClass("flipInX") };
+                    if (i == 1) { e.addClass("bounceInLeft") };
+                    if (i == 2) { e.addClass("bounceInRight") };
+                    i++;
+                });
+            });
         </script>
     </body>
 </html>
