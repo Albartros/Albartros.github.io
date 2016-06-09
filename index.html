@@ -49,9 +49,9 @@
         <script>
             var animated = $(".animated").hide();
             $( window ).load(function() {
-                animated[0].show().addClass("flipInX");
-                animated[1].show().addClass("bounceInLeft");
-                animated[2].show().addClass("bounceInRight");
+                animated.get(0).show().addClass("flipInX");
+                animated.get(1).show().addClass("bounceInLeft");
+                animated.get(2).show().addClass("bounceInRight");
             })
         </script>
     </body>
