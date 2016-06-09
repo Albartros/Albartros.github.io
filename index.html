@@ -47,15 +47,16 @@
         </div>
         <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script>
-            var animated = $(".animated").hide();
+            var animated = $(".animated");
+            var container = $(".container").first().hide();
             var i = 0;
             $( window ).load(function() {
                 setTimeout(functin() { 
-                    animated.show(); 
+                    container.show(); 
                 }, 50);
             }).resize(function() {
                 if (window.matchMedia("(max-width: 1280px)").matches) {
-                  animated.removeClass("animated");
+                    animated.removeClass("animated");
                 } else {
                     animated.addClass("animated");
                 };
