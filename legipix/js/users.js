@@ -1,7 +1,7 @@
 data = [
     {
         "name": "Albartros98",
-        "catchphrase": "Le fondateur dont vous avez besoin :smirk:",
+        "catchphrase": "Je suis le meilleur admin :lying_face:",
         "role": "Fondateur - Administrateur - Vidéaste",
         "description_1": "Je suis le Fondateur de ce groupe, et ce depuis 2009 ! :sunglasses: J'ai même pas prit une ride depuis. Au départ, je voulais organiser des courses tranquillement, puis les choses ont dégénéré et me voilà encore là à 22 ans :stuck_out_tongue_winking_eye:.",
         "description_2": "Je m'occupe principalement de maintenir les activités du site et réalise plusieurs vidéos pour la chaîne :film_frames:.",
@@ -36,9 +36,9 @@ data = [
     },
     {
         "name": "Mugen153",
-        "catchphrase": "-",
+        "catchphrase": "Respect. Loyauté. Honneur.",
         "role": "Community Manager",
-        "description_1": "Bras droit de Legipix et mastodonte autoproclamé de l’équipe, je suis présent depuis 2011. L'aventure a commencé avec l'époque des courses sur Halo Reach et a continué jusqu'à aujourd'hui... La Legipix a laissée son empreinte sur la quasi-totalité des jeux de la saga :tada:",
+        "description_1": "Bras droit de Legipix et mastodonte autoproclamé de l’équipe, je suis présent depuis 2011 :tada:.",
         "description_2": "Je me charge de toutes les relations que l'équipe entretient avec l’extérieur et j'aide à la gestion du groupe en lui même. Si vous avez des questions ou des demandes, c'est à moi qu'il faudra s'adresser :smirk:.",
         "lang": ":flag_fr: :flag_gb: :flag_de:",
         "spartanURL": "https://haloplayer.svc.halowaypoint.com/h5/profiles/Mugen153/spartan?size=512&crop=Full",
