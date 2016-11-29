@@ -46,15 +46,15 @@ data = [
         "games": [
             {
                 "name": "Halo 5 : Guardians",
+                "image": "dh.png"
+            },
+            {
+                "name": "Halo 5 : Guardians",
+                "image": "mgs.png"
+            },
+            {
+                "name": "Halo 5 : Guardians",
                 "image": "h5.png"
-            },
-            {
-                "name": "Halo 5 : Guardians",
-                "image": "mcc.png"
-            },
-            {
-                "name": "Halo 5 : Guardians",
-                "image": "tw3.png"
             }
         ],
         "contacts": [
