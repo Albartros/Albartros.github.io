@@ -8,6 +8,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
         <link href="./css.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Poiret+One" rel="stylesheet" type="text/css">
 
         <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
@@ -31,9 +32,9 @@
 
     <body>
         <div class="container">
-            <h1>Albartros98</h1>
-            <p>Fondateur de <a target="_blank" href="http://www.legipix.net/">legipix.net</a><br>Bisous</p>
-            <a target="_blank" class="youtube_url" href="http://www.youtube.com/user/albartros98/">
+            <h1 class="animated flipInX">Albartros98</h1>
+            <p class="animated bounceInLeft">Fondateur de <a target="_blank" href="http://www.legipix.net/">legipix.net</a><br>Bisous</p>
+            <a target="_blank" class="youtube_url animated bounceInRight" href="http://www.youtube.com/user/albartros98/">
                 <svg shape-rendering="geometricPrecision" class="svg" version="1.1" viewBox="0 0 80 32" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
                     <path class="path" d="M10.75 5.294c0.007-0.027 0.011-0.046 0.012-0.056l0.033-0.236-1.48-0.008c-1.337-0.008-1.746 0-1.783 0.034-0.018 0.016-0.479 1.77-1.302 4.946-0.392 1.515-0.723 2.725-0.734 2.689s-0.481-1.766-1.044-3.843c-0.563-2.078-1.034-3.789-1.048-3.803-0.019-0.019-1.812-0.028-3.263-0.016-0.21 0.002-0.327-0.41 1.876 6.598 0.305 0.97 0.762 2.344 1.015 3.052 0.292 0.817 0.5 1.448 0.642 1.974 0.251 1.002 0.26 1.63 0.205 2.363-0.063 0.847-0.073 6.826-0.011 6.926 0.047 0.077 2.851 0.112 3.116 0.040 0.042-0.012 0.071-0.053 0.090-0.279 0.066-0.194 0.071-0.968 0.071-4.18v-4.103l0.179-0.566c0.117-0.37 0.413-1.344 0.656-2.163s0.538-1.801 0.654-2.18c1.057-3.447 2.067-6.838 2.094-7.032l0.022-0.158z"></path>
                     <path class="path" d="M26.441 10.27l-0.001 0.214-0.033 0-0.019 5.906-0.018 5.726-0.458 0.467c-0.513 0.522-0.925 0.722-1.297 0.629-0.405-0.102-0.395 0.056-0.429-6.712l-0.031-6.23h-2.947v0.214h-0.034v6.759c0 7.242-0 7.237 0.367 7.965 0.293 0.579 0.719 0.861 1.45 0.958h0c0.962 0.128 2-0.308 2.962-1.244l0.418-0.407v0.701c0 0.606 0.017 0.706 0.127 0.737 0.18 0.050 2.412 0.053 2.653 0.004l0.2-0.041v-0.207l0.034-0.007v-15.472l-2.944 0.039z"></path>
@@ -44,5 +45,20 @@
             </svg>
             </a>
         </div>
+        <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+            var animated = $(".animated");
+            var container = $(".container").first().hide();
+            var i = 0;
+            $( window ).load(function() {
+                container.show()
+            }).resize(function() {
+                if (window.matchMedia("(max-width: 1279px)").matches) {
+                    animated.removeClass("animated");
+                } else {
+                    animated.addClass("animated");
+                };
+            }).resize();
+        </script>
     </body>
 </html>
