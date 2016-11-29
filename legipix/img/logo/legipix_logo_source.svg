@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="56.279911mm"
+   height="13.879689mm"
+   viewBox="0 0 199.41701 49.179999"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="legipix_logo_source.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#323232"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4"
+     inkscape:cx="161.98273"
+     inkscape:cy="-9.6735927"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-text-baseline="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-168.15014,-383.20481)">
+    <g
+       id="g3347"
+       transform="matrix(0.27245783,0,0,0.27245783,166.94039,252.45235)">
+      <g
+         transform="translate(0,-10.804914)"
+         id="g4220">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:91.48232269px;line-height:125%;font-family:sans-serif;letter-spacing:3.65929294px;word-spacing:0px;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="256.99472"
+           y="613.47632"
+           id="text3365"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3367"
+             x="256.99472"
+             y="613.47632"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#fafafa;fill-opacity:1">LEGIPIX</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:91.48232269px;line-height:125%;font-family:sans-serif;letter-spacing:3.65929294px;word-spacing:0px;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="618.1109"
+           y="613.44147"
+           id="text3369"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3371"
+             x="618.1109"
+             y="613.44147"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:73.18585968px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;fill:#fafafa;fill-opacity:1">.net</tspan></text>
+      </g>
+      <g
+         transform="matrix(2.3221322,0,0,2.3221322,16.52687,457.85467)"
+         id="g4178-2">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4164-6"
+           d="m 23.28278,14.640866 c -6.661002,0 -12.062914,5.402225 -12.062914,12.06796 0,6.661007 5.401912,12.062913 12.062914,12.062913 3.072614,0 5.873982,-1.148684 8.00297,-3.038018 -1.062752,-0.511499 -4.760906,-2.490935 -7.748114,-6.598353 0,0 6.732468,2.157484 11.333678,0.920997 0.30658,-1.063434 0.47522,-2.185488 0.47522,-3.347539 0,-6.665735 -5.398016,-12.06796 -12.063754,-12.06796 z"
+           style="fill:#fafafa" />
+        <path
+           style="fill:#fafafa"
+           inkscape:connector-curvature="0"
+           d="M 14.20251,9.4934849 C 4.1719973,13.557927 -4.5029038,37.415105 22.60677,41.485457 c 27.109686,4.065624 34.70082,30.091529 34.70082,30.091529 0,0 -20.874144,-20.874144 -47.17543,-18.43477 C -16.16439,55.581591 -4.5029038,9.7629507 14.20251,9.4934849 Z"
+           id="path4166-8" />
+        <path
+           style="fill:#ef5350"
+           inkscape:connector-curvature="0"
+           d="m 56.014628,46.407936 c -4.143634,5.225036 -3.261958,12.812625 1.959528,16.950343 5.226226,4.138901 12.81263,3.257227 16.951534,-1.963082 4.13889,-5.22149 3.257224,-12.812626 -1.964262,-16.946798 -5.221496,-4.142447 -12.81263,-3.260773 -16.9468,1.959537 z"
+           id="path4168-4" />
+        <path
+           style="fill:#ef5350"
+           inkscape:connector-curvature="0"
+           d="m 83.27558,46.04983 c 5.339686,9.418301 -2.674568,33.505944 -26.452556,19.850647 -23.779182,-13.645843 -45.888378,2.037539 -45.888378,2.037539 0,0 29.329234,-3.399051 48.419936,14.851348 C 78.455924,101.03268 97.773562,57.879141 83.27558,46.04983 Z"
+           id="path4170-6" />
+      </g>
+    </g>
+  </g>
+</svg>
