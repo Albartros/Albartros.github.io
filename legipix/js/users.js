@@ -16,7 +16,7 @@ data = [
                 "image": "tw3.png"
             },
             {
-                "image": "mcc.png"
+                "image": "re4.png"
             }
         ],
         "contacts": [
