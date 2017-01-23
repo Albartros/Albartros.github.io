@@ -55,7 +55,7 @@
 
       <div class="splash__more">
         <span class="splash__more__text">Qui sommes nous ?</span>
-        <a href="#more" class="splash__more__button"><i class="fa fa-angle-double-down animated flash" aria-hidden="true"></i></a>
+        <a href="#more" class="splash__more__button scrollTo"><i class="fa fa-angle-double-down animated flash" aria-hidden="true"></i></a>
       </div>
 
     </section>
@@ -109,6 +109,17 @@
       <span><strong>Site codé avec <i class="fa fa-heart" aria-hidden="true"></i> par <a target="_blank" href="/albartros98">Albartros98</a></strong></span>
       <span><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:legipix@gmail.com">legipix@gmail.com</a></span>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.scrollTo').on('click', function() {
+          var page = $(this).attr('href');
+          var speed = 750;
+          $('html, body').animate( { scrollTop: $(page).offset().top }, speed );
+          return false;
+        });
+      });
+    </script>
   </body>
 
 </html> 
