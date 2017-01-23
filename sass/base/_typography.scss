@@ -1,0 +1,22 @@
+body {
+  @include default-font();
+  color: $font-color;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+  outline: 0;
+  text-decoration: none;
+
+  &:active, &:visited {
+    text-decoration: none;
+  }
+}

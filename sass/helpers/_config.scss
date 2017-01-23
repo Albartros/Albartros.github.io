@@ -1,0 +1,48 @@
+/**
+ * Configuration de Susy
+ */
+$sl-columns: 12;
+$sl-gutters: 1/4;
+$sl-math: fluid;
+$sl-output: float;
+$sl-width: 1150px;
+
+$susy: (
+  columns: $sl-columns,
+  container: $sl-width,
+  gutters: $sl-gutters,
+  math: $sl-math,
+  output: $sl-output
+);
+
+/**
+ * Définition des couleurs
+ */
+$background-color: #EEE;
+
+$primary-color: #EF5350; // #2185D0 si thème Bleu.
+$secondary-color: #323232;
+
+$font-color: #212121;
+$font-alt-color: #FAFAFA;
+
+$button-background-color: $primary-color;
+$button-alt-background-color: #C9C9C9;
+
+$svg-path-fill-color: $font-color;
+
+/**
+ * Configuration des polices
+ */
+$font-default-line-height: 1;
+$font-default-size: 16px;
+$font-default-style: normal;
+$font-default-weight: 400;
+
+/**
+ * Configuration des boutons
+ */
+$button-height: 36px;
+$button-small-height: 1.9em;
+$button-padding: 0 8px;
+$button-radius: 3px;

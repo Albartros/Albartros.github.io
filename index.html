@@ -61,39 +61,40 @@
     <section id="more" class="crew">
       <div class="crew__centerer">
         <h1 class="crew__header">Rencontrez nos Membres</h1>
-        <div class="crew__pictures">
+        <ul id="crew" class="crew__pictures">
 
-          <div class="crew__pictures__container">
+          <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=aedlium25" class="crew__picture">
               <span class="crew__picture__name">Aedlium25</span>
               <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KIFXxmxGDtE9Vkd62rOpb7JXOjBD9G2Ei4YyB95G.AFXhX1EfzUEAJ7o8zwnjYKrUp&format=png&h=640&w=640" alt="Aedlium25">
             </a>
-          </div>
-          <div class="crew__pictures__container">
+          </li>
+          <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=Albartros98" class="crew__picture">
               <span class="crew__picture__name">Albartros98</span>
               <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KIIvpIMvvdBwycQWRfj9PbngQN2wkIBs8.VWUhpFM.T19wrEutnO84Mnpu8hgBEeJd&format=png&h=640&w=640" alt="Albartros98">
             </a>
-          </div>
-          <div class="crew__pictures__container">
+          </li>
+          <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=Atoxiel" class="crew__picture">
               <span class="crew__picture__name">Atoxiel</span>
               <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcS9jr0n8i7LY1tL3U7AiafZUeefzswO1DSHyzK.VegoaZyifD9AKVjER13c5fkvWK&format=png&h=640&w=640" alt="Atoxiel">
             </a>
-          </div>
-          <div class="crew__pictures__container">
+          </li>
+          <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=molant" class="crew__picture">
               <span class="crew__picture__name">Molant</span>
               <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KIbgsfD63mXFU_1J9M4K4P9JlD1k.UfUzddEoS7yMLhGXCGNoSGMT22HhEnFNIpxJQ&format=png&h=640&w=640" alt="Molant">
             </a>
-          </div>
-          <div class="crew__pictures__container">
+          </li>
+          <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=Mugen153" class="crew__picture">
               <span class="crew__picture__name">Mugen153</span>
               <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=Hr2eiH8yWKd4q_oa.xgbMr1gzNE.aPzuPi_MGWqeXFsC.q4P0ohmefxYuuNiFeWfTeWjF9anDvdZIIyaNa7FdpQmL.L.F48GpIncQb_Zk1D9BeXszAWD.W8.A8YM9VNYWFx2nInDeHsqSD60OXWreoFlzClrGVCP5MyHScVFyfg-&format=png&h=640&w=640" alt="Mugen153">
             </a>
-          </div>
-        </div>
+          </li>
+
+        </ul>
         <div class="crew__center">
           <h2 class="crew__quote">Le Sang de Leurs Morts ils vont Manger.</h2>
           <div class="crew__presentation">
@@ -112,12 +113,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
+        // Smooth Scroll
         $('.scrollTo').on('click', function() {
           var page = $(this).attr('href');
           var speed = 750;
           $('html, body').animate( { scrollTop: $(page).offset().top }, speed );
           return false;
         });
+        // Shuffle Crew
+        var $ul = $('#crew');
+        $ul.children('li').sort( function() {
+          return ( Math.round( Math.random() ) - 0.5 )
+        }).appendTo($ul);
       });
     </script>
   </body>

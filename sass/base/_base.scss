@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  @include box-sizing(inherit);
+}
+
+html {
+  @include box-sizing(border-box);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  height: 100%;
+  position: relative;
+}
+
+svg {
+  display: inline-block;
+}
+
+path {
+  fill: $svg-path-fill-color;
+}
+
+.hidden {
+  @include opacity(0);
+  left: -9999px;
+  position: absolute;
+}
+
+footer {
+  @include b(m) {
+    line-height: 1;
+  }
+  display: block;
+  margin: 2em 0 1em;
+  text-align: center;
+  line-height: 1.25;
+
+  span {
+    @include b(m) {
+      display: inline;
+      margin: 0 0.7em;
+    }
+    display: block;
+  }
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
