@@ -103,7 +103,7 @@
             var animated = $(".animated");
             var container = $(".container").first().hide();
             var $button = $(".code__button__button");
-            var i = 0;
+            var i = 0; var sequence = "";
             $(document).ready(function() {
                 container.show();
                 // Shuffle
@@ -115,15 +115,16 @@
                 $button.click(function(event) {
                     var $this = $(this);
                     if ( ! $this.hasClass("active")) {
-                        $(this).addClass("active");
-                        i++;
+                        i++; sequence += $this.data("value");
+                        $this.addClass("active");
                         if (i >= 6) {
+                            $shuffle = $("#shuffle");
                             $button.removeClass("active");
-                            $("#shuffle").addClass("false animated shake");
+                            $shuffle.addClass("false animated shake");
                             setTimeout(function(){
-                                $("#shuffle").removeClass("false animated shake");
+                                $shuffle.removeClass("false animated shake");
                             }, 1000); 
-                            i = 0;
+                            i = 0; sequence = "";
                         }
                     }
                 });
