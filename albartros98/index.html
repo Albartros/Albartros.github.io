@@ -7,7 +7,8 @@
         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
-        <link href="./css.css" rel="stylesheet" type="text/css">
+        <link href="../css/app.css" rel="stylesheet" type="text/css">
+        <link href="../css/legacy.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Poiret+One" rel="stylesheet" type="text/css">
 
@@ -31,7 +32,7 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="container code__header">
             <h1 class="animated flipInX">Albartros98</h1>
             <p class="animated bounceInLeft">Fondateur de <a target="_blank" href="http://www.legipix.net/">legipix.net</a><br>Bisous</p>
             <a target="_blank" class="youtube_url animated bounceInRight" href="http://www.youtube.com/user/albartros98/">
@@ -45,13 +46,88 @@
             </svg>
             </a>
         </div>
+
+        <div class="code__container">
+            <ul id="shuffle" class="code__buttons">
+            <!--<ul id="shuffle" class="code__buttons false animated shake">-->
+                <li class="code__button">
+                    <button data-value="1" class="code__button__button">
+                        <svg class="animated fadeIn" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 11.016q0.422 0 0.703 0.281t0.281 0.703-0.281 0.703-0.703 0.281-0.703-0.281-0.281-0.703 0.281-0.703 0.703-0.281zM12 16.5q1.875 0 3.188-1.313t1.313-3.188-1.313-3.188-3.188-1.313-3.188 1.313-1.313 3.188 1.313 3.188 3.188 1.313zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li class="code__button">
+                    <button data-value="2" class="code__button__button">
+                        <svg class="animated fadeIn" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z"></path>
+                            <path transform="scale(0.75), translate(4,4), rotate(45, 12, 12)" d="M12 18.984q2.906 0 4.945-2.039t2.039-4.945-2.039-4.945-4.945-2.039-4.945 2.039-2.039 4.945 2.039 4.945 4.945 2.039zM20.953 11.016h2.063v1.969h-2.063q-0.328 3.141-2.578 5.391t-5.391 2.578v2.063h-1.969v-2.063q-3.141-0.328-5.391-2.578t-2.578-5.391h-2.063v-1.969h2.063q0.328-3.141 2.578-5.391t5.391-2.578v-2.063h1.969v2.063q3.141 0.328 5.391 2.578t2.578 5.391zM12 8.016q1.641 0 2.813 1.172t1.172 2.813-1.172 2.813-2.813 1.172-2.813-1.172-1.172-2.813 1.172-2.813 2.813-1.172z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li class="code__button">
+                    <button data-value="3" class="code__button__button">
+                        <svg class="animated fadeIn" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.219 18l-1.125-4.828 3.75-3.234-4.922-0.422-1.922-4.5-1.922 4.547-4.922 0.375 3.75 3.234-1.125 4.828 4.219-2.531zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li class="code__button">
+                    <button data-value="4" class="code__button__button">
+                        <svg class="animated fadeIn" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93zM12 6.984q2.063 0 3.539 1.477t1.477 3.539-1.477 3.539-3.539 1.477-3.539-1.477-1.477-3.539 1.477-3.539 3.539-1.477z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li class="code__button">
+                    <button data-value="5" class="code__button__button">
+                        <svg class="animated fadeIn" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z"></path>
+                            <path transform="scale(0.825), translate(2.5,2.5)" d="M12 15.516q1.453 0 2.484-1.031t1.031-2.484-1.031-2.484-2.484-1.031-2.484 1.031-1.031 2.484 1.031 2.484 2.484 1.031zM19.453 12.984l2.109 1.641q0.328 0.234 0.094 0.656l-2.016 3.469q-0.188 0.328-0.609 0.188l-2.484-0.984q-0.984 0.703-1.688 0.984l-0.375 2.625q-0.094 0.422-0.469 0.422h-4.031q-0.375 0-0.469-0.422l-0.375-2.625q-0.891-0.375-1.688-0.984l-2.484 0.984q-0.422 0.141-0.609-0.188l-2.016-3.469q-0.234-0.422 0.094-0.656l2.109-1.641q-0.047-0.328-0.047-0.984t0.047-0.984l-2.109-1.641q-0.328-0.234-0.094-0.656l2.016-3.469q0.188-0.328 0.609-0.188l2.484 0.984q0.984-0.703 1.688-0.984l0.375-2.625q0.094-0.422 0.469-0.422h4.031q0.375 0 0.469 0.422l0.375 2.625q0.891 0.375 1.688 0.984l2.484-0.984q0.422-0.141 0.609 0.188l2.016 3.469q0.234 0.422-0.094 0.656l-2.109 1.641q0.047 0.328 0.047 0.984t-0.047 0.984z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li class="code__button">
+                    <button data-value="6" class="code__button__button">
+                        <svg class="animated fadeIn" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.984 17.484q1.031 0 1.781-0.727t0.75-1.758-0.75-1.758-1.781-0.727-1.758 0.727-0.727 1.758 0.727 1.758 1.758 0.727zM9.516 8.016q0 1.031 0.727 1.758t1.758 0.727 1.758-0.727 0.727-1.758-0.727-1.781-1.758-0.75-1.758 0.75-0.727 1.781zM8.016 17.484q1.031 0 1.758-0.727t0.727-1.758-0.727-1.758-1.758-0.727-1.781 0.727-0.75 1.758 0.75 1.758 1.781 0.727zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+
         <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script>
             var animated = $(".animated");
             var container = $(".container").first().hide();
+            var $button = $(".code__button__button");
             var i = 0;
-            $( window ).load(function() {
-                container.show()
+            $(document).ready(function() {
+                container.show();
+                // Shuffle
+                var $ul = $('#shuffle');
+                $ul.children('li').sort( function() {
+                    return ( Math.round( Math.random() ) - 0.5 )
+                }).appendTo($ul);
+                // Buttons
+                $button.click(function(event) {
+                    var $this = $(this);
+                    if ( ! $this.hasClass("active")) {
+                        $(this).addClass("active");
+                        i++;
+                        if (i >= 6) {
+                            $button.removeClass("active");
+                            $("#shuffle").addClass("false animated shake");
+                            setTimeout(function(){
+                                $("#shuffle").removeClass("false animated shake");
+                            }, 1000); 
+                            i = 0;
+                        }
+                    }
+                });
+
             }).resize(function() {
                 if (window.matchMedia("(max-width: 1279px)").matches) {
                     animated.removeClass("animated");

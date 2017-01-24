@@ -30,6 +30,10 @@
     @media (min-height: 1080px) {
       @content;
     }
+  } @else if $point == xxl {
+    @media (min-width: 1280px) {
+      @content;
+    }
   }
 }
 

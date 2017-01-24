@@ -10,7 +10,7 @@
 
     <!-- Styles -->
     <link href="css/app.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:100|Source+Sans+Pro:300,400,600" rel="stylesheet"> 
 
     <!-- Favicons -->
@@ -61,7 +61,7 @@
     <section id="more" class="crew">
       <div class="crew__centerer">
         <h1 class="crew__header">Rencontrez nos Membres</h1>
-        <ul id="crew" class="crew__pictures">
+        <ul id="shuffle" class="crew__pictures">
 
           <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=aedlium25" class="crew__picture">
@@ -90,7 +90,7 @@
           <li class="crew__pictures__container">
             <a target="blank" href="https://account.xbox.com/fr-FR/Profile?GamerTag=Mugen153" class="crew__picture">
               <span class="crew__picture__name">Mugen153</span>
-              <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=Hr2eiH8yWKd4q_oa.xgbMr1gzNE.aPzuPi_MGWqeXFsC.q4P0ohmefxYuuNiFeWfTeWjF9anDvdZIIyaNa7FdpQmL.L.F48GpIncQb_Zk1D9BeXszAWD.W8.A8YM9VNYWFx2nInDeHsqSD60OXWreoFlzClrGVCP5MyHScVFyfg-&format=png&h=640&w=640" alt="Mugen153">
+              <img class="crew__picture__gamerpic" src="https://images-eds-ssl.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KIbgsfD63mXFU_1J9M4K4P9Fx4QN66tll.R_J.Y6GfJkLo7m3cFynAydm_Z_UnfO2.&format=png&h=640&w=640" alt="Mugen153">
             </a>
           </li>
 
@@ -109,6 +109,7 @@
       <span><strong>Site codé avec <i class="fa fa-heart" aria-hidden="true"></i> par <a target="_blank" href="/albartros98">Albartros98</a></strong></span>
       <span><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:legipix@gmail.com">legipix@gmail.com</a></span>
     </footer>
+    
     <script src="https://use.fontawesome.com/012ef49db0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
@@ -120,8 +121,8 @@
           $('html, body').animate( { scrollTop: $(page).offset().top }, speed );
           return false;
         });
-        // Shuffle Crew
-        var $ul = $('#crew');
+        // Shuffle
+        var $ul = $('#shuffle');
         $ul.children('li').sort( function() {
           return ( Math.round( Math.random() ) - 0.5 )
         }).appendTo($ul);
