@@ -1,17 +1,25 @@
 .code {
 
   @include e(header) {
-    @include translate(-50%, -90%);
+    @include transform(translate(-50%, -70%) scale(0.7));
     width: 470px;
+
+    @include b(m) {
+      @include transform(translate(-50%, -90%) scale(1));
+    }
   }
   @include e(container) {
-    @include translate(-50%, 20px);
+    @include transform(translate(-50%, 10px) scale(0.7));
     display: block;
     height: 100px;
     left: 50%;
     position: absolute;
     top: 50%;
     width: 470px;
+
+    @include b(m) {
+      @include transform(translate(-50%, 20px) scale(1));
+    }
   }
   @include e(buttons) {
     @include flexbox((
