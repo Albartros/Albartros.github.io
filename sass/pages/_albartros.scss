@@ -1,22 +1,17 @@
 .code {
 
   @include e(header) {
-    @include b(xxl) {
-      @include translate(-50%, -90%);
-      width: 470px;
-    }
+    @include translate(-50%, -90%);
+    width: 470px;
   }
   @include e(container) {
-    @include b(xxl) {
-      @include translate(-50%, 20px);
-      display: block;
-      height: 100px;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      width: 470px;
-    }
-    display: none;
+    @include translate(-50%, 20px);
+    display: block;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 470px;
   }
   @include e(buttons) {
     @include flexbox((
