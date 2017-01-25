@@ -25,6 +25,7 @@ path {
   @include opacity(0);
   left: -9999px;
   position: absolute;
+  z-index: -1;
 }
 
 footer {
