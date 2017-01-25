@@ -10,7 +10,7 @@
         <link href="../css/app.css" rel="stylesheet" type="text/css">
         <link href="../css/legacy.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Poiret+One" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Poiret+One|Lato:300,400" rel="stylesheet" type="text/css">
 
         <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
@@ -32,7 +32,11 @@
     </head>
 
     <body>
-        <div class="container code__header">
+        <div id="isModal" class="modal">
+            <h2 class="modal__title"></h2>
+            <button id="closeModal" class="modal__close">&times;</button>
+        </div>
+        <div class="container code__header hideModal">
             <h1 class="animated flipInX">Albartros98</h1>
             <p class="animated bounceInLeft">Fondateur de <a target="_blank" href="http://www.legipix.net/">legipix.net</a><br>Bisous</p>
             <a target="_blank" class="youtube_url animated bounceInRight" href="http://www.youtube.com/user/albartros98/">
@@ -47,7 +51,7 @@
             </a>
         </div>
 
-        <div class="code__container">
+        <div class="code__container hideModal">
             <ul id="shuffle" class="code__buttons">
             <!--<ul id="shuffle" class="code__buttons false animated shake">-->
                 <li class="code__button">
@@ -101,13 +105,23 @@
         <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script>
             var animated = $(".animated");
-            var container = $(".container").first().hide();
             var $button = $(".code__button__button");
+            var $container = $(".container").first().hide();
+            var $hideModal = $(".hideModal");
+            var $modal = $("#isModal");
+            var $ul = $('#shuffle');
             var i = 0; var sequence = "";
+            $("#closeModal").click(function() {
+                // Seen
+                $modal.removeClass("active");
+                $hideModal.removeClass("hidden");
+                // BTS
+                $modal.find("h2").first().text("");
+                $modal.find("iframe").first().remove();
+            });
             $(document).ready(function() {
-                container.show();
-                // Shuffle
-                var $ul = $('#shuffle');
+                $container.show();
+                // Shuffle Buttons
                 $ul.children('li').sort( function() {
                     return ( Math.round( Math.random() ) - 0.5 )
                 }).appendTo($ul);
@@ -118,13 +132,40 @@
                         i++; sequence += $this.data("value");
                         $this.addClass("active");
                         if (i >= 6) {
-                            $shuffle = $("#shuffle");
-                            $button.removeClass("active");
-                            $shuffle.addClass("false animated shake");
-                            setTimeout(function(){
-                                $shuffle.removeClass("false animated shake");
-                            }, 1000); 
-                            i = 0; sequence = "";
+                            $.ajax({
+                                type: "get",
+                                url: "./json/" + sequence + ".json",
+                                dataType: "json",
+                                success: function(data) {
+                                    // Visible Result
+                                    $ul.addClass("true animated pulse");
+                                    i = 0; sequence = "";
+                                    setTimeout(function() {
+                                        // Prepare
+                                        $modal.find("h2").first().text(data.title);
+                                        $("<iframe>", {
+                                            src: "https://www.youtube.com/embed/" + data.id + "?autoplay=1&color=white&controls=0&fs=0&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0",
+                                            frameborder: 0,
+                                        }).appendTo($modal);
+                                        // Buttons
+                                        $ul.removeClass("true animated pulse");
+                                        $button.removeClass("active");
+                                        // Modal
+                                        $modal.addClass("active");
+                                        $hideModal.addClass("hidden");
+                                    }, 1000);
+                                },
+                                error: function() {
+                                    // Visible Result
+                                    $ul.addClass("false animated shake");
+                                    i = 0; sequence = "";
+                                    setTimeout(function() {
+                                        // Buttons
+                                        $ul.removeClass("false animated shake");
+                                        $button.removeClass("active");
+                                    }, 1000); 
+                                }
+                            });
                         }
                     }
                 });
