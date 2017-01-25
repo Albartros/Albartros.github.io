@@ -1,4 +1,4 @@
-body:active { // 500x100 display
+body:focus { // 500x100 display
   .code__container {
     @include transform(translate(-50%, -50%) scale(2.5));
   }
