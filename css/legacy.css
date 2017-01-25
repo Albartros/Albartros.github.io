@@ -8,7 +8,7 @@ body {
     background-image: url("../albartros98/background_720.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 101% cover;
+    background-size: 101% 100%;
     color: #f5f5f5;
     cursor: default;
     font-family: "Source Sans Pro", sans-serif;

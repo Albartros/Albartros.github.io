@@ -1,6 +1,6 @@
-body:focus { // 500x100 display and Focus it
+body:active { // 500x100 display
   .code__container {
-    @include transform(translate(-50%, -50%) scale(1));
+    @include transform(translate(-50%, -50%) scale(2.5));
   }
   .code__header {
     display: none !important;
