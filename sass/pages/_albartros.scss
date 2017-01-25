@@ -103,12 +103,17 @@
 
   @include e(title) {
     @include lato-font;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 300;
-    margin: 1.2em auto;
+    margin: 0.9em auto;
     text-align: center;
     text-transform: uppercase;
     word-spacing: 2.5px;
+
+    @include b(m) {
+      font-size: 1.25em;
+      margin: 1.2em auto;
+    }
   }
   @include e(close) {
     @include lato-font;
