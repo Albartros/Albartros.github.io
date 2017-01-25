@@ -57,9 +57,6 @@ p {
     top: 0;
     word-spacing: 1px;
 }
-p:after {
-    content: ".";
-}
 
 a {
     color: inherit;
@@ -72,6 +69,12 @@ a {
     bottom: 10px;
     position: absolute;
     right: 25px;
+}
+
+.xbox_url {
+    bottom: 10px;
+    position: absolute;
+    right: 100px;
 }
 
 .svg {
