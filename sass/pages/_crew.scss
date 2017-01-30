@@ -74,7 +74,7 @@
     text-align: center;
   }
   @include e(quote) {
-    @include b(m) { 
+    @include b(m) {
       font-size: 1.5em;
       max-width: 60%;
     }
