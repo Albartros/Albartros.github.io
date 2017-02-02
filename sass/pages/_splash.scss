@@ -1,5 +1,5 @@
 .splash {
-  @include background-image(linear-gradient(rgba(239, 83, 80, 0.7), rgba(239, 83, 80, 0.75)), url(../img/background.jpg));
+  @include background-image(linear-gradient(rgba(#00539F, 0.7), rgba(#00539F, 0.7)), url(../img/background_no_copy.jpg));
   background-size: cover;
   height: 100vh;
   min-height: 275px;
@@ -42,7 +42,7 @@
     padding: 0.7em 2em;
 
     &:hover {
-      background-color: rgba(239, 83, 80, 0.85);
+      background-color: #0095DD;
     }
   }
   @include e(more) {
@@ -54,7 +54,7 @@
 
     @include e(text) {
       @include translate(-50%, -100%);
-      color: mix(rgb(239, 83, 80), white);
+      color: white;
       left: 50%;
       position: absolute;
       top: -2.35em;
@@ -64,7 +64,7 @@
       @include border-top-radius(5px);
       @include translate(-50%, -100%);
       background-color: white;
-      color: rgb(239, 83, 80);
+      color: #00539F;
       font-size: 1.5em;
       left: 50%;
       padding: 5px 0 0;

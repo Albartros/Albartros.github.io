@@ -24,16 +24,17 @@
     padding: 0;
     width: 90%;
 
+    @include b(l) {
+      max-width: 640px * 4;
+      width: 85%;
+    }
+
     @include e(container) {
       @include b(m) {
-        width: 33.333%;
-        padding-bottom: 33.333%;
+        width: 25%;
+        padding-bottom: 25%;
       }
-      @include b(l) {
-        width: 20%;
-        padding-bottom: 20%;
-      }
-      background: rgb(239, 83, 80);
+      background: #00539F;
       float: left;
       padding-bottom: 50%;
       position: relative;
@@ -50,7 +51,7 @@
 
     &:hover, &.active {
       .crew__picture__name { @include transition-delay(0.2s); color: white }
-      .crew__picture__gamerpic { @include opacity(0.1) }
+      .crew__picture__gamerpic { @include opacity(0.1); }
     }
 
     @include e(name) {
@@ -109,6 +110,7 @@
     font-weight: 300;
     line-height: 1.15em;
     margin: 0 auto;
+    max-width: 640px * 4;
     text-align: justify;
     width: 85%;
 
