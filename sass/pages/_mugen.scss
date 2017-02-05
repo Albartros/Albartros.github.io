@@ -1,0 +1,140 @@
+.mugen {
+  @include background-image(radial-gradient(rgba(black, 0.25), rgba(black, 0.75)), url("../mugen153/background.jpg"));
+  @include scale(0.55);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include b(m) {
+    @include scale(1);
+  }
+
+  .modal__close:hover {
+    background-color: rgba(174,0,1,0.7);
+    color: #f5f5f5;
+  }
+
+  @include e(container) {
+    @include translate(-50%, -50%);
+    height: 500px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 500px;
+  }
+  @include e(game) {
+    @include opacity(0);
+    @include translate(-50%, -50%);
+    font-size: 5em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+  }
+  @include e(user) {
+    @include transition(background-color .2s ease);
+    @include border-radius(50%);
+    @include translate(-50%, -50%);
+    background-color: rgba(black, 0.7);
+    border: 2.5pt solid #eee;
+    color: #eee;
+    height: 300px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 300px;
+    z-index: 1;
+
+    &.false {
+      background-color: rgba(174,0,1,0.7);
+      .mugen__user__name,
+      .mugen__user__words { @include opacity(0) }
+      .mugen__game--false { @include opacity(1) }
+    }
+
+    &.true {
+      background-color: rgba(0,174,86,0.7);
+      .mugen__user__name,
+      .mugen__user__words { @include opacity(0) }
+      .mugen__game--true { @include opacity(1) }
+    }
+
+    @include e(name) {
+      @include lato-font;
+      @include opacity(1);
+      @include transition(all 0.2s ease);
+      @include translate(-50%, -105%);
+      font-size: 3em;
+      font-weight: 300;
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+    }
+    @include e(words) {
+      @include opacity(1);
+      @include roboto-font;
+      @include transition(all 0.2s ease);
+      @include translate(-50%, 0.4em);
+      font-size: 1.25em;
+      font-weight: 300;
+      left: 50%;
+      line-height: 1.2;
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      width: 100%;
+      z-index: 2;
+    }
+    @include e(xbox) {
+      @include transition(background-color 0.2s ease);
+      @include border-radius(50%);
+      //@include translateX(50%);
+      background-color: rgba(black, 0.7);
+      border: 2.15pt solid #eee;
+      bottom: 0;
+      height: 5em;
+      position: absolute;
+      right: -1em;
+      width: 5em;
+      z-index: 1;
+
+      @include b(m) {
+        right: -4em;
+      }
+
+      &:hover {
+        background-color: rgba(174,0,1,0.7);
+      }
+
+      svg {
+        @include translate(-50%, -50%);
+        height: 2em;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: 2em;
+      }
+      path {
+        fill: #eee;
+      }
+    }
+  }
+
+}
+
+.mugen-wrapper {
+    position: relative;
+    height: 0;
+    width: 100%; /* any width you want */
+    padding-top: 100%; /* if the menu is in full circle mode. 50% if it is in semi-circle mode. */
+}
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

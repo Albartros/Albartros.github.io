@@ -142,6 +142,12 @@
     });
 
     $(document).ready(function() {
+      DM.init({
+        apiKey: "fd0bef24fcf5c0728480",
+        status: true,
+        cookie: true
+      });
+
       $container.show();
       $ul.children('li').sort(function() {
         return (Math.round(Math.random()) - 0.5)
@@ -206,15 +212,6 @@
           }
         }
       });
-    });
-
-  </script>
-
-  <script>
-    DM.init({
-      apiKey: "fd0bef24fcf5c0728480",
-      status: true,
-      cookie: true
     });
 
   </script>
