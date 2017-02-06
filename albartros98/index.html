@@ -117,8 +117,50 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://api.dmcdn.net/all.js"></script>
   <script>
+    // Loading the Youtube API
+    function loadPlayer(id) {
+      if (typeof(YT) == "undefined" || typeof(YT.Player) == "undefined") {
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        window.onYouTubePlayerAPIReady = function() {
+          onYouTubePlayer(id);
+        };
+      } else {
+        onYouTubePlayer(id);
+      }
+    }
+
+    function onYouTubePlayer(id) {
+      player = new YT.Player("player", {
+        videoId: id,
+        width: "1920",
+        height: "1080",
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          iv_load_policy: 3,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0,
+          showsearch: 0,
+        },
+        events: {
+          "onStateChange": onPlayerStateChange,
+        }
+      });
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.ENDED) {
+        closeModal();
+      }
+    }
+
     var animated = $(".animated");
     var $button = $(".code__button__button");
     var $container = $(".container").first().hide();
@@ -127,14 +169,13 @@
     var $ul = $('#shuffle');
     var i = 0;
     var sequence = "";
-    var player = null;
+    var player;
 
     // Triggering closeModal
     function closeModal() {
       $modal.removeClass("active");
       $hideModal.removeClass("hidden");
       $modal.find("h2").first().text("");
-      player = null;
       $("#player").replaceWith("<div id=\"player\"></div>");
     };
     $("#closeModal").click(function() {
@@ -142,14 +183,8 @@
     });
 
     $(document).ready(function() {
-      DM.init({
-        apiKey: "fd0bef24fcf5c0728480",
-        status: true,
-        cookie: true
-      });
-
       $container.show();
-      $ul.children('li').sort(function() {
+      $ul.children("li").sort(function() {
         return (Math.round(Math.random()) - 0.5)
       }).appendTo($ul);
       $button.click(function(event) {
@@ -165,20 +200,7 @@
               dataType: "json",
               success: function(data) {
                 // Set the Player and the Title
-                player = DM.player(document.getElementById("player"), {
-                  video: data.id,
-                  params: {
-                    "api": 1,
-                    "autoplay": true,
-                    "controls": true,
-                    "endscreen-enable": false,
-                    "quality": "1080",
-                    "sharing-enable": false,
-                    "ui-highlight": "ffc81a",
-                    "ui-logo": false,
-                    "ui-start-screen-info": false,
-                  }
-                });
+                loadPlayer(data.id);
                 $("#titleModal").text(data.title);
 
                 $ul.addClass("true animated pulse");
@@ -192,10 +214,6 @@
                   $button.removeClass("active");
                   $modal.addClass("active");
                   $hideModal.addClass("hidden");
-
-                  player.addEventListener("end", function(event) {
-                    closeModal();
-                  });
 
                 }, 1000);
               },
