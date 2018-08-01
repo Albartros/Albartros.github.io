@@ -31,14 +31,30 @@
     }
     @include e(link) {
         @include transition(background-color 0.25s ease);
-        background-color: transparent;
-        border-radius: 1.4em;
-        border: 1px solid white;
+        background-color: transparent; //border-radius: 1.4em;
+        //border: 1px solid white;
         display: inline-block;
         margin: 0 5px;
         padding: 0.7em 2em;
-        &:hover {
-            background-color: #0095DD;
+        @include m(discord) {
+            &:hover {
+                background-color: #7289da;
+            }
+        }
+        @include m(youtube) {
+            &:hover {
+                background-color: #FF3C3C;
+            }
+        }
+        @include m(xbox) {
+            &:hover {
+                background-color: #52b043;
+            }
+        }
+        i {
+            font-size: 2em;
+            vertical-align: middle;
+            margin-right: .3em;
         }
     }
     @include e(more) {
