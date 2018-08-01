@@ -1,122 +1,132 @@
 .crew {
-  background-color: white;
-  min-height: 100vh;
-  min-height: calc(100vh - 4em);
-  min-width: 100vw;
-  overflow: hidden;
-  position: relative;
-
-  @include e(centerer) {
-    width: 100%;
-  }
-  @include e(header) {
-    @include lato-font();
-    color: #333;
-    font-weight: 400;
-    margin: 0 0 1em;
-    padding-top: 1em;
-    text-align: center;
-  }
-  @include e(pictures) {
-    @include clearfix();
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    width: 90%;
-
-    @include b(l) {
-      max-width: 640px * 4;
-      width: 85%;
-    }
-
-    @include e(container) {
-      @include b(m) {
-        width: 25%;
-        padding-bottom: 25%;
-      }
-      background: #00539F;
-      float: left;
-      padding-bottom: 50%;
-      position: relative;
-      width: 50%;
-    }
-  }
-  @include e(picture) {
-    bottom: 0;
-    left: 0;
+    background-color: white;
+    min-height: 100vh;
+    min-height: calc(100vh - 4em);
+    min-width: 100vw;
     overflow: hidden;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    &:hover, &.active {
-      .crew__picture__name { @include transition-delay(0.2s); color: white }
-      .crew__picture__gamerpic { @include opacity(0.1); }
-    }
-
-    @include e(name) {
-      @include transition(color 0.1s ease);
-      @include lato-font();
-      @include translate(-50%,-50%);
-      color: transparent;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      font-size: 1.5em;
-    }
-    @include e(gamerpic) {
-      @include transition(opacity 0.3s ease);
-      @include opacity(1);
-      height: 100%;
-      width: 100%;
-    }
-  }
-  @include e(center) {
-    text-align: center;
-  }
-  @include e(quote) {
-    @include b(m) {
-      font-size: 1.5em;
-      max-width: 60%;
-    }
-    @include roboto-font;
-    color: #333;
-    display: inline-block;
-    font-size: 1.25em;
-    font-weight: 100;
-    margin: 2em 0;
-    max-width: 90%;
     position: relative;
-
-    &:before, &:after {
-      @include translateX(-50%);
-      content: "";
-      height: 1px;
-      width : 120%;
-      width : calc(100% + 7em);
-      position: absolute;
-      left: 50%;
-      background-color: #333;
+    @include e(centerer) {
+        width: 100%;
     }
-    &:before {
-      top: -0.5em;
+    @include e(header) {
+        @include lato-font();
+        color: #333;
+        font-weight: 400;
+        margin: 0 0 1em;
+        padding-top: 1em;
+        text-align: center;
     }
-    &:after {
-      bottom: -0.5em;
+    @include e(pictures) {
+        @include clearfix();
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 90%;
+        @include b(l) {
+            max-width: 640px * 4;
+            width: 85%;
+        }
+        @include e(container) {
+            @include b(m) {
+                width: 25%;
+                padding-bottom: 25%;
+            }
+            background: #00539F;
+            float: left;
+            padding-bottom: 50%;
+            position: relative;
+            width: 50%;
+        }
     }
-  }
-  @include e(presentation) {
-    @include b(m) { font-size: 1.25em; }
-    font-weight: 300;
-    line-height: 1.15em;
-    margin: 0 auto;
-    max-width: 640px * 4;
-    text-align: justify;
-    width: 85%;
-
-    strong { font-weight: 400; }
-    p { margin-bottom: 0.5em; }
-    p:first-of-type { margin-top: 0 }
-    p:last-of-type { margin: 0 }
-  }
+    @include e(picture) {
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:hover,
+        &.active {
+            .crew__picture__name {
+                @include transition-delay(0.2s);
+                color: white
+            }
+            .crew__picture__gamerpic {
+                @include opacity(0.1);
+            }
+        }
+        @include e(name) {
+            @include transition(color 0.1s ease);
+            @include lato-font();
+            @include translate(-50%, -50%);
+            color: transparent;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            font-size: 1.5em;
+        }
+        @include e(gamerpic) {
+            @include transition(opacity 0.3s ease);
+            @include opacity(1);
+            height: 100%;
+            width: 100%;
+        }
+    }
+    @include e(center) {
+        text-align: center;
+    }
+    @include e(quote) {
+        @include b(m) {
+            font-size: 1.5em;
+            max-width: 60%;
+        }
+        @include roboto-font;
+        color: #333;
+        display: inline-block;
+        font-size: 1.25em;
+        font-weight: 100;
+        margin: 2em 0;
+        max-width: 90%;
+        position: relative;
+        &:before,
+        &:after {
+            @include translateX(-50%);
+            content: "";
+            height: 1px;
+            width: 120%;
+            width: calc(100% + 7em);
+            position: absolute;
+            left: 50%;
+            background-color: #333;
+        }
+        &:before {
+            top: -0.5em;
+        }
+        &:after {
+            bottom: -0.5em;
+        }
+    }
+    @include e(presentation) {
+        @include b(m) {
+            font-size: 1.25em;
+        }
+        font-weight: 300;
+        line-height: 1.15em;
+        margin: 0 auto;
+        max-width: 640px * 4;
+        text-align: justify;
+        width: 85%;
+        strong {
+            font-weight: 400;
+        }
+        p {
+            margin-bottom: 0.5em;
+        }
+        p:first-of-type {
+            margin-top: 0
+        }
+        p:last-of-type {
+            margin: 0
+        }
+    }
 }

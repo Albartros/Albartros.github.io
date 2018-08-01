@@ -1,54 +1,77 @@
 nav {
-  @include b(m) {
-    height: 4em;
-    text-align: left;
-  }
-  @include clearfix();
-  @include translateX(-50%);
-  color: white;
-  height: 3em;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 80%;
-  z-index: 1;
+    @include b(m) {
+        height: 4em;
+        text-align: left;
+    }
+    @include clearfix();
+    @include translateX(-50%);
+    color: white;
+    height: 3em;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 80%;
+    z-index: 2;
+    &.nav {
+        @include box-shadow($secondary-color 0 0 5px);
+        @include transform(none);
+        background-color: darken($secondary-color, 10);
+        left: 0;
+        padding: 0 10%;
+        position: fixed;
+        width: 100%;
+        .logo {
+            @include b(m) {
+                float: left;
+                height: 4em;
+            }
+            display: inline-block;
+            float: none;
+            height: 3em;
+            vertical-align: middle;
+            @include e(link) {
+                @include b(m) {
+                    line-height: 4em;
+                }
+                line-height: 3em;
+            }
+        }
+    }
 }
 
 .logo {
-  @include b(m) {
-    display: inline-block;
-  }
-  height: 4em;
-  display: none;
-  float: left;
-
-  @include e(site) {
     @include b(m) {
-      display: inline-block;
+        display: inline-block;
     }
+    height: 4em;
     display: none;
     float: left;
-    font-size: 1.2em;
-    line-height: 4em * 0.8;
-    margin-left: 0.15em;
-    text-transform: uppercase;
-  }
-  @include e(link) {
-    @include b(m) {
-      float: right;
-      margin-right: 0;
+    @include e(site) {
+        @include b(m) {
+            display: inline-block;
+        }
+        display: none;
+        float: left;
+        font-size: 1.2em;
+        line-height: 4em * 0.8;
+        margin-left: 0.15em;
+        text-transform: uppercase;
     }
-    display: inline-block;
-    line-height: 4em;
-    margin-left: 0.85em;
-    margin-right: 0.85em;
-
-    &:last-child {
-      @include b(m) {
+    @include e(link) {
+        @include b(m) {
+            float: right;
+            margin-right: 0;
+        }
         display: inline-block;
-      }
-      display: none;
+        line-height: 4em;
+        margin-left: 0.85em;
+        margin-right: 0.85em;
+        &:last-child {
+            @include b(m) {
+                display: inline-block;
+            }
+            display: none;
+        }
     }
-  }
 }

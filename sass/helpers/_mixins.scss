@@ -1,53 +1,63 @@
 /**
  * Mixins de polices
  */
+
 @mixin default-font() {
-  font: $font-default-style $font-default-weight $font-default-size "Source Sans Pro", sans-serif;
-  line-height: $font-default-line-height;
+    font: $font-default-style $font-default-weight $font-default-size "Source Sans Pro", sans-serif;
+    line-height: $font-default-line-height;
 }
 
 @mixin roboto-font() {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 @mixin lato-font() {
-  font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
+}
+
+@mixin monserrat-font() {
+    font-family: "Monserrat", sans-serif;
 }
 
 /**
  * Breakpoint
  */
+
 @mixin b($point) {
-  @if $point == m {
-    @media (min-width: 768px) {
-      @content;
+    @if $point==m {
+        @media (min-width: 768px) {
+            @content;
+        }
     }
-  } @else if $point == l {
-    @media (min-width: 992px) {
-      @content;
+    @else if $point==l {
+        @media (min-width: 992px) {
+            @content;
+        }
     }
-  } @else if $point == xl {
-    @media (min-height: 1080px) {
-      @content;
+    @else if $point==xl {
+        @media (min-height: 1080px) {
+            @content;
+        }
     }
-  } @else if $point == xxl {
-    @media (min-width: 1280px) {
-      @content;
+    @else if $point==xxl {
+        @media (min-width: 1280px) {
+            @content;
+        }
     }
-  }
 }
 
 /**
  * Norme BEM
  */
+
 @mixin e($element) {
-  &__#{$element} {
-    @content;
-  }
+    &__#{$element} {
+        @content;
+    }
 }
 
 @mixin m($modifier) {
-  &--#{"" + $modifier} {
-    @content;
-  }
+    &--#{"" + $modifier} {
+        @content;
+    }
 }
