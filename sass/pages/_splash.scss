@@ -1,6 +1,7 @@
 .splash {
-    @include background-image(linear-gradient(rgba(#00539F, 0.7), rgba(#00539F, 0.7)), url(../img/background_no_copy.jpg));
+    @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.7)), url(../img/infinite.jpg));
     background-size: cover;
+    background-position-x: center;
     height: 100vh;
     min-height: 275px;
     position: relative;

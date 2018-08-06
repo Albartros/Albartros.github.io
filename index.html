@@ -70,6 +70,50 @@
             </a>
         </div>
     </section>
+    <section class="game">
+        <div data-game="1" class="game__container animated" style="background-image:url(./img/halo.png)">
+            <div class="game__overlay">
+                <div class="game__info">
+                    <img src="./img/logo/halo.png" alt="halo" class="game__info__logo">
+                    <p class="game__info__content">
+                        Nos efforts créatifs se concentrent principalement sur la saga Halo qui est à l'origine de la formation de la communauté.
+                        Nous jouons principalement à
+                        <b>Halo 5 : Guardians</b> et aussi de temps en temps à
+                        <b>Halo : The Master Chief Collection</b>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-game="2" class="game__container animated hidden" style="background-image:url(./img/sot.jpg)">
+            <div class="game__overlay">
+                <div class="game__info">
+                    <img src="./img/logo/sea_of_thieves.png" alt="sot" class="game__info__logo">
+                    <p class="game__info__content">
+                        Nous jouons aux pirates sur les mers agitées de <b>Sea of Thieves</b> à l'occasion d'un contrat, d'un évènement ou tout simplement pour passer le temps.
+                        N'y prenez garde, nous sommes redoutables.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-game="3" class="game__container animated hidden" style="background-image:url(./img/mc.jpg)">
+            <div class="game__overlay">
+                <div class="game__info">
+                    <img src="./img/logo/minecraft.png" alt="sot" class="game__info__logo">
+                    <p class="game__info__content">
+                        Nous construisons le village paisible de Legitown sur notre Realm
+                        <b>Minecraft</b> (version Bedrock). Explorations, architecture, ingénieurie... C'est notre grand terrain de
+                        jeu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="progress" class="game__progress"></div>
+        <div class="game__controls">
+            <a href="#" data-game="1" class="game__controls__bullet active"></a>
+            <a href="#" data-game="2" class="game__controls__bullet"></a>
+            <a href="#" data-game="3" class="game__controls__bullet"></a>
+        </div>
+    </section>
     <section id="more" class="crew">
         <div class="crew__centerer">
             <h1 class="crew__header">Rencontrez nos Membres</h1>
@@ -146,10 +190,62 @@
                 }, speed);
                 return false;
             });
+
             var $ul = $('#shuffle');
+            var $button = $(".game__controls__bullet");
+            var $game = $(".game__container");
+            var $progress = $("#progress");
+            var currentSlide = 1;
+            var maxSlides = $button.length;
+            var interval;
+
             $ul.children('li').sort(function () {
                 return (Math.round(Math.random()) - 0.5)
             }).appendTo($ul);
+
+            // Le timer du slideshow
+            var timer = function () {
+                interval = setInterval(function () {
+                    if (currentSlide != maxSlides) {
+                        currentSlide++;
+                        slide(currentSlide);
+                    }
+                    else {
+                        currentSlide = 1;
+                        slide(currentSlide);
+                    }
+                }, 7500);
+            }
+            timer();
+            
+
+            // Changement manuel du slideshow
+            $button.click(function (event) {
+                event.preventDefault();
+                var $this = $(this);
+                if (!$this.hasClass("active")) {
+                    slide($this.data("game"));
+                }
+                clearInterval(interval);
+                timer();
+            })
+
+            // Le slideshow
+            function slide(id) {
+                $button.removeClass("active").filter("[data-game='" + id + "']").addClass("active");
+                $game.addClass("fadeOutLeft");
+                $progress.removeClass("game__progress--run")
+                currentSlide = id;
+                setTimeout(function () {
+                    $game.addClass("hidden").removeClass("fadeInLeft fadeOutLeft").filter("[data-game='" + id + "']").removeClass("hidden").addClass("fadeInRight");
+                    $progress.addClass("game__progress--run");
+                }, 500);
+            }
+
+            // Fix léger
+            setTimeout(function () {
+                $progress.addClass("game__progress--run");
+            }, 500);
         });
 
     </script>

@@ -1,0 +1,74 @@
+.game {
+    background-color: darken($secondary-color, 10);
+    height: 600px;
+    position: relative;
+    width: 100%;
+    @include e(container) {
+        background-position-x: right;
+        background-repeat: no-repeat;
+        background-size: 75% auto;
+        height: 100%;
+        width: 100%;
+    }
+    @include e(overlay) {
+        @include background-image(linear-gradient(to left, rgba(20, 27, 46, 0.2) 0%, darken($secondary-color, 10) 60%, darken($secondary-color, 10) 100%));
+        background-blend-mode: multiply;
+        height: 100%;
+        width: 100%;
+    }
+    @include e(info) {
+        @include translateY(-50%);
+        top: 50%;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        width: 40%;
+        @include e(logo) {
+            width: 80%;
+        }
+        @include e(content) {
+            margin: 2em auto 0;
+            width: 75%;
+            color: $font-alt-color;
+            font-size: 1.25em;
+            line-height: 1.3;
+            font-weight: 300;
+        }
+    }
+    @include e(controls) {
+        @include translateX(-50%);
+        bottom: 15px;
+        left: 50%;
+        position: absolute;
+        z-index: 1;
+        @include e(bullet) {
+            background-color: darken($background-color, 50%);
+            border-radius: 10px;
+            display: inline-block;
+            height: 10px;
+            margin: 0 5px;
+            width: 10px;
+            &.active {
+                background-color: $background-color;
+            }
+        }
+    }
+    @include e(progress) {
+        background-color: $primary-color;
+        bottom: 0;
+        height: 3px;
+        position: absolute;
+        @include m(run) {
+            @include animation(progress 7s 1 linear);
+        }
+    }
+}
+
+@include keyframes(progress) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
