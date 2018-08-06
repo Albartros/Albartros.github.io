@@ -43,7 +43,7 @@
             width: 40%;
         }
         @include e(logo) {
-            width: 80%;
+            width: 75%;
         }
         @include e(content) {
             color: $font-alt-color;
