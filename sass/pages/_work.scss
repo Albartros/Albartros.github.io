@@ -1,0 +1,85 @@
+.work {
+    height: 100vh; //margin-bottom: 5px;
+    position: relative;
+    width: 100%;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    @include b(m) {
+        height: 400px;
+    }
+    @include b(xxl) {
+        height: 40vh;
+        .splash__more__text,
+        .splash__more__button {
+            display: none;
+        }
+    }
+    @include e(game) {
+        @include background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 1) 100%), url(../img/xbox.jpg));
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
+        position: absolute;
+        width: 100%;
+        @include b(m) {
+            @include background-image(linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), url(../img/xbox.jpg));
+            height: 100%;
+            width: 50%;
+            background-size: cover;
+        }
+    }
+    @include e(video) {
+        @include background-image(linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 1) 100%), url(../img/adobe.jpg));
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        @include b(m) {
+            @include background-image(linear-gradient(to left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), url(../img/adobe.jpg));
+            height: 100%;
+            right: 0;
+            width: 50%;
+            background-size: cover;
+        }
+    }
+    @include e(title) {
+        @include translate(-50%, -50%);
+        color: $font-alt-color;
+        font-size: 2em;
+        font-weight: 300;
+        left: 50%;
+        line-height: 1.1;
+        margin-top: 0;
+        margin: none;
+        position: absolute;
+        top: 50%;
+        top: calc(50% - 0.6em);
+        width: 90%;
+        max-width: 900px;
+        text-align: center;
+        @include b(m) {
+            width: auto;
+        }
+        br {
+            display: none;
+            @include b(xxl) {
+                display: initial;
+            }
+        }
+    }
+    @include e(subtitle) {
+        @include translateX(50%);
+        display: block;
+        font-size: 0.6em;
+        position: absolute;
+        right: 50%;
+        margin-top: 5px;
+        @include b(m) {
+            //@include translateX(0);
+            //right: 0;
+        }
+    }
+}

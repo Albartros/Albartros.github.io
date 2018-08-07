@@ -7,6 +7,9 @@
     @include b(m) {
         height: 600px;
     }
+    @include b(xxl) {
+        height: 60vh;
+    }
     @include e(container) {
         background-position-x: right;
         background-repeat: no-repeat;
@@ -61,7 +64,7 @@
     }
     @include e(controls) {
         @include translateX(-50%);
-        bottom: 15px;
+        top: 15px;
         left: 50%;
         position: absolute;
         z-index: 1;

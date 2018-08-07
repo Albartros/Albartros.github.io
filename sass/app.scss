@@ -1,23 +1,23 @@
 /**
  * Importing the dependencies
  */
+
 @import "animate";
 @import "compass";
 @import "susy";
-
 /**
  * Importing the helpers
  */
+
 @import "helpers/config";
 @import "helpers/mixins";
-
 /**
  * Importing the base styles, including reset
  */
+
 @import "base/reset";
 @import "base/base";
 @import "base/typography";
-
 @import "pages/albartros";
 @import "pages/crew";
 @import "pages/game";
@@ -25,3 +25,4 @@
 @import "pages/mugen";
 @import "pages/nav";
 @import "pages/splash";
+@import "pages/work";
