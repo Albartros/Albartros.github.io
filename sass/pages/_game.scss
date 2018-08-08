@@ -82,7 +82,7 @@
     }
     @include e(progress) {
         background-color: $primary-color;
-        bottom: 0;
+        top: 0;
         height: 3px;
         position: absolute;
         @include m(run) {
