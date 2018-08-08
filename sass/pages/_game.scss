@@ -86,7 +86,7 @@
         height: 3px;
         position: absolute;
         @include m(run) {
-            @include animation(progress 7s 1 linear);
+            @include animation(progress 9s 1 linear);
         }
     }
 }
