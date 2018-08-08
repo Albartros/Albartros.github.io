@@ -28,14 +28,20 @@
         }
         @include e(container) {
             @include b(m) {
-                width: 25%;
-                padding-bottom: 25%;
+                width: 20%;
+                padding-bottom: 20%;
             }
             background: #00539F;
             float: left;
             padding-bottom: 50%;
             position: relative;
             width: 50%;
+            &:last-of-type {
+                margin: 0 25%;
+                @include b(m) {
+                    margin: 0;
+                }
+            }
         }
     }
     @include e(picture) {
