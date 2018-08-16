@@ -44,6 +44,11 @@
             @content;
         }
     }
+    @else if $point==uhd {
+        @media (min-height: 2160px) {
+            @content;
+        }
+    }
 }
 
 /**

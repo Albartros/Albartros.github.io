@@ -1,11 +1,17 @@
 .splash {
-    @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.7)), url(../img/infinite.jpg));
+    @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.7)), url(../img/infinite_720.jpg));
     background-size: cover;
     background-position-x: center;
     height: 100vh;
     min-height: 275px;
     position: relative;
     width: 100vw;
+    @include b(l) {
+        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.7)), url(../img/infinite_1080.jpg));
+    }
+    @include b(uhd) {
+        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.7)), url(../img/infinite_4k.jpg));
+    }
     @include e(title) {
         @include lato-font();
         @include translate(-50%, -50%);
