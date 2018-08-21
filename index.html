@@ -273,7 +273,7 @@
             // Le slideshow
             function slide(id) {
                 $button.removeClass("active").filter("[data-game='" + id + "']").addClass("active");
-                $game.addClass("fadeOutLeft");
+                $game.addClass("fadeOutLeft").removeClass("fadeInRight");
                 $progress.removeClass("game__progress--run")
                 currentSlide = id;
                 setTimeout(function () {
