@@ -11,7 +11,7 @@
     <link href="../css/app.css" rel="stylesheet" type="text/css">
     <link href="../css/legacy.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Poiret+One|Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Lato:300,400" rel="stylesheet" type="text/css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
@@ -347,8 +347,8 @@
                 if (!('ontouchstart' in window)) {
                     window.addEventListener('mousemove', mouseMove);
                 }
-                window.addEventListener('scroll', scrollCheck);
-                window.addEventListener('resize', resize);
+                //window.addEventListener('scroll', scrollCheck);
+                //window.addEventListener('resize', resize);
             }
 
             function mouseMove(e) {
@@ -363,11 +363,6 @@
                 }
                 target.x = posx;
                 target.y = posy;
-            }
-
-            function scrollCheck() {
-                if (document.body.scrollTop > height) animateHeader = false;
-                else animateHeader = true;
             }
 
             function resize() {

@@ -22,9 +22,10 @@ body {
     background-size: cover;
     color: #f5f5f5;
     cursor: default;
-    font-family: "Source Sans Pro", sans-serif;
+    //font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    //font-weight: 400;
     margin: 0;
     min-height: 100%;
     min-width: 330px;
@@ -49,9 +50,8 @@ body {
 h1 {
     left: 0;
     position: relative;
-    ;
     top: 0;
-    font-family: "Poiret One", cursive;
+    font-family: "Poiret One", cursive; //font-family: 'Titillium Web', sans-serif;
     font-size: 4em;
     font-weight: 100;
     margin: 0;
@@ -105,8 +105,7 @@ a {
 
 @media only screen and (min-width: 1280px) {
     body {
-        background-image: url("../albartros98/23460_1080.jpg");
-        //background-size: 105% auto;
+        background-image: url("../albartros98/23460_1080.jpg"); //background-size: 105% auto;
         //background-position: top;
     }
 }
