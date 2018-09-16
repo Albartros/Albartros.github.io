@@ -48,6 +48,15 @@ footer {
     }
 }
 
+#disqus_thread {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    @include b(xl) {
+        width: 960px;
+    }
+}
+
 .disabled {
     cursor: not-allowed !important;
 }

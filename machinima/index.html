@@ -1,101 +1,36 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Machinimas signés Legipix
+description: "Les machinimas signés Legipix sont réalisés afin de proposer des histoires uniques et qui nous tiennent à coeur."
+permalink: /machinima/
+comments: false
+nav: true
+---
 
-<head>
-    <title>Machinimas signés Legipix</title>
+<section class="machinima">
 
-    <meta charset="utf-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-    <link href="../css/app.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:100|Source+Sans+Pro:300,400,600|Montserrat:400,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../img//favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../img//favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#d1c4e9">
-    <meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#00539F">
-</head>
-
-<body>
-    <nav class="nav">
-        <a href="/">
-            <img class="logo" src="../img/logo/logo_smile.svg" alt="logo">
-            <div class="logo__site">Legipix</div>
-        </a>
-
-        <a href="#" class="logo__link">Machinimas</a>
-        <a href="#" class="logo__link disabled">Montages</a>
-
-    </nav>
-    
-    <section class="machinima">
-        <div class="machinima__card" style="background-image: url(../img/machinima/the_last_showdown.jpg)">
-            <div class="machinima__ribbon">
-                <span>Vedette</span>
-            </div>
+    {% for machinima in site.machinima reversed %}
+        
+        <div class="machinima__card" style="background-image: url({{ site.url }}/img/machinima/{{ machinima.image }})">
+            {% if machinima.ribbon %}
+                <div class="machinima__ribbon">
+                    <span>{{ machinima.ribbon }}</span>
+                </div>
+            {% endif %}
+            
             <div class="machinima__card__overlay">
                 <div class="machinima__card__content">
-                    <h1 class="machinima__card__content__title">Last showdown</h1>
-                    <h4 class="machinima__card__content__info">(2017) Western, Muet</h4>
-                    <p class="machinima__card__content__description">Billy Bob fait régner la terreur dans tout le far West, mais un adversaire se présente à lui et engage un duel
-                        à l'issue funeste.</p>
-                    <a target="_blank" href="https://www.youtube.com/watch?v=8EwWe3fBprM" class="machinima__card__content__button">
+                    <h1 class="machinima__card__content__title">{{ machinima.title }}</h1>
+                    <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {{ machinima.genre }}</h4>
+                    <p class="machinima__card__content__description">{{ machinima.description }}</p>
+                    <a href="{{ machinima.url }}" class="machinima__card__content__button">
                         <i class="fas fa-play"></i>
                         Regarder
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+        
+    {% endfor %}
 
-    <footer>
-        <span>
-            <i class="far fa-copyright" aria-hidden="true"></i> 2017 Legipix</span>
-        <span>
-            <strong>Site codé avec
-                <i class="fa fa-heart" aria-hidden="true"></i> par
-                <a target="_blank" href="/albartros98">Albartros98</a>
-            </strong>
-        </span>
-        <span>
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            <a href="mailto:legipix@gmail.com">legipix@gmail.com</a>
-        </span>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.scrollTo').on('click', function () {
-                var page = $(this).attr('href');
-                var speed = 750;
-                $('html, body').animate({
-                    scrollTop: $(page).offset().top
-                }, speed);
-                return false;
-            });
-            var $ul = $('#shuffle');
-            $ul.children('li').sort(function () {
-                return (Math.round(Math.random()) - 0.5)
-            }).appendTo($ul);
-        });
-
-    </script>
-</body>
-
-</html>
+</section>

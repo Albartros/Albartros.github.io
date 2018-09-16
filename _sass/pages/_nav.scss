@@ -19,7 +19,7 @@ nav {
         background-color: darken($secondary-color, 10);
         left: 0;
         padding: 0 10%;
-        position: fixed;
+        position: sticky;
         width: 100%;
         .logo {
             @include b(m) {
@@ -67,11 +67,5 @@ nav {
         line-height: 4em;
         margin-left: 0.85em;
         margin-right: 0.85em;
-        &:last-child {
-            @include b(m) {
-                display: inline-block;
-            }
-            display: none;
-        }
     }
 }

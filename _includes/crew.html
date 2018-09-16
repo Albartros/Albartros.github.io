@@ -1,0 +1,46 @@
+<section id="more" class="crew">
+    <div class="crew__centerer">
+        <h1 class="crew__header">Membres fondateurs</h1>
+        <ul id="shuffle" class="crew__pictures">
+
+            {% for user in site.data.authors %}
+            <li class="crew__pictures__container">
+                {% if user.site %}
+                <a href="{{ site.url }}/{{ user.site }}" class="crew__picture">
+                    <i class="fas fa-info-circle" title="Ce membre a une page perso"></i>
+                    <span class="crew__picture__name">{{ user.name }}</span>
+                    <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="Aedlium25">
+                </a>
+                {% else %}
+                <a target="_blank" href="https://account.xbox.com/en-us/profile?gamertag={{ user.name }}" class="crew__picture">
+                    <span class="crew__picture__name">{{ user.name }}</span>
+                    <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="Aedlium25">
+                </a>
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="crew__center">
+            <h2 class="crew__quote">Join the fight.</h2>
+            <div class="crew__presentation">
+                <p>C'est en commençant à faire des courses de mangoustes sur le jeu Halo 3 en
+                    <strong>Juillet 2009</strong> que nous nous sommes rencontrés. Ce qui n'était au début qu'un
+                    passe temps
+                    a évolué, nous avons ainsi commencé à faire des montages de nos courses, toujours dans le but
+                    de
+                    souligner les échecs de nos membres sur un ton humoristique. Sur Halo REACH, nous avons étendu
+                    nos
+                    vidéos aux montages en mode multijoueurs et aux Machinimas. Cependant nos études respectives
+                    nous
+                    ont forcés à patienter jusqu'à Halo 5 pour recommencer nos activités en nous focalisant sur les
+                    <strong>Machinimas</strong>, le jeu en équipe et les petits montages en tous genres de nos
+                    aléas pendant
+                    nos parties.</p>
+                <p>Avec le temps, nous avons appris à nous perfectionner et à évoluer, sans jamais douter de nos
+                    capacités.
+                    Nous ne sommes pas orientés e-sport, mais nous n'avons aucun mal à jouer plus que correctement.
+                    <strong>Nos maitres-mots sont fun et fair-play, tentez donc l’expérience avec nous</strong>.</p>
+            </div>
+        </div>
+    </div>
+</section>

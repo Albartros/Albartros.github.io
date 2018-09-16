@@ -6,14 +6,13 @@
         @include flex-direction(row);
         @include flex-wrap(wrap);
         @include justify-content(center);
-        padding: 5em 4em 0 5em;
+        padding: 2em 4em 0;
     }
     background-color: white;
     min-height: 100vh;
-    min-height: calc(100vh - 4em);
+    min-height: calc(100vh - 8em);
     min-width: 100vw;
-    overflow: hidden;
-    padding-top: 3em;
+    overflow: hidden; //padding-top: 3em;
     position: relative;
     @include e(card) {
         @include b(l) {
@@ -40,7 +39,7 @@
         width: 90%;
         &:first-of-type {
             @include b(l) {
-                margin: 1em 5em;
+                margin: 1em 6em;
             }
         }
         @include e(overlay) {
@@ -164,6 +163,63 @@
                 top: 100%;
                 z-index: -1;
             }
+        }
+    }
+    @include e(about) {
+        border-left: 4px solid $primary-color;
+        font-size: 1.1em;
+        margin: 1em auto 3em;
+        padding-left: 1em;
+        padding-left: calc(1em + 2px);
+        width: 100%; //background-color: white;
+        @include b(m) {
+            width: 768px;
+        }
+        @include b(xl) {
+            width: 1200px; 
+        }
+        @include e(title) {
+            margin: 0;
+        }
+        @include e(date) {}
+        p {
+            line-height: 1.25;
+        }
+    }
+}
+
+.player {
+    background-color: black;
+    height: 70vh; //background-color: black;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    &:hover {
+        .player__back {
+            @include opacity(1);
+        }
+    }
+    #player {
+        height: calc(100% - 2em);
+        position: relative;
+        top: 1em;
+        max-width: 100vw;
+    }
+    @include e(back) {
+        @include border-radius(5px);
+        @include opacity(0);
+        @include transition(opacity 0.25s linear);
+        @include translateY(-50%);
+        background-color: $primary-color;
+        color: $font-alt-color;
+        display: block;
+        left: 1em;
+        padding: .75em 1em;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        @include m(displayed) {
+            @include opacity(1);
         }
     }
 }

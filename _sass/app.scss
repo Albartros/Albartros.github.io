@@ -13,11 +13,13 @@
  * Importing the base styles, including reset
  */
 
-@import "base/reset";
 @import "base/base";
+@import "base/reset";
 @import "base/typography";
 @import "pages/albartros";
+@import "pages/blog";
 @import "pages/crew";
+@import "pages/error";
 @import "pages/game";
 @import "pages/machinima";
 @import "pages/mugen";

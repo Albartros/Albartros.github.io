@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="{{ site.url }}/css/app.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:100|Source+Sans+Pro:300,400,600">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ site.url }}/img//favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/img/favicon/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/img//favicon/apple-icon-180x180.png">
+
+    <link rel="manifest" href="{{ site.url }}/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#d1c4e9">
+    <meta name="msapplication-TileImage" content="{{ site.url }}/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00539F">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
+    <script src="{{ site.url }}/js/app.js"></script>
+
+    {% seo %}
+
+    <meta name="google-site-verification" content="p0uvsArs7lZQb1ljqa5sm7nU8lYRYmfHZEJJ_CklLwc">
+</head>
+
+<body>
+
+    {% include header.html content="nav" %}
+
+    <section class="player">
+        <div id="player"></div>
+    </section>
+
+    <section class="machinima__about">
+        <h1 class="machinima__about__title">{{ page.title }}</h1>
+        <span class="machinima__about__date">Mise en ligne le {{ page.date | date: "%d/%m/%Y" }}</span>
+        {{ content }}
+    </section>
+
+    {% if page.comments %}
+    {% include disqus.html %}
+    {% endif %}
+
+    {% include footer.html %}
+
+    <script>
+        $back = $("#back");
+        loadPlayer("{{ page.youtube }}");
+
+        function loadPlayer(id) {
+            if (typeof (YT) == "undefined" || typeof (YT.Player) == "undefined") {
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName("script")[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                window.onYouTubePlayerAPIReady = function () {
+                    onYouTubePlayer(id);
+                };
+            } else {
+                onYouTubePlayer(id);
+            }
+        }
+
+        function onYouTubePlayer(id) {
+            player = new YT.Player("player", {
+                videoId: id,
+                width: "1920",
+                height: "1080",
+                playerVars: {
+                    autoplay: 1,
+                    controls: 1,
+                    disablekb: 0,
+                    iv_load_policy: 3,
+                    modestbranding: 0,
+                    rel: 0,
+                    showinfo: 0,
+                    showsearch: 0,
+                },
+                events: {
+                    "onStateChange": onPlayerStateChange,
+                }
+            });
+        }
+
+        var state = true;
+        $(window).keypress(function (e) {
+            if (e.key === ' ' || e.key === 'Spacebar') {
+                // ' ' is standard, 'Spacebar' was used by IE9 and Firefox < 37
+                e.preventDefault();
+                if (state == true) {
+                    player.pauseVideo();
+                } else {
+                    player.playVideo();
+                }
+                state = !state;
+            }
+        })
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                state = true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

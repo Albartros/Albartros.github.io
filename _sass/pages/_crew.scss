@@ -47,7 +47,7 @@
     @include e(picture) {
         bottom: 0;
         left: 0;
-        overflow: hidden;
+        overflow: visible;
         position: absolute;
         right: 0;
         top: 0;
@@ -60,6 +60,14 @@
             .crew__picture__gamerpic {
                 @include opacity(0.1);
             }
+        }
+        i {
+            color: white;
+            font-size: 1.5em;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
         }
         @include e(name) {
             @include transition(color 0.1s ease);
