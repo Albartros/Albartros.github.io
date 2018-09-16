@@ -60,7 +60,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        loadPlayer("{{ page.youtube }}");
+        setTimeout(function () {
+            loadPlayer("{{ page.youtube }}");
+        }, 1000);
 
         function loadPlayer(id) {
             if (typeof (YT) == "undefined" || typeof (YT.Player) == "undefined") {
