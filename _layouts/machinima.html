@@ -33,9 +33,6 @@
     <meta name="msapplication-TileImage" content="{{ site.url }}/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#00539F">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
-    <script src="{{ site.url }}/js/app.js"></script>
-
     {% seo %}
 
     <meta name="google-site-verification" content="p0uvsArs7lZQb1ljqa5sm7nU8lYRYmfHZEJJ_CklLwc">
@@ -61,8 +58,8 @@
 
     {% include footer.html %}
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        $back = $("#back");
         loadPlayer("{{ page.youtube }}");
 
         function loadPlayer(id) {
