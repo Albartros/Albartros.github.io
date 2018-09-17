@@ -2,7 +2,8 @@
  * Importing the dependencies
  */
 
-@import "compass";
+@import "compass/compass";
+@import "compass/animation/core"; 
 /**
  * Importing the helpers
  */
@@ -21,11 +22,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #f5f5f5;
-    cursor: default;
-    //font-family: "Source Sans Pro", sans-serif;
+    cursor: default; //font-family: "Source Sans Pro", sans-serif;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
-    //font-weight: 400;
+    font-size: 20px; //font-weight: 400;
     margin: 0;
     min-height: 100%;
     min-width: 330px;
