@@ -7,7 +7,7 @@ author: albartros98
 year: 2017
 date: 2017-05-23 00:00:00
 genre: [western, muet]
-image: the_last_showdown.jpg
+image: img/machinima/the_last_showdown.jpg
 
 ribbon: vedette
 description: Billy Bob fait régner la terreur dans tout le far West, mais un adversaire se présente à lui et engage un duel à l'issue funeste.

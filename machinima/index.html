@@ -11,7 +11,7 @@ nav: true
 
     {% for machinima in site.machinima reversed %}
         
-        <div class="machinima__card" style="background-image: url({{ site.url }}/img/machinima/{{ machinima.image }})">
+        <div class="machinima__card" style="background-image: url({{ site.url }}/{{ machinima.image }})">
             {% if machinima.ribbon %}
                 <div class="machinima__ribbon">
                     <span>{{ machinima.ribbon }}</span>
