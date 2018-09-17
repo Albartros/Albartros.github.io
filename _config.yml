@@ -19,6 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Site de la communauté Legipix. Nous privilégions le fun et les machinimas.
 #baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://legipix.net" # the base hostname & protocol for your site, e.g. http://example.com
+lang: fr_FR
 
 # Build settings
 markdown: kramdown
