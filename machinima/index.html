@@ -21,7 +21,7 @@ nav: true
             <div class="machinima__card__overlay">
                 <div class="machinima__card__content">
                     <h1 class="machinima__card__content__title">{{ machinima.title }}</h1>
-                    <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {{ machinima.genre }}</h4>
+                    <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {% for genre in machinima.genre %}{{ genre }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}</h4>
                     <p class="machinima__card__content__description">{{ machinima.description }}</p>
                     <a href="{{ machinima.url }}" class="machinima__card__content__button">
                         <i class="fas fa-play"></i>

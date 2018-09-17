@@ -362,5 +362,3 @@ nav.nav .logo__link { line-height: 3em; }
 .work__title br { display: none; }
 @media (min-width: 1280px) { .work__title br { display: initial; } }
 .work__subtitle { -webkit-transform: translateX(50%); -moz-transform: translateX(50%); -ms-transform: translateX(50%); -o-transform: translateX(50%); transform: translateX(50%); display: block; font-size: 0.6em; position: absolute; right: 50%; margin-top: 5px; }
-
-/*# sourceMappingURL=app.css.map */

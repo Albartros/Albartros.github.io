@@ -6,7 +6,7 @@ author: albartros98
 
 year: 2017
 date: 2017-05-23 00:00:00
-genre: western, muet
+genre: [western, muet]
 image: the_last_showdown.jpg
 
 ribbon: vedette
