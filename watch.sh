@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sass --sourcemap=none --watch _sass:css --style compact
+sass --sourcemap=none --watch _sass:css --style compressed
