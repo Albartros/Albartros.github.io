@@ -1,21 +1,4 @@
 /**
- * Configuration de Susy
- */
-$sl-columns: 12;
-$sl-gutters: 1/4;
-$sl-math: fluid;
-$sl-output: float;
-$sl-width: 1150px;
-
-$susy: (
-  columns: $sl-columns,
-  container: $sl-width,
-  gutters: $sl-gutters,
-  math: $sl-math,
-  output: $sl-output
-);
-
-/**
  * Définition des couleurs
  */
 $background-color: #EEE;

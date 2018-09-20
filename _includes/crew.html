@@ -2,23 +2,24 @@
     <div class="crew__centerer">
         <h1 class="crew__header">Membres fondateurs</h1>
         <ul id="shuffle" class="crew__pictures">
-
+        
             {% for user in site.data.authors %}
             <li class="crew__pictures__container">
                 {% if user.site %}
                 <a href="{{ site.url }}/{{ user.site }}" class="crew__picture">
                     <i class="fas fa-info-circle" title="Ce membre a une page perso"></i>
-                    <span class="crew__picture__name">{{ user.name }}</span>
                     <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="Aedlium25">
+                    <span class="crew__picture__name">{{ user.name }}</span>
                 </a>
                 {% else %}
                 <a target="_blank" href="https://account.xbox.com/en-us/profile?gamertag={{ user.name }}" class="crew__picture">
-                    <span class="crew__picture__name">{{ user.name }}</span>
                     <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="Aedlium25">
+                    <span class="crew__picture__name">{{ user.name }}</span>
                 </a>
                 {% endif %}
-                </li>
+            </li>
             {% endfor %}
+        
         </ul>
         <div class="crew__center">
             <h2 class="crew__quote">Join the fight.</h2>
