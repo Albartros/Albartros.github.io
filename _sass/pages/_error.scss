@@ -2,9 +2,9 @@
     background: url(../img/background/desert.jpg) no-repeat center 75%;
     background-size: auto;
     position: relative;
-    height: calc(100vh - 10.25em);
+    height: calc(100vh - 9.7em);
     @include b(m) {
-        height: calc(100vh - 8.25em);
+        height: calc(100vh - 8em);
     }
 }
 
