@@ -46,7 +46,7 @@
         <div id="player"></div>
     </section>
 
-    <section class="machinima__about">
+    <section id="about" class="machinima__about">
         <h1 class="machinima__about__title">{{ page.title }}</h1>
         <span class="machinima__about__date">Mise en ligne le {{ page.date | date: "%d/%m/%Y" }}</span>
         {{ content }}
@@ -59,65 +59,10 @@
     {% include footer.html %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ site.url }}/js/app.js"></script>
     <script>
-        setTimeout(function () {
-            loadPlayer("{{ page.youtube }}");
-        }, 1000);
-
-        function loadPlayer(id) {
-            if (typeof (YT) == "undefined" || typeof (YT.Player) == "undefined") {
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName("script")[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                window.onYouTubePlayerAPIReady = function () {
-                    onYouTubePlayer(id);
-                };
-            } else {
-                onYouTubePlayer(id);
-            }
-        }
-
-        function onYouTubePlayer(id) {
-            player = new YT.Player("player", {
-                videoId: id,
-                width: "1920",
-                height: "1080",
-                playerVars: {
-                    autoplay: 1,
-                    controls: 1,
-                    disablekb: 0,
-                    iv_load_policy: 3,
-                    modestbranding: 0,
-                    rel: 0,
-                    showinfo: 0,
-                    showsearch: 0,
-                },
-                events: {
-                    "onStateChange": onPlayerStateChange,
-                }
-            });
-        }
-
-        var state = true;
-        $(window).keypress(function (e) {
-            if (e.key === ' ' || e.key === 'Spacebar') {
-                // ' ' is standard, 'Spacebar' was used by IE9 and Firefox < 37
-                e.preventDefault();
-                if (state == true) {
-                    player.pauseVideo();
-                } else {
-                    player.playVideo();
-                }
-                state = !state;
-            }
-        })
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING) {
-                state = true;
-            }
-        }
+        Player.init()
+        Machinima.init("{{ page.youtube }}")
     </script>
 
 </body>
