@@ -3,15 +3,13 @@
  */
 
 @import "compass/compass";
-@import "compass/animation/core"; 
+@import "compass/animation/core";
 /**
  * Importing the helpers
  */
 
 @import "helpers/config";
 @import "helpers/mixins";
-
-
 html {
     height: 100%;
 }
@@ -19,7 +17,7 @@ html {
 body {
     background-attachment: fixed;
     background-color: transparent;
-    background-image: url("../albartros98/23460_720.jpg");
+    background-image: url("../albartros98/reach_720.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +59,7 @@ h1 {
 }
 
 p {
-    font-size: 1em;
+    font-size: .85em;
     left: 0;
     letter-spacing: 0.2px;
     margin: 0;
@@ -97,22 +95,15 @@ a {
     fill: #f5f5f5;
 }
 
-#demo-canvas {
-    display: none;
-    @include b(m) {
-        display: initial;
-    }
-}
-
 @media only screen and (min-width: 1280px) {
     body {
-        background-image: url("../albartros98/23460_1080.jpg"); //background-size: 105% auto;
+        background-image: url("../albartros98/reach_1080.jpg"); //background-size: 105% auto;
         //background-position: top;
     }
 }
 
 @media only screen and (min-width: 4096px) {
     body {
-        background-image: url("../albartros98/23460_4K.jpg");
+        background-image: url("../albartros98/reach_4K.jpg");
     }
-}
+} 
