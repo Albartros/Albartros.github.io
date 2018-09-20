@@ -1,0 +1,11 @@
+---
+layout: null
+---
+{
+{% for code in site.data.sequences %}
+    "{{ code.sequence }}" : {
+        "title": "{{ code.title }}",
+        "id": "{{ code.id }}"
+    }{% if forloop.last %}{% else %},{% endif %}
+{% endfor %}
+}
