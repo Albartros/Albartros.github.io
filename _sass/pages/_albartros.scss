@@ -34,7 +34,7 @@ body:focus {
         padding: 0;
         &.false {
             .code__button__button {
-                background-color: rgba(235, 37, 33, 0.9);
+                background-color: rgba(#b7182a, 0.9);
                 svg {
                     fill: #f5f5f5;
                 }
@@ -42,7 +42,7 @@ body:focus {
         }
         &.true {
             .code__button__button {
-                background-color: rgba(80, 239, 83, 0.9);
+                background-color: rgba(#44a755, 0.9);
                 svg {
                     fill: #f5f5f5;
                 }
@@ -148,5 +148,41 @@ body:focus {
             width: 800px;
             margin: 0 2em 1em;
         }
+    }
+}
+
+/* https://codepen.io/thomasvaeth/pen/EevQPV */
+
+.fog {
+    @include e(img) {
+        display: none;
+        height: 100vh;
+        position: absolute;
+        width: 300vw;
+        @include b(m) {
+            display: block;
+        }
+        @include m(first) {
+            background: url("../albartros98/fog-1.png") repeat-x;
+            background-size: contain;
+            background-position: center;
+            animation: marquee 90s linear infinite;
+        }
+        @include m(second) {
+            background: url("../albartros98/fog-2.png") repeat-x;
+            background-size: contain;
+            background-position: center;
+            animation: marquee 40s linear infinite;
+        }
+    }
+}
+
+// Marquee
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-200vw, 0, 0);
     }
 }
