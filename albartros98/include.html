@@ -183,6 +183,7 @@
         var player;
         var count = [];
         var $count = $("#count");
+        var found;
 
         // Triggering closeModal
         function closeModal() {
@@ -196,7 +197,10 @@
         });
 
         $(document).ready(function () {
-            count = Cookies.getJSON("found");
+            found = Cookies.getJSON("found");
+            if (typeof found !== "undefined") {
+                count = found;
+            }
             $count.text(count.length);
 
             $container.show();
