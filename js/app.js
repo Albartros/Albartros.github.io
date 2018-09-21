@@ -123,13 +123,24 @@ var Legicode = {
         $("#closeModal").click(function () {
             self.closeModal()
         })
+
         var $button = $(".code__button__button")
+        $(window).keydown(function (event) {
+            if (event.which >= 97 && event.which <= 103) {
+                event.preventDefault()
+                var id = event.which - 96
+                $button.filter("[data-value='" + id + "']").click()
+            } else if (event.which == 27) {
+                self.closeModal()
+            }
+        })
         $button.click(function () {
             var $this = $(this)
             if (!$this.hasClass("active")) {
                 self.settings.sequenceIncrement++
                 self.settings.sequence += $this.data("value")
                 $this.addClass("active")
+                var $allButtons = $("#buttons")
                 if (self.settings.sequenceIncrement >= 7) {
                     var proposedSequence = self.settings.sequence
                     if (proposedSequence in self.settings.sequences) {
@@ -148,7 +159,6 @@ var Legicode = {
                             self.updateCounter()
                         }
 
-                        var $allButtons = $("#shuffle")
                         $allButtons.addClass("true animated pulse")
                         setTimeout(function () {
                             $allButtons.removeClass("true animated pulse")
@@ -160,7 +170,6 @@ var Legicode = {
                             Player.loadVideo(self.settings.sequences[proposedSequence].id)
                         }, 1000);
                     } else {
-                        var $allButtons = $("#shuffle")
                         $allButtons.addClass("false animated shake")
                         setTimeout(function () {
                             $allButtons.removeClass("false animated shake")
@@ -190,8 +199,8 @@ var Machinima = {
     },
     buttonListener: function () {
         var self = this
-        $(window).keypress(function (event) {
-            if (event.key === " " || event.key === "Spacebar") {
+        $(window).keydown(function (event) {
+            if (event.which == 32) {
                 event.preventDefault()
 
                 if (self.settings.state == true) {
@@ -200,6 +209,9 @@ var Machinima = {
                     self.settings.player.playVideo()
                 }
                 self.settings.state = !self.settings.state
+            } else if (event.which == 27) {
+                self.settings.player.stopVideo()
+                self.scrollDescription()
             }
         })
     },
