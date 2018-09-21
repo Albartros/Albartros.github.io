@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="{{ site.url }}/css/app.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:100|Source+Sans+Pro:300,400,600">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ site.url }}/img//favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/img/favicon/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/img//favicon/apple-icon-180x180.png">
+
+    <link rel="manifest" href="{{ site.url }}/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#d1c4e9">
+    <meta name="msapplication-TileImage" content="{{ site.url }}/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00539F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    {% seo %}
+
+    <meta name="google-site-verification" content="p0uvsArs7lZQb1ljqa5sm7nU8lYRYmfHZEJJ_CklLwc">
+</head>
+
+<body>
+
+    {% include header.html content="nav" %}
+    {% assign author = site.data.authors[page.author] %}
+
+    <section class="blog__container">
+        <div class="blog__feed">
+            <atricle class="blog__article">
+                <h1 class="blog__article__title blog__article__title--large">{{ page.title }}</h1>
+                <span class="blog__article__meta blog__article__meta--large">
+                    <i class="far fa-clock"></i> <span class="blog__article__meta__time">Temps de lecture : {% include read.html %}</span>
+
+                    <i class="far fa-calendar-alt"></i> {% assign d = page.date | date: "%-d" %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = page.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ page.date | date: '%Y' }}
+
+                    <i class="far fa-user"></i> {% if author.site %}<a href="{{ site.url }}/{{ author.site }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>
+                <div class="blog__article__imageContainer">
+                    <img src="{{ site.url }}/img/blog/{{ page.image }}" alt="{{ page.title }}" class="blog__article__image blog__article__image--locked">
+                </div>
+                {{ content }}
+            </atricle>
+        </div>
+    </section>
+
+    {% if page.comments %}
+    {% include disqus.html %}
+    {% endif %}
+
+    {% include footer.html %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ site.url }}/js/app.js"></script>
+    <script>{{ page.scripts }}</script>
+</body>
+
+</html>

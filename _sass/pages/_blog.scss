@@ -1,0 +1,120 @@
+.blog {
+    @include e(container) {
+        height: auto;
+        margin: 0 auto;
+        min-height: calc(100vh - 9.7em);
+        position: relative;
+        top: 0;
+        width: 100%;
+        @include b(m) {
+            min-height: calc(100vh - 8em);
+            width: 80%;
+        }
+        @include b(l) {
+            width: 60%;
+        }
+    }
+    @include e(feed) {
+        padding-top: 1em;
+        width: 100%;
+        @include b(m) {
+            width: 100%;
+        }
+        @include b(xl) {
+            padding-top: 2em;
+            width: 800px;
+        }
+    }
+    @include e(article) {
+        display: block;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        border-bottom: 1px dashed gray;
+        &:last-child {
+            border: none;
+        }
+        @include e(title) {
+            @include lato-font();
+            font-size: 1.75em;
+            margin: 0;
+            @include m(large) {
+                font-size: 2em;
+            }
+        }
+        @include e(meta) {
+            display: block; //font-size: 1.1em;
+            margin-top: 5px;
+            text-transform: uppercase;
+            color: lighten($font-color, 30%);
+            letter-spacing: 1px;
+            word-spacing: 1px;
+            @include m(large) {
+                margin: .8em 0 1em;
+            }
+            a {
+                color: $primary-color;
+            }
+            i {
+                margin-left: .75em;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+            @include e(time) {
+                color: $primary-color;
+            }
+        }
+        @include e(imageContainer) {
+            margin-top: 10px;
+            overflow: hidden;
+            padding-top: 50%;
+            position: relative;
+            width: 100%;
+        }
+        @include e(image) {
+            @include transition(all .5s ease);
+            @include transform(scale(1) translateX(-50%));
+            height: 100%;
+            left: 50%;
+            min-width: 100%;
+            position: absolute;
+            top: 0;
+            &:hover {
+                @include transform(scale(1.1) translateX(-50%));
+                left: 55%;
+            }
+            @include m(locked) {
+                &:hover {
+                    @include transition(none);
+                    @include transform(scale(1) translateX(-50%));
+                    left: 50%;
+                }
+            }
+        }
+        p {
+            line-height: 1.75;
+            font-size: 1.1em;
+            padding: 0 5px;
+            @include b(m) {
+                padding: 0;
+            }
+        }
+        @include e(button) {
+            color: $primary-color;
+            font-size: 1.2em;
+            font-weight: 600;
+            &:hover {
+                i {
+                    margin-left: 15px;
+                }
+            }
+            i {
+                @include transition(margin-left .2s ease);
+                margin-left: 5px;
+                position: relative;
+                top: 1.2px;
+            }
+        }
+    }
+}

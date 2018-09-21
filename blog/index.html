@@ -1,0 +1,26 @@
+---
+layout: default
+title: Actualités
+description: "Restez au courant des dernières actualutés de Legipix."
+permalink: blog
+comments: false
+nav: true
+---
+<section class="blog__container">
+    <div class="blog__feed">
+
+        {% for post in site.posts %}
+
+        <atricle class="blog__article">
+            <h2 class="blog__article__title">{{ post.title }}</h2>
+            <span class="blog__article__meta">{% assign d = post.date | date: "%-d" %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = post.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ post.date | date: '%Y' }}</span>
+            <div class="blog__article__imageContainer">
+                <img src="{{ site.url }}/img/blog/{{ post.image }}" alt="{{ post.title }}" class="blog__article__image">
+            </div>
+            {{ post.excerpt }}</p>
+            <a href="{{ post.url }}" class="blog__article__button">Lire la suite <i class="fas fa-arrow-right"></i></a>
+        </atricle>
+        
+        {% endfor %}
+    </div>
+</section>
