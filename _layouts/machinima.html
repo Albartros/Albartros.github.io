@@ -48,9 +48,10 @@
         <div id="player"></div>
     </section>
 
+    {% assign author = site.data.authors[page.author] %}
     <section id="about" class="machinima__about">
         <h1 class="machinima__about__title">{{ page.title }}</h1>
-        <span class="machinima__about__date">Mise en ligne le {{ page.date | date: "%d/%m/%Y" }}</span>
+        <span class="machinima__about__meta">Mise en ligne le {% assign dy = page.date | date: "%a" %}{% case dy %}{% when "Mon" %}lundi{% when "Tue" %}mardi{% when "Wed" %}mercredi{% when "Thu" %}jeudi{% when "Fri" %}vendredi{% when "Sat" %}samedi{% when "Sun" %}dimanche{% else %}{{ dy }}{% endcase %} {% assign d = page.date | date: "%-d" %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = page.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ page.date | date: '%Y' }} par {% if author.site %}<a href="{{ site.url }}/{{ author.site }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>
         {{ content }}
     </section>
 

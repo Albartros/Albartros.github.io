@@ -181,7 +181,11 @@
         @include e(title) {
             margin: 0;
         }
-        @include e(date) {}
+        @include e(meta) {
+            a {
+                color: $primary-color
+            }
+        }
         p {
             line-height: 1.25;
         }

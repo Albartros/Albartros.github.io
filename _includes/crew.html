@@ -3,7 +3,8 @@
         <h1 class="crew__header">Membres fondateurs</h1>
         <ul id="shuffle" class="crew__pictures">
         
-            {% for user in site.data.authors %}
+            {% for users in site.data.authors %}
+            {% assign user = users[1] %}
             <li class="crew__pictures__container">
                 {% if user.site %}
                 <a href="{{ site.url }}/{{ user.site }}" class="crew__picture">

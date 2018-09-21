@@ -9,7 +9,6 @@
 }
 
 .error {
-    @include transition(padding 0.2s);
     @include translate(-50%, -50%);
     @include flexbox(( align-items: center, display: flex, flex-direction: column, ));
     left: 50%;
@@ -26,7 +25,6 @@
         }
     }
     @include e(subTitle) {
-        @include transition(font-size 0.2s, margin 0.2s);
         font-size: 1.3em;
         font-weight: 400;
         margin: -1em 0 .5em;
