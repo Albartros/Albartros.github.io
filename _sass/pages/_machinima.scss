@@ -176,7 +176,7 @@
             width: 768px;
         }
         @include b(xl) {
-            width: 1200px; 
+            width: 1200px;
         }
         @include e(title) {
             margin: 0;
@@ -190,7 +190,7 @@
 
 .player {
     background-color: black;
-    height: 70vh; //background-color: black;
+    height: calc(100vw / 1.77);
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -199,11 +199,21 @@
             @include opacity(1);
         }
     }
+    @include b(m) {
+        height: 70vh;
+    }
     #player {
-        height: calc(100% - 2em);
+        @include translateX(-50%);
+        height: 100%;
+        left: 50%;
         position: relative;
-        top: 1em;
-        max-width: 100vw;
+        top: 0;
+        width: 100%;
+        @include b(m) {
+            height: 100%;
+            max-width: 100vw;
+            width: calc(70vh * 1.77);
+        }
     }
     @include e(back) {
         @include border-radius(5px);
