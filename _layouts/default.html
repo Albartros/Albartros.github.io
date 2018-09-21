@@ -46,9 +46,7 @@
     {% else %}
     {% include header.html %}
     {% endif %}
-
     {{ content }}
-
     {% if page.comments %}
     {% include disqus.html %}
     {% endif %}
@@ -57,9 +55,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{ site.url }}/js/app.js"></script>
-    <script>
-        Homepage.init()
-    </script>
+    <script>{{ page.scripts }}</script>
 </body>
 
 </html>
