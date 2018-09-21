@@ -67,5 +67,26 @@ nav {
         line-height: 4em;
         margin-left: 0.85em;
         margin-right: 0.85em;
+        position: relative;
+        &::after {
+            @include transition(height .2s ease);
+            background-color: $primary-color;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 0;
+            position: absolute;
+            width: 100%;
+        }
+        &:hover {
+            &::after {
+                height: 3px;
+            }
+        }
+        @include m(active) {
+            &::after {
+                height: 3px;
+            }
+        }
     }
 }
