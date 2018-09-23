@@ -53,8 +53,9 @@ nav {
     @include b(m) {
         display: inline-block;
     }
-    height: 4em;
     display: none;
+    height: 4em;
+    vertical-align: middle;
     @include e(site) {
         @include b(m) {
             display: inline-block;
