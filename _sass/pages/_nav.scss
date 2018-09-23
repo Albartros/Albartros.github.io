@@ -32,11 +32,9 @@ nav {
         }
         .logo {
             @include b(m) {
-                float: left;
                 height: 4em;
             }
             display: inline-block;
-            float: none;
             height: 3em;
             vertical-align: middle;
             @include e(link) {
