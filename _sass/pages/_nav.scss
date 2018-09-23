@@ -6,7 +6,7 @@ nav {
     @include display-flex(flex);
     @include flex-direction(row);
     @include flex-wrap(nowrap);
-    @include justify-content(space-between);
+    @include justify-content(center);
     color: white;
     height: 3em;
     left: 50%;
@@ -18,6 +18,7 @@ nav {
     @include b(m) {
         height: 4em;
         text-align: left;
+        @include justify-content(space-between);
     }
     &.nav {
         @include box-shadow($secondary-color 0 0 5px);
