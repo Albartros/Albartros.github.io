@@ -6,3 +6,40 @@
         height: calc(100vh - 8em);
     }
 }
+
+.page {
+    @include e(title) {
+        @include background-image(linear-gradient(to bottom right, $primary-color, mix($primary-color, orange, 65%)));
+        @include box-shadow($secondary-color 0 0 5px);
+        background-size: cover;
+        background-size: cover; //background-position-y: 20%;
+        color: white; //@include lato-font();
+        font-size: 1.25em;
+        font-weight: 400; //line-height: 4em;
+        height: 3.5em;
+        line-height: 3.5em;
+        margin: 0 0 2px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        @include b(m) {
+            // font-size: 1.5em;
+            font-size: 1.5em; //height: 4em;
+            height: 4em; //line-height: 4em;
+            line-height: 4em;
+        }
+        @include b(l) {
+            // font-size: 1.5em;
+            font-size: 1.75em; //height: 4em;
+            height: 5em; //line-height: 4em;
+            line-height: 5em;
+        }
+        @include m(blog) {
+            @include background-image(linear-gradient(rgba(20, 27, 46, 0.4), rgba(20, 27, 46, 0.1)), url(../img/background/city.jpg));
+            background-position-y: 20%;
+        }
+        @include m(machinima) {
+            @include background-image(linear-gradient(rgba(20, 27, 46, 0.4), rgba(20, 27, 46, 0.1)), url(../img/background/esport.jpg));
+        }
+    }
+}

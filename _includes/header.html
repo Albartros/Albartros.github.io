@@ -3,7 +3,9 @@
         <img class="logo" src="{{ site.url }}/img/logo/logo_smile.svg" alt="logo">
         <div class="logo__site">Legipix</div>
     </a>
-    {% for item in site.data.navigations %}
-    <a href="{{ site.url }}/{{ item.link }}" class="logo__link{% if item.link == page.permalink or item.link == page.layout %} logo__link--active{% endif %}">{{ item.title }}</a>
-    {% endfor %}
+    <div>
+        {% for item in site.data.navigations %}
+        <a href="{{ site.url }}/{{ item.link }}" class="logo__link{% if item.link == page.permalink or item.link == page.layout %} logo__link--active{% endif %}">{{ item.title }}</a>
+        {% endfor %}
+    </div>
 </nav>

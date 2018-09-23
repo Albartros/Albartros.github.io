@@ -253,7 +253,7 @@ var Player = {
             playerVars: {
                 autoplay: 1,
                 controls: 1,
-                disablekb: 1,
+                disablekb: 0,
                 iv_load_policy: 3,
                 modestbranding: 0,
                 rel: 0,

@@ -37,8 +37,7 @@ footer {
     }
     display: block;
     margin: 2em 0 1em;
-    text-align: center;
-    line-height: 1.25;
+    text-align: center; //line-height: 1.25;
     span {
         @include b(m) {
             display: inline;
@@ -50,6 +49,21 @@ footer {
         position: relative;
         top: 1px;
     }
+}
+
+kbd {
+    background-color: #e1e3e5;
+    border-radius: 3px;
+    border: 1px solid #adb3b9;
+    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #FFF inset;
+    color: #242729;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    text-shadow: 0 1px 0 #FFF;
+    white-space: nowrap;
 }
 
 #disqus_thread {
