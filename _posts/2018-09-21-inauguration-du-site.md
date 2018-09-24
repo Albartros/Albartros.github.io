@@ -40,8 +40,8 @@ Par défaut et pendant la lecture, il y a deux raccourcis claviers de disponible
 Mais si vous cliquez directement sur le lecteur, vous aurez accès à la place aux raccourcis Youtube dont :
 
 - <kbd>Espace</kbd> : mettre en pause ou reprendre la lecture.
-- <kbd>></kbd> : avancer de 5 secondes.
-- <kbd><</kbd> : reculer de 5 secondes.
+- <kbd>→</kbd> : avancer de 5 secondes.
+- <kbd>←</kbd> : reculer de 5 secondes.
 - <kbd>F</kbd> : activer le mode plein écran.
 - <kbd>C</kbd> : activer les sous-titres si disponible.
 
