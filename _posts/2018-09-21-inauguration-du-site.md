@@ -51,10 +51,11 @@ Ces pages ont pour vocation de servir de "carte de visite" au membre qui la poss
 Le contenu de la page est librement modifié par son propriétaire.
 Il y en a deux à ce jour : une pour moi même : [Albartros98](https://legipix.net/albartros98/) et une pour [Mugen153](https://legipix.net/mugen153/).
 Ces deux pages personnelles présentent toutes les deux un mini-jeu sous la forme de code à rentrer dans le but de dévoiler une vidéo associée à ce code.
-L'intérêt est de cacher ces codes dans mon machinimas pour permettre aux plus curieux de trouver des **secrets de tournage**, **scènes coupées** ou **scènes alternatives** par exemple.
+L'intérêt est de cacher ces codes dans nos machinimas pour permettre aux plus curieux de trouver des **secrets de tournage**, **scènes coupées** ou **scènes alternatives** par exemple.
 
 La page de Mugen153 est quelque peu en retard sur la mienne mais elle sera mise à jour sous peu, sa modernisation est plus délicate.
-**Concernant ma page personnelle**, il y a des raccourcis clavier qui permettent d'interagir avec le mini-jeu :
+<span style="color: #EF5350">**Mise à jour 27 septembre 2018 : La page de Mugen153 a été mise à jour.**</span>
+**Concernant les pages personnelles**, il y a des raccourcis clavier qui permettent d'interagir avec le mini-jeu :
 
 - <kbd>1</kbd> à <kbd>7</kbd> : enclencher les glyphes correspondants.
 - <kbd>Échap</kbd> : arrêter la lecture de la vidéo et fermer le lecteur.
