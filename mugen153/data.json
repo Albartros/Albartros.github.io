@@ -2,7 +2,7 @@
 layout: null
 ---
 {
-{% for code in site.data.seq_albartros %}
+{% for code in site.data.seq_mugen %}
     "{{ code.sequence }}" : {
         "title": "{{ code.title }}",
         "id": "{{ code.id }}"

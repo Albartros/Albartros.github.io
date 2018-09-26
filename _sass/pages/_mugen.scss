@@ -1,13 +1,12 @@
 .mugen {
-    @include background-image(radial-gradient(rgba(black, 0.25), rgba(black, 0.75)), url("../mugen153/background.jpg"));
-    @include scale(0.55);
+    @include background-image(radial-gradient(rgba(black, 0.25), rgba(black, 0.75)), url("../mugen153/background.jpg")); //@include scale(0.55);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     @include b(m) {
-        @include scale(0.8);
+        //@include scale(0.8);
     }
     .modal__close:hover {
         background-color: rgba(174, 0, 1, 0.7);
@@ -21,15 +20,6 @@
         position: absolute;
         top: 50%;
         width: 500px;
-    }
-    @include e(game) {
-        @include opacity(0);
-        @include translate(-50%,
-        -50%);
-        font-size: 5em;
-        left: 50%;
-        position: absolute;
-        top: 50%;
     }
     @include e(user) {
         @include transition(background-color .2s ease);
@@ -45,33 +35,13 @@
         top: 50%;
         width: 300px;
         z-index: 1;
-        &.false {
-            background-color: rgba(174, 0, 1, 0.7);
-            .mugen__user__name,
-            .mugen__user__words {
-                @include opacity(0)
-            }
-            .mugen__game--false {
-                @include opacity(1)
-            }
-        }
-        &.true {
-            background-color: rgba(0, 174, 86, 0.7);
-            .mugen__user__name,
-            .mugen__user__words {
-                @include opacity(0)
-            }
-            .mugen__game--true {
-                @include opacity(1)
-            }
-        }
         @include e(name) {
             @include lato-font;
             @include opacity(1);
             @include transition(all 0.2s ease);
             @include translate(-50%,
             -105%);
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: 300;
             left: 50%;
             margin: 0;
@@ -85,7 +55,7 @@
             @include transition(all 0.2s ease);
             @include translate(-50%,
             0.4em);
-            font-size: 1.25em;
+            font-size: 1.1em;
             font-weight: 300;
             left: 50%;
             line-height: 1.2;
@@ -132,10 +102,40 @@
 .mugen-wrapper {
     position: relative;
     height: 0;
-    width: 100%;
+    width: 25vw;
     /* any width you want */
     padding-top: 100%;
     /* if the menu is in full circle mode. 50% if it is in semi-circle mode. */
+    /*@include scale(0.55);
+    @include b(m) {
+        @include scale(0.8);
+    }*/
+    &.false {
+        .sector {
+            fill: rgba(174, 0, 1, 0.7) !important;
+        }
+    }
+    &.true {
+        .sector {
+            fill: rgba(0, 174, 86, 0.7) !important;
+        }
+    }
+}
+
+.mugen-wrapper-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%) scale(0.5));
+    @include b(m) {
+        @include transform(translate(-50%, -50%) scale(0.75));
+    }
+    &:last-of-type {
+        @include transform(translate(-50%, -50%) scale(0.45));
+        @include b(m) {
+            @include transform(translate(-50%, -50%) scale(0.7));
+        }
+    }
 }
 
 #menu {

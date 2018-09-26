@@ -134,14 +134,15 @@ var Legicode = {
                 self.closeModal()
             }
         })
-        $button.click(function () {
+        $button.click(function (event) {
+            event.preventDefault()
             var $this = $(this)
             if (!$this.hasClass("active")) {
                 self.settings.sequenceIncrement++
                 self.settings.sequence += $this.data("value")
                 $this.addClass("active")
                 var $allButtons = $("#buttons")
-                if (self.settings.sequenceIncrement >= 7) {
+                if (self.settings.sequenceIncrement >= $button.length) {
                     var proposedSequence = self.settings.sequence
                     if (proposedSequence in self.settings.sequences) {
                         function isValueInArray(arr, val) {
