@@ -149,4 +149,14 @@
     top: 0;
     left: 0;
     width: 100%;
+    @include animation(spin 1s 1 cubic-bezier(.28, .29, .51, 1));
+}
+
+@include keyframes(spin) {
+    0% {
+        @include rotate(0deg)
+    }
+    100% {
+        @include rotate(360deg)
+    }
 }
