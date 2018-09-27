@@ -96,7 +96,7 @@ var Legicode = {
         if (typeof cookies == "undefined") {
             Cookies.set(this.settings.cookieName, [], { expires: this.settings.cookieLength })
         } else {
-            this.settings.codesFound = cookies
+            this.settings.codesFound = cookies.filter(cookie => cookie.length == $(".code__button__button").length)
         }
         this.updateCounter()
     },
@@ -156,7 +156,7 @@ var Legicode = {
                         }
                         if (isValueInArray(self.settings.codesFound, proposedSequence) == false) {
                             self.settings.codesFound.push(proposedSequence)
-                            Cookies.set(self.settings.cookieName, self.settings.codesFound, { expires: 365 })
+                            Cookies.set(self.settings.cookieName, self.settings.codesFound, { expires: this.settings.cookieLength })
                             self.updateCounter()
                         }
 
