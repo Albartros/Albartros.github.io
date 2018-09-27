@@ -9,12 +9,12 @@
                 {% if user.site %}
                 <a href="{{ site.url }}/{{ user.site }}" class="crew__picture">
                     <i class="fas fa-info-circle" title="Ce membre a une page perso"></i>
-                    <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="Aedlium25">
+                    <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="{{ user.name }}">
                     <span class="crew__picture__name">{{ user.name }}</span>
                 </a>
                 {% else %}
                 <a target="_blank" href="https://account.xbox.com/en-us/profile?gamertag={{ user.name }}" class="crew__picture">
-                    <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="Aedlium25">
+                    <img class="crew__picture__gamerpic" src="{{ site.url }}{{ user.picture }}" alt="{{ user.name }}">
                     <span class="crew__picture__name">{{ user.name }}</span>
                 </a>
                 {% endif %}
