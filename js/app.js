@@ -97,7 +97,7 @@ var Legicode = {
         if (typeof cookies == "undefined") {
             Cookies.set(this.settings.cookieName, [], { expires: this.settings.cookieLength })
         } else {
-            this.settings.codesFound = cookies.filter(cookie => cookie.length == $(".code__button__button").length)
+            this.settings.codesFound = cookies
         }
         this.updateCounter()
     },
@@ -108,7 +108,7 @@ var Legicode = {
         })
     },
     updateCounter: function () {
-        $("#count").text(this.settings.codesFound.length)
+        $("#count").text(this.settings.codesFound.filter(code => code.length == $(".code__button__button").length).length)
     },
     closeModal: function () {
         $modal = $("#isModal")
