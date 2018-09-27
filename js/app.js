@@ -178,9 +178,9 @@ var Legicode = {
                     var proposedSequence = self.settings.sequence
                     if (proposedSequence in self.settings.sequences) {
                         self.playSound("success")
-                        $allButtons.addClass("true animated pulse slow")
+                        $allButtons.addClass("true animated pulse")
                         setTimeout(function () {
-                            $allButtons.removeClass("true animated pulse slow")
+                            $allButtons.removeClass("true animated pulse")
                             $button.removeClass("active")
 
                             self.openModal()
