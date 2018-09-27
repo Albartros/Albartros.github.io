@@ -81,6 +81,7 @@ var Legicode = {
         cookieLength: 365,
         cookieName: "foundSequences",
         init: false,
+        muted: false,
         sequence: "",
         sequenceIncrement: 0,
         sequences: {}
@@ -110,41 +111,84 @@ var Legicode = {
         $("#count").text(this.settings.codesFound.length)
     },
     closeModal: function () {
-        $("#isModal").removeClass("active").find("h2").first().text("")
-        $(".hideModal").removeClass("hidden")
-        $("#player").replaceWith("<div id=\"player\"></div>")
+        $modal = $("#isModal")
+        if ($modal.hasClass("active")) {
+            this.playSound("back")
+            setTimeout(function () {
+                $modal.removeClass("active").find("h2").first().text("")
+                $(".hideModal").removeClass("hidden")
+                $("#player").replaceWith("<div id=\"player\"></div>")
+            }, 150)
+        }
     },
     openModal: function () {
         $("#isModal").addClass("active")
         $(".hideModal").addClass("hidden")
     },
+    toggleMute: function () {
+        this.settings.muted = !this.settings.muted
+        $(".volumeIcon").toggleClass("hidden")
+    },
+    playSound: function (sound) {
+        if (this.settings.muted == false) {
+            switch (sound) {
+                case "back":
+                    $("#back").prop("volume", 0.4).prop("currentTime", 0).trigger("play")
+                    break
+                case "error":
+                    $("#error").prop("volume", 0.4).trigger("play")
+                    break
+                case "select":
+                    $("#select").prop("volume", 0.4).prop("currentTime", 0.1).trigger("play")
+                    break
+                case "success":
+                    $("#success").prop("volume", 0.25).prop("currentTime", 0.1).trigger("play")
+                    break
+            }
+        }
+    },
     buttonListener: function () {
         var self = this
+
         $("#closeModal").click(function () {
             self.closeModal()
         })
 
-        var $button = $(".code__button__button")
-        $(window).keydown(function (event) {
-            if (event.which >= 97 && event.which <= 103) {
-                event.preventDefault()
-                var id = event.which - 96
-                $button.filter("[data-value='" + id + "']").click()
-            } else if (event.which == 27) {
-                self.closeModal()
-            }
+        var $mute = $("#volume")
+        $mute.click(function (event) {
+            event.preventDefault()
+            self.toggleMute()
         })
+
+        var $button = $(".code__button__button")
+        var $allButtons = $("#buttons")
+        setTimeout(function () {
+            $allButtons.removeClass("flipInX delay-1s")
+        }, 2000);
+
         $button.click(function (event) {
             event.preventDefault()
             var $this = $(this)
             if (!$this.hasClass("active")) {
                 self.settings.sequenceIncrement++
                 self.settings.sequence += $this.data("value")
+                self.playSound("select")
                 $this.addClass("active")
-                var $allButtons = $("#buttons")
                 if (self.settings.sequenceIncrement >= $button.length) {
                     var proposedSequence = self.settings.sequence
                     if (proposedSequence in self.settings.sequences) {
+                        self.playSound("success")
+                        $allButtons.addClass("true animated pulse faster")
+                        setTimeout(function () {
+                            $allButtons.removeClass("true animated pulse faster")
+                            $button.removeClass("active")
+
+                            self.openModal()
+                            $("#titleModal").text(self.settings.sequences[proposedSequence].title)
+
+                            Player.loadVideo(self.settings.sequences[proposedSequence].id)
+                        }, 1000);
+
                         function isValueInArray(arr, val) {
                             inArray = false
                             for (i = 0; i < arr.length; i++) {
@@ -159,21 +203,11 @@ var Legicode = {
                             Cookies.set(self.settings.cookieName, self.settings.codesFound, { expires: self.settings.cookieLength })
                             self.updateCounter()
                         }
-
-                        $allButtons.addClass("true animated pulse")
-                        setTimeout(function () {
-                            $allButtons.removeClass("true animated pulse")
-                            $button.removeClass("active")
-
-                            self.openModal()
-                            $("#titleModal").text(self.settings.sequences[proposedSequence].title)
-
-                            Player.loadVideo(self.settings.sequences[proposedSequence].id)
-                        }, 1000);
                     } else {
-                        $allButtons.addClass("false animated shake")
+                        self.playSound("error")
+                        $allButtons.addClass("false animated shake faster")
                         setTimeout(function () {
-                            $allButtons.removeClass("false animated shake")
+                            $allButtons.removeClass("false animated shake faster")
                             $button.removeClass("active")
                         }, 1000);
                     }
@@ -181,6 +215,16 @@ var Legicode = {
                     self.settings.sequenceIncrement = 0
                     self.settings.sequence = ""
                 }
+            }
+        })
+
+        $(window).keydown(function (event) {
+            if (event.which >= 97 && event.which <= 103) {
+                event.preventDefault()
+                var id = event.which - 96
+                $button.filter("[data-value='" + id + "']").click()
+            } else if (event.which == 27) {
+                self.closeModal()
             }
         })
     }

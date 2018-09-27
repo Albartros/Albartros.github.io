@@ -5,7 +5,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-
     .modal__close:hover {
         background-color: rgba(174, 0, 1, 0.7);
         color: #f5f5f5;
@@ -77,6 +76,15 @@
             z-index: 1;
             @include b(m) {
                 right: -4em;
+            }
+            @include m(volume) {
+                top: 0;
+                bottom: auto;
+                left: -1em;
+                right: auto;
+                @include b(m) {
+                    left: -4em;
+                }
             }
             &:hover {
                 background-color: rgba(174, 0, 1, 0.7);

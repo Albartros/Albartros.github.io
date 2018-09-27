@@ -62,7 +62,7 @@ p {
     font-size: .85em;
     left: 0;
     letter-spacing: 0.2px;
-    margin: 0;
+    margin: 0 0 0 20px;
     position: relative;
     text-align: left;
     top: 0;
@@ -79,13 +79,19 @@ a {
 .youtube_url {
     bottom: 10px;
     position: absolute;
-    right: 25px;
+    right: 12.5px;
 }
 
 .xbox_url {
     bottom: 10px;
     position: absolute;
-    right: 100px;
+    right: 87.5px;
+}
+
+.audio_url {
+    bottom: 10px;
+    position: absolute;
+    left: 12.5px;
 }
 
 .svg {
@@ -106,4 +112,4 @@ a {
     body {
         background-image: url("../albartros98/reach_4K.jpg");
     }
-} 
+}
