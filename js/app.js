@@ -156,7 +156,7 @@ var Legicode = {
                         }
                         if (isValueInArray(self.settings.codesFound, proposedSequence) == false) {
                             self.settings.codesFound.push(proposedSequence)
-                            Cookies.set(self.settings.cookieName, self.settings.codesFound, { expires: this.settings.cookieLength })
+                            Cookies.set(self.settings.cookieName, self.settings.codesFound, { expires: self.settings.cookieLength })
                             self.updateCounter()
                         }
 
