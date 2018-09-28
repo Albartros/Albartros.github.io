@@ -89,6 +89,7 @@ var Legicode = {
     init: function () {
         this.buttonListener()
         this.initializeCookies()
+        this.initializeCustom()
         this.initializeSequences()
         this.settings.init = true
     },
@@ -145,6 +146,18 @@ var Legicode = {
                     $("#success").prop("volume", 0.25).prop("currentTime", 0.1).trigger("play")
                     break
             }
+        }
+    },
+    initializeCustom: function () {
+        var url = new URL(window.location.href)
+        if (url.searchParams.get("code")) {
+            var order = url.searchParams.get("code").split(',')
+            
+            var $buttons = $(".code__button")
+            $buttons.sort(function (a, b) {
+                console.log(order.indexOf(a.dataset.value) - order.indexOf(b.dataset.value))
+                return order.indexOf(a.dataset.value) - order.indexOf(b.dataset.value)
+            }).appendTo("#buttons")
         }
     },
     buttonListener: function () {
