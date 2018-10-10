@@ -11,9 +11,10 @@ var Homepage = {
         this.settings.init = true
     },
     shuffleUsers: function () {
-        $("#shuffle").children("li").sort(function () {
-            return (Math.round(Math.random()) - 0.5)
-        }).appendTo($("#shuffle"))
+        var shuffle = document.getElementById("shuffle")
+        for (var i = shuffle.children.length; i >= 0; i--) {
+            shuffle.appendChild(shuffle.children[Math.random() * i | 0])
+        }
     },
     initScroller: function () {
         var self = this
