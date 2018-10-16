@@ -46,7 +46,7 @@
         width: 90%;
         &:first-of-type {
             @include b(l) {
-                margin: 1em 6em;
+                margin: 1em 12.5%;
             }
         }
         @include e(overlay) {
