@@ -17,24 +17,26 @@ var Homepage = {
         }
     },
     initScroller: function () {
-        var self = this
-        $(".scrollTo").on("click", function () {
-            var page = $(this).attr("href")
-            $("html, body").animate({
-                scrollTop: $(page).offset().top
-            }, self.settings.scrollSpeed)
-            return false
-        });
+        var scrollButtons = document.getElementsByClassName("scrollTo")
+        for (var i = 0; i < scrollButtons.length; i++) {
+            scrollButtons[i].addEventListener("click", function (event) {
+                event.preventDefault()
+                document.getElementById(event.currentTarget.hash.substr(1)).scrollIntoView({
+                    behavior: "smooth"
+                })
+            }, false)
+        }
     },
     initSlideshow: function () {
         var self = this
 
         setTimeout(function () {
-            $("#progress").addClass("game__progress--run")
+            document.getElementById("progress").classList.add("game__progress--run")
         }, 500);
 
         var timer = function () {
-            var maxSlides = $(".game__controls__bullet").length
+            var maxSlides = document.getElementsByClassName("game__controls__bullet").length
+
             interval = setInterval(function () {
                 if (self.settings.currentSlide != maxSlides) {
                     self.settings.currentSlide++
@@ -47,31 +49,52 @@ var Homepage = {
             }, 9500)
         }
 
-        $(".game__controls__bullet").click(function (event) {
-            event.preventDefault()
-            var $this = $(this)
-
-            if (!$this.hasClass("active")) {
-                self.changeSlideshow($this.data("game"))
-            }
-            clearInterval(interval)
-            timer()
-        })
+        var slideBullets = document.getElementsByClassName("game__controls__bullet")
+        for (var i = 0; i < slideBullets.length; i++) {
+            slideBullets[i].addEventListener("click", function (event) {
+                event.preventDefault()
+                if (!event.currentTarget.classList.contains("active")) {
+                    self.changeSlideshow(event.currentTarget.dataset.game)
+                }
+                clearInterval(interval)
+                timer()
+            }, false)
+        }
 
         timer()
     },
     changeSlideshow: function (id) {
-        var $game = $(".game__container")
-        var $progress = $("#progress")
-
-        $(".game__controls__bullet").removeClass("active").filter("[data-game='" + id + "']").addClass("active")
-        $game.addClass("fadeOutLeft").removeClass("fadeInRight")
-        $progress.removeClass("game__progress--run")
         this.settings.currentSlide = id
 
+        var game = document.getElementsByClassName("game__container")
+        for (var i = 0; i < game.length; i++) {
+            game[i].classList.add("fadeOutLeft")
+            game[i].classList.remove("fadeInRight")
+        }
+
+        var progress = document.getElementById("progress")
+        progress.classList.remove("game__progress--run")
+
+        var slideBullets = document.getElementsByClassName("game__controls__bullet")
+        for (var i = 0; i < slideBullets.length; i++) {
+            slideBullets[i].classList.remove("active")
+            if (slideBullets[i].dataset.game == id) {
+                slideBullets[i].classList.add("active")
+            }
+        }
+
         setTimeout(function () {
-            $game.addClass("hidden").removeClass("fadeInLeft fadeOutLeft").filter("[data-game='" + id + "']").removeClass("hidden").addClass("fadeInRight")
-            $progress.addClass("game__progress--run")
+            for (var i = 0; i < game.length; i++) {
+                game[i].classList.add("hidden")
+                game[i].classList.remove("fadeInRight")
+                game[i].classList.remove("fadeOutLeft")
+                if (game[i].dataset.game == id) {
+                    game[i].classList.remove("hidden")
+                    game[i].classList.add("fadeInRight")
+                }
+            }
+            
+            progress.classList.add("game__progress--run")
         }, 500)
     },
 }
