@@ -281,7 +281,7 @@ var Machinima = {
     },
     buttonListener: function () {
         var self = this
-        $(window).keydown(function (event) {
+        window.addEventListener("keydown", function (event) {
             if (event.which == 32) {
                 event.preventDefault()
 
@@ -305,10 +305,9 @@ var Machinima = {
         }, 1000);
     },
     scrollDescription: function () {
-        var self = this
-        $("html, body").animate({
-            scrollTop: $("#about").offset().top - $("nav").first().height()
-        }, self.settings.scrollSpeed)
+        document.getElementById("about").scrollIntoView({
+            behavior: "smooth"
+        })
     }
 }
 
