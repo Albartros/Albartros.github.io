@@ -101,39 +101,51 @@ var Homepage = {
 
 var Legicode = {
     settings: {
-        codesFound: [],
+        codesFound: 0,
         cookieLength: 365,
         cookieName: "foundSequences",
+        host: "https://legipix.zd.fr",
         init: false,
         muted: false,
         sequence: "",
-        sequenceIncrement: 0,
-        sequences: {}
+        sequenceIncrement: 0
     },
     init: function () {
         this.buttonListener()
-        this.initializeCookies()
+        this.initializeCounter()
         this.initializeCustom()
-        this.initializeSequences()
         this.settings.init = true
     },
-    initializeCookies: function () {
-        var cookies = Cookies.getJSON(this.settings.cookieName)
-        if (typeof cookies == "undefined") {
-            Cookies.set(this.settings.cookieName, [], { expires: this.settings.cookieLength })
-        } else {
-            this.settings.codesFound = cookies
-        }
-        this.updateCounter()
-    },
-    initializeSequences: function () {
+    initializeCounter: function () {
         var self = this
-        $.getJSON("./data.json", function (data) {
-            self.settings.sequences = data
-        })
+        var request = new XMLHttpRequest()
+        request.open("GET", this.settings.host + "/code/count", true)
+
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
+                // Success!
+                var data = JSON.parse(request.responseText)
+                var buttonLength = $(".code__button__button").length
+                
+                if (buttonLength == 6) {
+                    self.settings.codesFound = data.sequences_6
+                } else if (buttonLength == 7) {
+                    self.settings.codesFound = data.sequences_7
+                }
+
+                self.updateCounter()
+            }
+        }
+
+        request.onerror = function () {
+            // There was a connection error of some sort
+        }
+
+        request.send()
+        return true
     },
     updateCounter: function () {
-        $("#count").text(this.settings.codesFound.filter(code => code.length == $(".code__button__button").length).length)
+        $("#count").text(this.settings.codesFound)
     },
     closeModal: function () {
         $modal = $("#isModal")
@@ -212,42 +224,48 @@ var Legicode = {
                 self.playSound("select")
                 $this.addClass("active")
                 if (self.settings.sequenceIncrement >= $button.length) {
-                    var proposedSequence = self.settings.sequence
-                    if (proposedSequence in self.settings.sequences) {
-                        self.playSound("success")
-                        $allButtons.addClass("true animated pulse")
-                        setTimeout(function () {
-                            $allButtons.removeClass("true animated pulse")
-                            $button.removeClass("active")
 
-                            self.openModal()
-                            $("#titleModal").text(self.settings.sequences[proposedSequence].title)
+                    var request = new XMLHttpRequest();
+                    request.open("GET", self.settings.host + "/code/" + self.settings.sequence, true);
 
-                            Player.loadVideo(self.settings.sequences[proposedSequence].id)
-                        }, 1000);
+                    request.onload = function () {
+                        if (request.status >= 200 && request.status < 400) {
+                            // Success!
+                            var data = JSON.parse(request.responseText);
 
-                        function isValueInArray(arr, val) {
-                            inArray = false
-                            for (i = 0; i < arr.length; i++) {
-                                if (val == arr[i]) {
-                                    inArray = true
-                                }
-                            }
-                            return inArray
+                            self.playSound("success")
+                            $allButtons.addClass("true animated pulse")
+                            setTimeout(function () {
+                                $allButtons.removeClass("true animated pulse")
+                                $button.removeClass("active")
+
+                                self.openModal()
+                                $("#titleModal").text(data.title)
+
+                                Player.loadVideo(data.video_id)
+                            }, 1000)
+                        } else {
+                            // We reached our target server, but it returned an error
+                            self.playSound("error")
+                            $allButtons.addClass("false animated shake faster")
+                            setTimeout(function () {
+                                $allButtons.removeClass("false animated shake faster")
+                                $button.removeClass("active")
+                            }, 1000)
                         }
-                        if (isValueInArray(self.settings.codesFound, proposedSequence) == false) {
-                            self.settings.codesFound.push(proposedSequence)
-                            Cookies.set(self.settings.cookieName, self.settings.codesFound, { expires: self.settings.cookieLength })
-                            self.updateCounter()
-                        }
-                    } else {
+                    }
+
+                    request.onerror = function () {
+                        // There was a connection error of some sort
                         self.playSound("error")
                         $allButtons.addClass("false animated shake faster")
                         setTimeout(function () {
                             $allButtons.removeClass("false animated shake faster")
                             $button.removeClass("active")
-                        }, 1000);
+                        }, 1000)
                     }
+
+                    request.send()
 
                     self.settings.sequenceIncrement = 0
                     self.settings.sequence = ""
