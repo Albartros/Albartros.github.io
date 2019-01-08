@@ -1,0 +1,27 @@
+cancelled:
+  status: false
+
+scenario:
+  type: preprod
+  name: Scénario
+  progress: 99
+
+capture:
+  type: video
+  name: Tournage
+  progress: 60
+
+montage:
+  type: video
+  name: Montage
+  progress: 50
+
+dubbing:
+  type: audio
+  name: Doublage
+  progress: 0
+
+mixing:
+  type: audio
+  name: Mixage audio
+  progress: 30

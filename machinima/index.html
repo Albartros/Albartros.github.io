@@ -10,7 +10,34 @@ nav: true
 <section class="machinima">
 
     <div class="machinima__flex">
-        
+        {% if site.data.production.cancelled.status == false %}
+        <div class="machinima__card" style="background-image: url({{ site.url }}/img/machinima/announcement.jpg)">      
+            <div class="machinima__card__overlay">
+                <div class="machinima__card__content">
+                    <h2 class="machinima__card__content__title">Prochain machinima</h2>
+                    <h4 class="machinima__card__content__info">État de l'avancement</h4>
+                    {% for items in site.data.production %}
+                    {% assign item = items[1] %}
+
+                    {% unless item.status == false %}
+                    <p class="machinima__card__content__progressname">
+                        {{ item.name }}
+                    </p>
+                    <div class="machinima__card__content__progressbar">
+                        <div class="machinima__card__content__innerbar" style="transform: translate3D({{ item.progress }}%, 0, 0);">
+                        </div>
+                    </div>
+                    {% endunless %}
+
+                    
+                    {% endfor %}
+
+                    
+
+                </div>
+            </div>
+        </div>
+        {% endif %}
         {% for machinima in site.machinima reversed %}
         
         <div class="machinima__card" style="background-image: url({{ site.url }}/{{ machinima.image }})">
