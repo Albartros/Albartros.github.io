@@ -9,17 +9,17 @@ scenario:
 capture:
   type: video
   name: Tournage
-  progress: 70
+  progress: 80
 
 montage:
   type: video
   name: Montage
-  progress: 60
+  progress: 68
 
 dubbing:
   type: audio
   name: Doublage
-  progress: 0
+  progress: 1
 
 mixing:
   type: audio
