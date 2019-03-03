@@ -23,5 +23,5 @@ Mais cette réputation d'ingénieur corrompu a un coût, et Luis va le découvri
 **Corrompus** est un machinima court maus audacieux, ne vous y méprenez pas.
 J'ai voulu apprendre de nouvelles techniques cinématographiques appliquées à **Halo 5 : Guardians**.
 Ces quelques minutes représentent l'ensemble de ce que j'ai pu découvrir : les fonds verts, les effets de champ, le mixage audio...
-**Corrompus** est donc la continuation artistique de **Last showdown**, mais en beaucoup plus mature et réfléchi.
-Je ne remercierai jamais assez les excellents doubleurs de [Creative Community](https://creativecommunity.fr/) qui ont pu donner vie à mes personnages.
+**Corrompus** est donc la continuation artistique de Last showdown, mais en beaucoup plus mature et réfléchi.
+Je ne remercierai jamais assez les excellents doubleurs de **[Creative Community](https://creativecommunity.fr/)** qui ont pu donner vie à mes personnages.
