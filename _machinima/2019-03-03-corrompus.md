@@ -9,7 +9,7 @@ date: 2019-03-03 00:00:00
 genre: [espionnage, action]
 image: img/machinima/corrompus.jpg
 
-description: La réputation d'ingénieur corrompu a un prix à payer, Luis l'apprends aujourd'hui au cours de son ultime échange.
+description: Découvrez l'histoire de Luis, un ingénieur militaire corrompu qui va rapidement se trouver dans une situation qui le dépasse.
 
 permalink: machinima/corrompus
 youtube: BVKioZ5lgYc
