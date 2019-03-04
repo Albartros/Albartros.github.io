@@ -22,6 +22,6 @@ Mais cette réputation d’ingénieur corrompu a un coût, et Luis va le découv
 Corrompus est un machinima court mais intense.
 Notre désir a été d'user de nouvelles techniques cinématographiques appliquées à Halo 5 : Guardians. 
 
-Ces quelques minutes représentent l’ensemble de ce que nous avons pu découvrir : les fonds verts, les effets de champ, le mixage audio, le suivi 3D et bien d'autres…
+Ces quelques minutes représentent l’ensemble de ce que nous avons pu découvrir : les fonds verts, les effets de champ, le mixage audio, le suivi 3D et bien d'autres… 
 **Corrompus** est donc la continuation artistique de **[Last Showdown](https://legipix.net/machinima/last-showdown)**, mais en beaucoup plus mature et réfléchi, et un matériel de meilleure qualité.
 Merci au excellents doubleurs de **[Creative Community](https://creativecommunity.fr/)** qui ont su donner vie à ce récit, de la plus belle des manières.
