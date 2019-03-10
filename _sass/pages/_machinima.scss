@@ -24,16 +24,17 @@
     }
     @include e(card) {
         @include b(l) {
-            @include box-shadow(-1px 2px 10px 3px rgba(0, 0, 0, 0) inset);
+            @include box-shadow(-1px 2px 10px 3px rgba(0, 0, 0, 0));
             @include transition(all 0.25s ease);
+            @include scale(1);
             background-position: left;
             background-size: auto 102%;
             margin: 1em;
             max-width: 800px;
             width: 75%;
             &:hover {
-                @include box-shadow(-1px 2px 10px 3px rgba(0, 0, 0, 0.5) inset);
-                background-size: auto 100%;
+                @include box-shadow(-1px 2px 10px 3px rgba(0, 0, 0, 0.5));
+                @include scale(1.01);
             }
         }
         background-position: center;
@@ -51,8 +52,8 @@
             @include b(l) {
                 /*background-position: -30%;*/
                 &:hover {
-                    @include box-shadow(-1px 2px 10px 3px rgba(0, 0, 0, 0) inset);
-                    background-size: auto 102%;
+                    @include box-shadow(-1px 2px 10px 3px rgba(0, 0, 0, 0));
+                    @include scale(1);
                 }
             }
             .machinima__card__overlay {
