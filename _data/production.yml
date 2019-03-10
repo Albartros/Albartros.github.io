@@ -1,27 +1,27 @@
 cancelled:
-  status: true
+  status: false
 
 scenario:
   type: preprod
   name: Scénario
-  progress: 100
+  progress: 5
 
 capture:
   type: video
   name: Tournage
-  progress: 95
+  progress: 1
 
 montage:
   type: video
   name: Montage
-  progress: 80
+  progress: 1
 
 dubbing:
   type: audio
   name: Doublage
-  progress: 100
+  progress: 1
 
 mixing:
   type: audio
   name: Mixage audio
-  progress: 35
+  progress: 1
