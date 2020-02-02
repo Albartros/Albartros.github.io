@@ -12,6 +12,11 @@ image: img/machinima/corrompus.jpg
 ribbon: vedette
 description: Découvrez l'histoire de Luis, un ingénieur militaire corrompu qui va rapidement se trouver dans une situation qui le dépasse.
 
+award: Golden Monitor Awards 2018-2019
+awardIcon: GMA
+awardCategory: Nominné aux Golden Monitor Awards
+awardRank: Prix du Plus Grand Potentiel
+
 permalink: machinima/corrompus
 youtube: BVKioZ5lgYc
 comments: true

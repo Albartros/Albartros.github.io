@@ -2,5 +2,5 @@
 layout: user
 title: Mugen153
 description: "Page personnelle de Mugen153"
-permalink: /mugen153/
+permalink: /mareiku/
 ---

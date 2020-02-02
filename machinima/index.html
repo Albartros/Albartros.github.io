@@ -46,6 +46,19 @@ nav: true
                 <span>{{ machinima.ribbon }}</span>
             </div>
             {% endif %}
+
+            {% if machinima.award %}
+            <div class="machinima__award">
+                <div class="machinima__award__medal">
+                    <img src="{{ site.url }}/img/award/{{ machinima.awardIcon }}.png" alt="" class="machinima__award__medal__medal">
+                </div>
+                <div class="machinima__award__content">
+                    <b>{{ machinima.awardCategory }}</b><br>
+                    <span>{{ machinima.awardRank }}</span><br>
+                    <span>{{ machinima.award }}</span>
+                </div>
+            </div>
+            {% endif %}
         
             <div class="machinima__card__overlay">
                 <div class="machinima__card__content">
