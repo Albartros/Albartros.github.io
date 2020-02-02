@@ -14,7 +14,7 @@ description: Découvrez l'histoire de Luis, un ingénieur militaire corrompu qui
 
 award: Golden Monitor Awards 2018-2019
 awardIcon: GMA
-awardCategory: Nominné aux Golden Monitor Awards
+awardCategory: Nominé aux Golden Monitor Awards
 awardRank: Prix du Plus Grand Potentiel
 
 permalink: machinima/corrompus
