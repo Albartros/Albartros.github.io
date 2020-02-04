@@ -9,7 +9,7 @@ scenario:
 capture:
   type: preprod
   name: Pré-production (storyboard, forge...)
-  progress: 85
+  progress: 90
 
 montage:
   type: video
@@ -19,9 +19,9 @@ montage:
 dubbing:
   type: video
   name: Montage et Effets visuels
-  progress: 100
+  progress: 70
 
 mixing:
   type: audio
   name: Doublage et Mixage audio
-  progress: 10
+  progress: 60
