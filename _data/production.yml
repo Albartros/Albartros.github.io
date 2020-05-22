@@ -8,7 +8,7 @@ scenario:
 
 capture:
   type: preprod
-  name: Pré-production (storyboard, forge...)
+  name: Pré-production
   progress: 1
 
 montage:
@@ -18,10 +18,10 @@ montage:
 
 dubbing:
   type: video
-  name: Montage et Effets visuels
+  name: Montage et VFX
   progress: 1
 
 mixing:
   type: audio
-  name: Doublage et Mixage audio
+  name: Doublage et Mixage
   progress: 1
