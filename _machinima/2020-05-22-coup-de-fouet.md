@@ -10,7 +10,7 @@ genre: [espionnage, action]
 image: img/machinima/coup.png
 
 ribbon: vedette
-description: Luis est vivant et le Directeur prépare des arrangements douteux avec les sénateurs d'Andesia.
+description: Luis est vivant et le Directeur prépare des arrangements douteux avec les sénateurs d'Andesia, un évènement va changer la donne pour notre héros.
 
 permalink: machinima/coup-de-fouet
 youtube: 0t2EDitouJA
