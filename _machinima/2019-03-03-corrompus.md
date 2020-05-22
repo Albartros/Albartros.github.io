@@ -9,7 +9,6 @@ date: 2019-03-03 00:00:00
 genre: [espionnage, action]
 image: img/machinima/corrompus.jpg
 
-ribbon: vedette
 description: Découvrez l'histoire de Luis, un ingénieur militaire corrompu qui va rapidement se trouver dans une situation qui le dépasse.
 
 award: Golden Monitor Awards 2018-2019
@@ -30,4 +29,4 @@ Notre désir a été d'user de nouvelles techniques cinématographiques appliqu�
 
 Ces quelques minutes représentent l’ensemble de ce que nous avons pu découvrir : les fonds verts, les effets de champ, le mixage audio, le suivi 3D et bien d'autres… 
 **Corrompus** est donc la continuation artistique de **[Last Showdown](https://legipix.net/machinima/last-showdown)**, mais en beaucoup plus mature et réfléchi, et un matériel de meilleure qualité.
-Merci au excellents doubleurs de **[Creative Community](https://creativecommunity.fr/)** qui ont su donner vie à ce récit, de la plus belle des manières.
+Merci aux excellents doubleurs de **[Creative Community](https://creativecommunity.fr/)** qui ont su donner vie à ce récit, de la plus belle des manières.

@@ -4,24 +4,24 @@ cancelled:
 scenario:
   type: preprod
   name: Scénario
-  progress: 100
+  progress: 5
 
 capture:
   type: preprod
   name: Pré-production (storyboard, forge...)
-  progress: 100
+  progress: 1
 
 montage:
   type: video
   name: Tournage et Capture
-  progress: 100
+  progress: 1
 
 dubbing:
   type: video
   name: Montage et Effets visuels
-  progress: 100
+  progress: 1
 
 mixing:
   type: audio
   name: Doublage et Mixage audio
-  progress: 90
+  progress: 1
