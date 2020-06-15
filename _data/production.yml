@@ -4,12 +4,12 @@ cancelled:
 scenario:
   type: preprod
   name: Scénario
-  progress: 5
+  progress: 75
 
 capture:
   type: preprod
   name: Pré-production
-  progress: 1
+  progress: 5
 
 montage:
   type: video
