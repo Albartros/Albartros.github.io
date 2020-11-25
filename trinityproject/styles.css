@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#start-screen {
+    height: 664px;
+    background: url(./images/startbackground.png)no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    bottom: 250px;
+    left: 125px;
+}
+
+#history {
+    position: absolute;
+    left: 50px;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    font-style: normal;
+    color: white;
+    text-align: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#start-button {
+    width: 400px;
+    height: 100px;
+    background-color: black;
+    border: white 3px solid;
+    background-image: url(./images/buttonBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+}
+
+#game {
+    width: auto;
+    height: 661PX;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+    background-image: url(./images/mombasanight.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: none;
+}
+
+#hornet {
+    width: 80px;
+    height: 40px;
+    background-image: url(./images/hornet.png);
+    position: absolute;
+    transition: top .1s linear;
+    top: 320px;
+}
+
+#banshee, #banshee2, #banshee3 {
+    width: 71px;
+    height: 37px;
+    background-image: url(./images/banshee.png);
+    position: absolute;
+    right: 100%;
+    animation: banshee 3s infinite linear;
+}
+
+@keyframes banshee{
+    0%{left:100%}
+    100%{left:-71px}
+}
+
+#elite, #elite2 {
+    width: 91px;
+    height: 40px;
+    background-image: url(./images/elite.png);
+    position: absolute;
+    right: 100%;
+    bottom: 400px;
+    animation: elite 3s infinite linear;
+}
+
+@keyframes elite{
+    0%{left:100%}
+    100%{left:-71px}
+}
+
+#phantom {
+    width: 251px;
+    height: 119px;
+    background-image: url(./images/phantom.png);
+    position: absolute;
+    right: 100%;
+    top: 100px;
+    animation: phantom 4s infinite linear;
+}
+
+@keyframes phantom{
+    0%{left:100%}
+    100%{left:-250px}
+}
+
+#score {
+    width: 100px;
+    height: 34px;
+    color: #3EB7EA;
+    border-radius: 15px;
+    border: white 3px solid;
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}

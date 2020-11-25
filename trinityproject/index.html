@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" href="https://w.halocdn.com/favicon.ico?v=2">
+    <title> Halo Trinity </title>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <div id="start-screen">
+        <div id="logo">
+            <img src="./images/gameLogo.png" style="width: 500px;">
+        </div>
+            <div id="history">
+                <a>
+                    PROLOGUE :<br>
+                    "On the 22nd of October 2552, the Battle for Mombasa ended,<br> 
+                    numerous lives were lost. Marines, ODST and Spartans fought aside,<br> 
+                    but it wasn't enough. The city fell, and all hope was lost..<br>
+                    Except, for your squad. Ramirez, you, and Kurt are still alive,<br>
+                    you have to escape the city to deliver crucial intel to the<br>
+                    Office of Naval Intelligence FOB near Tsavo. Get to it,<br>
+                    hop in your Hornet, and accomplish your mission."<br><br>
+                        - Corporal Taylor "Dutch" Henry Miles, Unit Alpha-Nine
+                </a>
+            </div>
+        <button id="start-button" onclick="startGame()"></button>
+    </div>
+    <div id="game">
+        <div id="score">0</div>
+        <div class="banshee ennemies" id="banshee"></div>
+        <div class="banshee ennemies" id="banshee2"></div>
+        <div class="banshee ennemies" id="banshee3"></div>
+        <div class="elite ennemies" id="elite"></div>
+        <div class="elite ennemies" id="elite2"></div>
+        <div class="phantom ennemies" id="phantom"></div>
+        <div class="" id="hornet"></div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
