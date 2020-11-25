@@ -5,21 +5,21 @@ var scorecontainer = document.getElementById("score")
 // Menu theme music
 
 var menuTheme = new Audio();
-menuTheme.src ="/music/menuTheme.mp3";
+menuTheme.src ="./music/menuTheme.mp3";
 
 menuTheme.play();
 
 var gameOverTheme = new Audio();
-gameOverTheme.src ="/music/gameOverTheme.mp3";
+gameOverTheme.src ="./music/gameOverTheme.mp3";
 
 // Game theme music
 
 var gameTheme = new Audio();
-gameTheme.src = "/music/gameTheme.mp3";
+gameTheme.src = "./music/gameTheme.mp3";
 
 
 var oof = new Audio();
-oof.src = "/music/hit.mp3";
+oof.src = "./music/hit.mp3";
 
 var backgroundPosition = 0;
 
