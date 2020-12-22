@@ -9,6 +9,11 @@ date: 2020-05-22 00:00:00
 genre: [espionnage, action]
 image: img/machinima/coup.png
 
+award: Golden Monitor Awards 2019-2020
+awardIcon: gma2
+awardCategory: Nominé aux Golden Monitor Awards
+awardRank: Best Director - Best Picture - Best Visual Design
+
 ribbon: vedette
 description: Luis est vivant et le Directeur prépare des arrangements douteux avec les sénateurs d'Andesia, un évènement va changer la donne pour notre héros.
 
