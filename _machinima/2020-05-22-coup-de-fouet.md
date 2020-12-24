@@ -12,7 +12,8 @@ image: img/machinima/coup.png
 award: Golden Monitor Awards 2019-2020
 awardIcon: gma2
 awardCategory: Primé aux Golden Monitor Awards
-awardRank: [Best Picture](https://youtu.be/z4VDExaoCfQ?t=469)
+awardRank: Best Picture
+awardLink: https://youtu.be/z4VDExaoCfQ?t=469
 
 ribbon: vedette
 description: Luis est vivant et le Directeur prépare des arrangements douteux avec les sénateurs d'Andesia, un évènement va changer la donne pour notre héros.
