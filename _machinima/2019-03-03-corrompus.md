@@ -15,6 +15,7 @@ award: Golden Monitor Awards 2018-2019
 awardIcon: gma2
 awardCategory: Nominé aux Golden Monitor Awards
 awardRank: Most Potential
+awardLink: https://youtu.be/lE4T7BvovWo&t=3707s
 
 permalink: machinima/corrompus
 youtube: BVKioZ5lgYc
