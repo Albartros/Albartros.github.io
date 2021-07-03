@@ -10,7 +10,7 @@ genre: [espionnage, action]
 image: img/machinima/coup.png
 
 award: Golden Monitor Awards 2020
-awardIcon: gma
+awardIcon: GMA
 awardCategory: Primé aux Golden Monitor Awards
 awardRank: Best Picture
 awardLink: https://youtu.be/z4VDExaoCfQ?t=469
