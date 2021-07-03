@@ -133,12 +133,18 @@
 
             .button {
                 @include translateX(-50%);
-                background-color: black;
+                @include opacity(0);
+                background-color: transparent;
                 bottom: calc(100% + 1em);
                 left: 50%;
 
+                width: 100%;
+                height: 300px;
+                bottom: 0;
+
                 @include b(m) {
                     //@include translateX(0);
+                    @include opacity(1);
                     background-color: rgba(255, 255, 255, .2);
                     bottom: .5em;
                     left: auto;
@@ -186,7 +192,7 @@
             @include e(description) {
                 @include opacity(.85);
                 line-height: 1.2;
-                font-size: 15px;
+                font-size: 14px;
                 margin: 0.5em;
 
                 @include b(m) {
