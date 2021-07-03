@@ -135,19 +135,36 @@
                 @include translateX(-50%);
                 @include opacity(0);
                 background-color: transparent;
-                bottom: calc(100% + 1em);
                 left: 50%;
 
                 width: 100%;
                 height: 300px;
                 bottom: 0;
 
+                i {
+                    display: none;
+                }
+
                 @include b(m) {
                     //@include translateX(0);
                     @include opacity(1);
                     background-color: rgba(255, 255, 255, .2);
-                    bottom: .5em;
+                    bottom: 1.5em;
                     left: auto;
+                    width: auto;
+                    height: auto;
+                }
+
+                @include b(l) {
+                    i {
+                        display: inline-block;
+                    }
+                }
+
+                &:hover {
+                    @include b(m) {
+                        background-color: $primary-color;
+                    }
                 }
             }
 
@@ -197,6 +214,7 @@
 
                 @include b(m) {
                     font-size: $font-default-size;
+                    line-height: 1.4;
                 }
             }
         }
