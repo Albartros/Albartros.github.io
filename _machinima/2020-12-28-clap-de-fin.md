@@ -7,7 +7,7 @@ author: albartros98
 year: 2020
 date: 2020-12-28 00:00:00
 genre: [humour]
-image: img/machinima/clap_de_fin.png
+image: img/machinima/clap_de_fin.jpg
 
 award: Halowards 2020
 awardIcon: halowards
