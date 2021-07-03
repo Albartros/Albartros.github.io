@@ -18,7 +18,7 @@ awardLink: https://youtu.be/z4VDExaoCfQ?t=469
 award2: Halo Machinima Rewind 2020
 award2Icon: hmr
 award2Category: Primé au Halo Machinima Rewind
-award2Rank: Best cinematography - Visual Effects
+award2Rank: Best Cinematography - Visual Effects
 award2Link: https://www.youtube.com/watch?v=Mb4XLGpQkp4
 
 award3: Halowards 2020
