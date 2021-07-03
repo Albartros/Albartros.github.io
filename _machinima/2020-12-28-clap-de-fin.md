@@ -9,6 +9,12 @@ date: 2020-12-28 00:00:00
 genre: [humour]
 image: img/machinima/clap_de_fin.png
 
+award: Halowards 2020
+awardIcon: halowards
+awardCategory: Nominé aux Halowards
+awardRank: Meilleur Design - Humour
+awardLink: https://www.twitch.tv/videos/1074643880
+
 description: Décidément 2020 aura vraiment été une année particulière.
 
 permalink: machinima/clap-de-fin

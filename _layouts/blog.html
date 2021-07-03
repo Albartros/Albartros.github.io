@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ site.url }}/css/app.css" type="text/css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:100|Source+Sans+Pro:300,400,600">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 
@@ -35,6 +34,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
 
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+
     {% seo %}
 
     <meta name="google-site-verification" content="p0uvsArs7lZQb1ljqa5sm7nU8lYRYmfHZEJJ_CklLwc">
@@ -44,7 +46,7 @@
 
     {% include header.html content="nav" %}
     {% assign author = site.data.authors[page.author] %}
-    <h2 class="page__title page__title--blog">Nos actualités</h2>
+    <div class="page__title page__title--blog">Nos actualités</div>
     <section class="blog__container">
         <div class="blog__feed">
             <atricle class="blog__article">

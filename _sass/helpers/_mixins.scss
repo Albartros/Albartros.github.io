@@ -2,6 +2,8 @@
  * Mixins de polices
  */
 
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:100|Source+Sans+Pro:300,400,600|Open+Sans:600");
+
 @mixin default-font() {
     font: $font-default-style $font-default-weight $font-default-size "Source Sans Pro", sans-serif;
     line-height: $font-default-line-height;
@@ -13,6 +15,10 @@
 
 @mixin lato-font() {
     font-family: "Lato", sans-serif;
+}
+
+@mixin open-sans() {
+    font-family: "Open Sans", sans-serif;
 }
 
 @mixin monserrat-font() {

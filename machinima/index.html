@@ -6,12 +6,75 @@ permalink: machinima
 comments: false
 nav: true
 ---
-<h1 class="page__title page__title--machinima">Nos machinimas</h1>
+<div class="page__title page__title--machinima">Nos machinimas</div>
 <section class="machinima">
 
-    <div class="machinima__flex">
+    <div class="machinima__flex animated fadeInUp">
+        {% for machinima in site.machinima reversed %}
+        
+        <div class="machinima__card" style="background-image: url({{ site.url }}/{{ machinima.image }})">
+            {% if machinima.ribbon %}
+            <div class="machinima__ribbon">
+                <span>{{ machinima.ribbon }}</span>
+            </div>
+            {% endif %}
+
+            {% if machinima.award %}
+            <div class="machinima__award">
+                <div class="machinima__award__medal animated tada">
+                    <img src="{{ site.url }}/img/award/{{ machinima.awardIcon }}.png" alt="" class="machinima__award__medal__medal">
+                </div>
+                <div class="machinima__award__content">
+                    <b>{{ machinima.awardCategory }}</b><br>
+                    <span><a target="_blank" href="{{ machinima.awardLink }}">{{ machinima.awardRank }}</a></span><br>
+                    <span>{{ machinima.award }}</span>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if machinima.award2 %} 
+            <div class="machinima__award machinima__award--second">
+                <div class="machinima__award__medal animated tada">
+                    <img src="{{ site.url }}/img/award/{{ machinima.award2Icon }}.png" alt="" class="machinima__award__medal__medal">
+                </div>
+                <div class="machinima__award__content">
+                    <b>{{ machinima.award2Category }}</b><br>
+                    <span><a target="_blank" href="{{ machinima.award2Link }}">{{ machinima.award2Rank }}</a></span><br>
+                    <span>{{ machinima.award2 }}</span>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if machinima.award3 %} 
+            <div class="machinima__award machinima__award--third">
+                <div class="machinima__award__medal animated tada">
+                    <img src="{{ site.url }}/img/award/{{ machinima.award3Icon }}.png" alt="" class="machinima__award__medal__medal">
+                </div>
+                <div class="machinima__award__content">
+                    <b>{{ machinima.award3Category }}</b><br>
+                    <span><a target="_blank" href="{{ machinima.award3Link }}">{{ machinima.award3Rank }}</a></span><br>
+                    <span>{{ machinima.award3 }}</span>
+                </div>
+            </div>
+            {% endif %}
+        
+            <div class="machinima__card__overlay">
+                <div class="machinima__card__content">
+                    <h2 class="machinima__card__content__title">{{ machinima.title }}</h2>
+                    <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {% for genre in
+                        machinima.genre %}{{ genre }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}</h4>
+                    <p class="machinima__card__content__description">{{ machinima.description }}</p>
+                    <a href="{{ machinima.url }}" class="button">
+                        <i class="fas fa-play"></i>
+                        Regarder
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
         {% if site.data.production.cancelled.status == false %}
-        <div class="machinima__card" style="background-image: url({{ site.url }}/img/machinima/storyboard.jpg)">      
+        <div class="machinima__card animated bounceInUp" style="background-image: url({{ site.url }}/img/machinima/storyboard.jpg)">      
             <div class="machinima__card__overlay">
                 <div class="machinima__card__content">
                     <h2 class="machinima__card__content__title">Prochain machinima</h2>
@@ -38,43 +101,6 @@ nav: true
             </div>
         </div>
         {% endif %}
-        {% for machinima in site.machinima reversed %}
-        
-        <div class="machinima__card" style="background-image: url({{ site.url }}/{{ machinima.image }})">
-            {% if machinima.ribbon %}
-            <div class="machinima__ribbon">
-                <span>{{ machinima.ribbon }}</span>
-            </div>
-            {% endif %}
-
-            {% if machinima.award %}
-            <div class="machinima__award">
-                <div class="machinima__award__medal">
-                    <img src="{{ site.url }}/img/award/{{ machinima.awardIcon }}.png" alt="" class="machinima__award__medal__medal">
-                </div>
-                <div class="machinima__award__content">
-                    <b>{{ machinima.awardCategory }}</b><br>
-                    <span><a href="{{ machinima.awardLink }}">{{ machinima.awardRank }}</a></span><br>
-                    <span>{{ machinima.award }}</span>
-                </div>
-            </div>
-            {% endif %}
-        
-            <div class="machinima__card__overlay">
-                <div class="machinima__card__content">
-                    <h2 class="machinima__card__content__title">{{ machinima.title }}</h2>
-                    <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {% for genre in
-                        machinima.genre %}{{ genre }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}</h4>
-                    <p class="machinima__card__content__description">{{ machinima.description }}</p>
-                    <a href="{{ machinima.url }}" class="machinima__card__content__button">
-                        <i class="fas fa-play"></i>
-                        Regarder
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        {% endfor %}
     </div>
 
 </section>

@@ -1,0 +1,25 @@
+.button {
+    @include transition(background-color 0.25s ease);
+    background-color: rgba(255, 255, 255, .2);
+    bottom: .5em;
+    left: 0;
+    padding: .5em 1.4em;
+    position: absolute;
+
+    @include b(m) {
+        bottom: 1em;
+        padding: .8em 2em;
+    }
+
+    &:hover {
+        background-color: $primary-color;
+    }
+
+    i {
+        margin-right: .75em;
+    }
+}
+
+.pace .pace-progress {
+    background: $primary-color !important;
+}
