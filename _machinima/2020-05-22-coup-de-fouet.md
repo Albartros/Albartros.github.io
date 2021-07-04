@@ -25,7 +25,7 @@ award3: Halowards 2020
 award3Icon: halowards
 award3Category: Primé aux Halowards
 award3Rank: Meilleur Scénario - Doublage - Action/Drame
-award3Link: https://www.twitch.tv/videos/1074643880
+award3Link: https://www.youtube.com/watch?v=b26H1JybLT8
 
 ribbon: vedette
 description: Luis est vivant et le Directeur prépare des arrangements douteux avec les sénateurs d'Andesia, un évènement va changer la donne pour notre héros.

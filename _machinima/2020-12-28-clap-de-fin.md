@@ -13,7 +13,7 @@ award: Halowards 2020
 awardIcon: halowards
 awardCategory: Nominé aux Halowards
 awardRank: Meilleur Design - Humour
-awardLink: https://www.twitch.tv/videos/1074643880
+awardLink: https://www.youtube.com/watch?v=b26H1JybLT8
 
 description: Décidément 2020 aura vraiment été une année particulière.
 
