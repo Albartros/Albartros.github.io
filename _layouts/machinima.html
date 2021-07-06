@@ -55,6 +55,36 @@
         <h1 class="machinima__about__title">{{ page.title }}</h1>
         <span class="machinima__about__meta">Mise en ligne le {% assign dy = page.date | date: "%a" %}{% case dy %}{% when "Mon" %}lundi{% when "Tue" %}mardi{% when "Wed" %}mercredi{% when "Thu" %}jeudi{% when "Fri" %}vendredi{% when "Sat" %}samedi{% when "Sun" %}dimanche{% else %}{{ dy }}{% endcase %} {% assign d = page.date | date: "%-d" %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = page.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ page.date | date: '%Y' }} par {% if author.site %}<a href="{{ site.url }}/{{ author.site }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>
         {{ content }}
+        {% if page.award %}
+        <h2>Récompenses</h2>
+        <ul class="machinima__awards">
+            <li class="machinima__awards__award">
+                <img src="{{ site.url }}/img/award/{{ page.awardIcon }}.png" alt="award" class="machinima__awards__icon">
+                <div class="machinima__awards__content">
+                    <p><a href="{{ page.awardLink }}" target="_blank">{{ page.awardCategory }}</a></p>
+                    <span><b>Pour la catégorie :</b><br> {{ page.awardRank }}</span>
+                </div>
+            </li>
+            {% if page.award2 %}
+            <li class="machinima__awards__award">
+                <img src="{{ site.url }}/img/award/{{ page.award2Icon }}.png" alt="award" class="machinima__awards__icon">
+                <div class="machinima__awards__content">
+                    <p><a href="{{ page.award2Link }}" target="_blank">{{ page.award2Category }}</a></p>
+                    <span><b>Pour la catégorie :</b><br> {{ page.award2Rank }}</span>
+                </div>
+            </li>
+            {% endif %}
+            {% if page.award3 %}
+            <li class="machinima__awards__award">
+                <img src="{{ site.url }}/img/award/{{ page.award3Icon }}.png" alt="award" class="machinima__awards__icon">
+                <div class="machinima__awards__content">
+                    <p><a href="{{ page.award3Link }}" target="_blank">{{ page.award3Category }}</a></p>
+                    <span><b>Pour la catégorie :</b><br> {{ page.award3Rank }}</span>
+                </div>
+            </li>
+            {% endif %}
+        </ul>
+        {% endif %}
     </section>
 
     {% if page.comments %}

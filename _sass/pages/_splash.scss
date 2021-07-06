@@ -1,16 +1,20 @@
 .splash {
-    @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/infinite_720.jpg));
-    background-size: cover;
-    background-position-x: center;
+    @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/halo_smol.jpg));
+    //background-size: cover;
+    background-size: auto 100%;
+    background-position: center;
     height: 100vh;
     min-height: 275px;
     position: relative;
     width: 100vw;
     @include b(l) {
-        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/infinite_1080.jpg));
+        @include translateZ(0);
+        @include animation(background-animate 5s ease-out 1);
+        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/halo_big.jpg));
+        background-size: 100% auto;
     }
     @include b(uhd) {
-        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/infinite_4k.jpg));
+        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/halo.jpg));
     }
     @include e(title) {
         @include lato-font();
@@ -91,5 +95,14 @@
             top: 0;
             width: 2.5em;
         }
+    }
+}
+
+@include keyframes(background-animate) {
+    0% {
+        background-size: 115%;
+    }
+    100% {
+        background-size: 100% auto;
     }
 }
