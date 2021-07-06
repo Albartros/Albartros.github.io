@@ -10,11 +10,11 @@
     @include b(l) {
         @include translateZ(0);
         @include animation(background-animate 5s ease-out 1);
-        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/halo_big.jpg));
+        @include background-image(linear-gradient(rgba(20, 27, 46, 0.4), rgba(20, 27, 46, 0.2)), url(../img/background/halo_big.jpg));
         background-size: 100% auto;
     }
     @include b(uhd) {
-        @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/halo.jpg));
+        @include background-image(linear-gradient(rgba(20, 27, 46, 0.4), rgba(20, 27, 46, 0.2)), url(../img/background/halo.jpg));
     }
     @include e(title) {
         @include lato-font();
