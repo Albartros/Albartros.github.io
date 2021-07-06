@@ -1,5 +1,5 @@
 .splash {
-    @include background-image(linear-gradient(rgba(20, 27, 46, 0.8), rgba(20, 27, 46, 0.5)), url(../img/background/halo_smol.jpg));
+    @include background-image(linear-gradient(rgba(20, 27, 46, 0.4), rgba(20, 27, 46, 0.2)), url(../img/background/halo_smol.jpg));
     //background-size: cover;
     background-size: auto 100%;
     background-position: center;
