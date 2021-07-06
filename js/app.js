@@ -178,6 +178,9 @@ var Legicode = {
                 case "select":
                     $("#select").prop("volume", 0.4).prop("currentTime", 0.1).trigger("play")
                     break
+                case "award":
+                    $("#award").prop("volume", 0.4).trigger("play")
+                    break
                 case "success":
                     $("#success").prop("volume", 0.25).prop("currentTime", 0.1).trigger("play")
                     break
@@ -208,6 +211,10 @@ var Legicode = {
             event.preventDefault()
             self.toggleMute()
         })
+
+        $("#halowards").click(function (event) {
+            self.playSound("award")
+        });
 
         var $button = $(".code__button__button")
         var $allButtons = $("#buttons")

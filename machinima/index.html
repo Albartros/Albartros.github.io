@@ -58,17 +58,15 @@ nav: true
             </div>
             {% endif %}
         
-            <div class="machinima__card__overlay">
-                <div class="machinima__card__content">
-                    <h2 class="machinima__card__content__title">{{ machinima.title }}</h2>
-                    <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {% for genre in
-                        machinima.genre %}{{ genre }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}</h4>
-                    <p class="machinima__card__content__description">{{ machinima.description }}</p>
-                    <a href="{{ machinima.url }}" class="button">
-                        <i class="fas fa-play"></i>
-                        Regarder
-                    </a>
-                </div>
+            <div class="machinima__card__content">
+                <h2 class="machinima__card__content__title">{{ machinima.title }}</h2>
+                <h4 class="machinima__card__content__info">({{ machinima.date | date: "%Y" }}) {% for genre in
+                    machinima.genre %}{{ genre }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}</h4>
+                <p class="machinima__card__content__description">{{ machinima.description }}</p>
+                <a href="{{ machinima.url }}" class="button">
+                    <i class="fas fa-play"></i>
+                    Regarder
+                </a>
             </div>
         </div>
         {% endfor %}
